@@ -1,0 +1,165 @@
+@import "../../modules/settings/_setting_pages";
+
+.order-info-compete {
+  margin: 20*$px;
+  padding: 0 20*$px;
+  &__title {
+    font-size: 18*$px;
+  }
+  &__description {
+    font-size: 14*$px;
+  }
+  &__address-item {
+    margin-top: 15*$px;
+    line-height: 24*$px;
+    .order-piece {
+      font-size: 16*$px;
+      color: $color_gold;
+    }
+    label {
+      color: $color_gray_text;
+    }
+  }
+}
+
+//我的订单
+.order-list-log{
+  position:absolute;
+  right:60px;
+  top:0;
+  z-index:9;
+  width:500*$px;
+  padding-top: 30*$px;
+  display:none;
+
+  .order-tracking{
+    position: relative;
+    padding:0 20*$px;
+    margin: 0;
+    background:#fff;
+    border:1px solid $color_gray_border;
+    box-shadow:0 5px 13px rgba(0,0,0,.09);
+    &__hd, &__ft{
+      padding:0;
+    }
+    &__bd{
+      padding:14*$px 0 0;
+    }
+    &__col-01{
+      width:150/450*100%;
+    }
+    &__col-02{
+      width:200/450*100%;
+    }
+    &__col-03{
+      width:100/450*100%;
+    }
+
+    &:before,&:after{
+      content:'';
+      border:10px solid transparent;
+      border-top: 0;
+      position:absolute;
+      right:98*$px;
+    }
+    &:before{
+      top:-11px;
+      border-bottom-color:$color_gray_border;
+      z-index:-1;
+    }
+    &:after{
+      top:-10px;
+      border-bottom-color:#fff;
+    }
+  }
+}
+
+.pages {
+  margin-bottom: 120*$px;
+}
+
+
+/*订单回收站*/
+.order-trash{
+  float: right;
+  font-size: 18px;
+  width: 120*$px;
+  height: 38*$px;
+  line-height: 38*$px;
+  margin: 0 0 0 -10px;
+  border: 1px solid #e6be99;
+  border-bottom: 2px solid #e6be99;
+  color: #e6be99;
+  text-align: center;
+}
+.order-search{
+  width: 200*$px;
+}
+
+//presale order status
+@mixin bull {
+    content: '\02022\02022\02022\02022\02022\02022\02022';
+    position: absolute;
+    right: 10%;;
+    top: 50%;
+    margin-top: -15*$px;
+    font-size: 20*$px;
+    font-weight: 100;
+    color: $color_gray_light;
+}
+$color_step_active: #56b36a;
+.order-status {
+    width: 100%;
+    margin-top: 20*$px;
+    padding: 10*$px;
+    border-top: 1px dashed $color_gray_border;
+    background-color: $color_panel_bg;
+    &__icon {
+        display: inline-block;
+        width: 50*$px;
+        height: 50*$px;
+        padding-top: 6*$px;
+        margin-right: 10*$px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 1.5;
+        color: white;
+        background-color: $color_gray_light;
+    }
+    &__step1 {
+        position: relative;
+        width: 38%;
+        &:after {
+            @include bull;
+        }
+        &.active {
+            .order-status__icon {
+                background-color: $color_step_active;
+            }
+            &:after {
+                color: $color_step_active;
+            }
+        }
+    }
+    &__step2 {
+        @extend .order-status__step1;
+        &:after {
+            right: 6%;
+        }
+    }
+    &__step3 {
+        width: 24%;
+        &.active {
+            .order-status__icon {
+                background-color: $color_step_active;
+            }
+        }
+    }
+    &__title {
+        padding-top: 6*$px;
+        font-weight: bolder;
+    }
+    &__done {
+        color: $color_step_active;
+    }
+}

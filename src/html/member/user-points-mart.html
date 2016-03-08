@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>积分兑换</title>
+    @@include('../_common/header/head.html')
+    @@include('./_include/meta.html')
+</head>
+<body>
+<div class="page page-user-points layout-fixed" data-module="">
+    <!--header-->
+    @@include('../_common/header/header.html')
+    <!--/header end-->
+
+    <div class="container container-border-bottom">
+        <div class="container__wrap">
+            <div class="layout-fixed-inner">
+                <div class="container__main">
+                    <div class="container__main-inner u-clearfix">
+                        <!--nav-->
+                        @@include('../_common/nav/nav.html', { "navName":"卧室" } )
+                        <!--/nav end-->
+                        <div class="main-layout u-wrap u-clearfix">
+                            <div class="main-layout-sidebar">
+                                <div class="center-menu">
+                                    <a class="center-menu__item" href="#">我的订单</a>
+                                    <a class="center-menu__item" href="#">我的购物车</a>
+                                    <a class="center-menu__item" href="#">收藏夹</a>
+                                    <a class="center-menu__item _active" href="#">我的积分</a>
+                                    <a class="center-menu__item" href="#">用户信息</a>
+                                </div>
+                            </div>
+                            <div class="main-layout-container point-container">
+
+                                <div class="tabs-simple point-reference">
+                                    <a href="user-points.html">积分明细</a>
+                                    <a href="user-points-mart.html" class="active">积分兑换</a>
+
+                                    <p class="ref">
+                                        您目前的可用积分：<em id="usable-point" data-point="3560" class="num">3560</em>
+                                        <span class="u-ml_20">
+                                            即将到期的积分：<em class="num">560</em>
+                                        </span>
+                                        <a href="" class="normal u-ml_20">如何获取积分？</a>
+                                    </p>
+                                </div>
+
+                                <!--list-->
+                                <ul id="gift-list" class="grid grid-2 gift-list">
+                                    <li data-price="2990">
+                                        <div class="grid grid-2 info">
+                                            <img class="thumb" src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/04/30/54fe458a_pic_show01.jpg?imageView/1/w/210/h/210/q/80" alt="">
+
+                                            <div>
+                                                <h4 class="title">安吉 沙发椅</h4>
+                                                <ul class="sku-list">
+                                                    <li>品名：沙发</li>
+                                                    <li>面料：麻纺面料</li>
+                                                    <li>框架：实木框架</li>
+                                                    <li>填充物：高密度优质海绵</li>
+                                                    <li>沙发脚：金属脚</li>
+                                                    <li>可否拆洗：是</li>
+                                                    <li>可否拆装：否</li>
+                                                </ul>
+                                                
+                                                <p class="value"><span class="desc">积分：</span><em>450</em>积分</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <input type="submit" class="btn btn-larger-big btn-color-orange exchange" value="立即兑换" />
+                                            
+                                            <p class="value"><span class="desc">数量：</span>
+                                                <span class="amount-box">
+                                                    <input type="text" name="goods_sku_quantity" value="1" data-max="99" data-price="2990">
+                                                    <button class="plus"></button>
+                                                    <button class="minus"></button>
+                                                </span>
+
+                                                <input type="hidden" name="goods_sku_id" value="291">
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                
+                                <!--/list end-->
+                                <!--pager-->
+                                <div class="pages point-pager">
+                                    <a href="#" class="pages__prev pages__btn btn btn-primary _disable">&#xf0115;</a>
+                                    <a href="#" class="pages__next pages__btn btn btn-primary">&#xf0116;</a>
+                                </div>
+                                <!--/pager end-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../_common/footer/footer.html')
+</div>
+@@include('../_common/footer/foot.html')
+<script src="/js/member-point_mall.js"></script>
+</body>
+</html>

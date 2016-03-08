@@ -1,0 +1,55 @@
+@import "~css/modules/settings/_setting_pages";
+.referral-section {
+  padding-top: 100px;
+  padding-bottom: 30px;
+  background-color: #eaeaea;
+}
+
+.referral-info {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  h2 {
+    display: inline-block;
+    margin-bottom: 20px;
+    border-bottom: solid 2px #c33232;
+    color: #c33232;
+    font-weight: 600;
+  }
+  &__title {
+    display: block;
+    padding: 40px 0;
+    text-indent: -10000px;
+    background-image: url("~images/activity/activity-july-s3-1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .referral-guide {
+    width: 65%;
+    img {
+      max-width: 100%;
+    }
+  }
+  .referral-link {
+    width: 28%;
+    margin-left: 5%;
+    padding-left: 20px;
+    border-left: solid 2px #dbdbdb;
+    ._link-btn {
+      padding-top: 20px;
+    }
+    ._link {
+      display: block;
+      width: 300px;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      background-color: #dbdbdb;
+      text-align: left;
+      box-shadow: inset 0 1px 1.6px 1.7px rgba(0, 0, 0, 0.1);
+      cursor: text;
+    }
+  }
+}

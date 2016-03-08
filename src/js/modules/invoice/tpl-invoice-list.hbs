@@ -1,0 +1,23 @@
+<div class="address-list order-invoice u-clearfix">
+    {{#each this}}
+        <div class="address-list__item u-clearfix" data-id="{{id}}">
+            <div class="address-list__checkbox u-fl{{#if is_default}} _active{{/if}}">
+                <div class="invoice-title u-ellipse" title={{#if title_type}}{{company_name}}{{/if}}>
+                    {{#if title_type}}{{company_name}}{{else}}个人{{/if}}
+                </div>
+                <div class="u-ellipse u-pt_10">
+                    {{#if type}}增值税发票{{else}}普通发票{{/if}}
+                    <a class="u-black-link j-invoice-del u-fr" href="javascript:;">删除</a>
+                </div>
+                <div class="address-list__action u-fl" style="display: none">
+                    <a class="u-black-link j-invoice-update" href="javascript:;">修改</a>
+                    <span class="u-ml_10 u-mr_10">|</span>
+                    <a class="u-black-link j-invoice-del" href="javascript:;">删除</a>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+    <div class="address-list__ft">
+        <a href="javascript:;" class="btn btn-primary j-invoice-create">使用新发票</a>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="modal" style="width: {{width}}px">
+    {{#if title}}
+    <h4 class="modal-title">{{title}}</h4>
+    {{/if}}
+
+    {{#if closeBtn}}
+    <a class="modal-close primary-modal-close"></a>
+    {{/if}}
+
+    <div class="modal-body">{{{content}}}</div>
+
+    {{#if footer}}
+    <div class="modal-footer">{{{footer}}}</div>
+    {{/if}}
+</div>

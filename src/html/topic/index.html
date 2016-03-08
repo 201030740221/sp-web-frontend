@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预售首页</title>
+    @@include('../_common/header/head.html')
+    <link rel="stylesheet" href="/css/ui-modules.css" />
+    <link rel="stylesheet" href="/css/topic.css" />
+    <!--[if lt IE 9]>
+    <script src="/js/ie.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <input type="hidden" name="column_id" id="column_id" value="1">
+    <input type="hidden" name="topics" id="topics" value="{&quot;total&quot;:36,&quot;per_page&quot;:10,&quot;current_page&quot;:1,&quot;last_page&quot;:4,&quot;next_page_url&quot;:&quot;http:\/\/www.sipin.alvin\/topic?page=2&quot;,&quot;prev_page_url&quot;:null,&quot;from&quot;:1,&quot;to&quot;:10,&quot;data&quot;:[{&quot;id&quot;:1,&quot;column_id&quot;:1,&quot;status&quot;:1,&quot;title&quot;:&quot;test&quot;,&quot;sub_title&quot;:&quot;test&quot;,&quot;author&quot;:&quot;test&quot;,&quot;source&quot;:&quot;test&quot;,&quot;keyword&quot;:&quot;&quot;,&quot;summary&quot;:&quot;test&quot;,&quot;thumb_pic_id&quot;:1,&quot;content&quot;:&quot;<p>test<\/p>&quot;,&quot;created_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;updated_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;deleted_at&quot;:null,&quot;thumb_pic&quot;:{&quot;id&quot;:1,&quot;member_id&quot;:0,&quot;goods_id&quot;:0,&quot;order_id&quot;:0,&quot;name&quot;:&quot;6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;path&quot;:&quot;2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;full_path&quot;:&quot;http:\/\/7sbwdf.com1.z0.glb.clouddn.com\/2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;extension&quot;:&quot;jpg&quot;,&quot;mime&quot;:&quot;image\/jpeg&quot;,&quot;size&quot;:203247,&quot;is_image&quot;:1,&quot;thumbnail&quot;:null,&quot;width&quot;:1417,&quot;height&quot;:956,&quot;private&quot;:0,&quot;groups&quot;:null,&quot;tags&quot;:&quot;&quot;,&quot;created_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;updated_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;deleted_at&quot;:null}},{&quot;id&quot;:2,&quot;column_id&quot;:1,&quot;status&quot;:1,&quot;title&quot;:&quot;test&quot;,&quot;sub_title&quot;:&quot;test&quot;,&quot;author&quot;:&quot;test&quot;,&quot;source&quot;:&quot;test&quot;,&quot;keyword&quot;:&quot;&quot;,&quot;summary&quot;:&quot;test&quot;,&quot;thumb_pic_id&quot;:1,&quot;content&quot;:&quot;<p>test<\/p>&quot;,&quot;created_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;updated_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;deleted_at&quot;:null,&quot;thumb_pic&quot;:{&quot;id&quot;:1,&quot;member_id&quot;:0,&quot;goods_id&quot;:0,&quot;order_id&quot;:0,&quot;name&quot;:&quot;6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;path&quot;:&quot;2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;full_path&quot;:&quot;http:\/\/7sbwdf.com1.z0.glb.clouddn.com\/2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;extension&quot;:&quot;jpg&quot;,&quot;mime&quot;:&quot;image\/jpeg&quot;,&quot;size&quot;:203247,&quot;is_image&quot;:1,&quot;thumbnail&quot;:null,&quot;width&quot;:1417,&quot;height&quot;:956,&quot;private&quot;:0,&quot;groups&quot;:null,&quot;tags&quot;:&quot;&quot;,&quot;created_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;updated_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;deleted_at&quot;:null}},{&quot;id&quot;:3,&quot;column_id&quot;:1,&quot;status&quot;:1,&quot;title&quot;:&quot;test&quot;,&quot;sub_title&quot;:&quot;test&quot;,&quot;author&quot;:&quot;test&quot;,&quot;source&quot;:&quot;test&quot;,&quot;keyword&quot;:&quot;&quot;,&quot;summary&quot;:&quot;test&quot;,&quot;thumb_pic_id&quot;:1,&quot;content&quot;:&quot;<p>test<\/p>&quot;,&quot;created_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;updated_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;deleted_at&quot;:null,&quot;thumb_pic&quot;:{&quot;id&quot;:1,&quot;member_id&quot;:0,&quot;goods_id&quot;:0,&quot;order_id&quot;:0,&quot;name&quot;:&quot;6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;path&quot;:&quot;2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;full_path&quot;:&quot;http:\/\/7sbwdf.com1.z0.glb.clouddn.com\/2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;extension&quot;:&quot;jpg&quot;,&quot;mime&quot;:&quot;image\/jpeg&quot;,&quot;size&quot;:203247,&quot;is_image&quot;:1,&quot;thumbnail&quot;:null,&quot;width&quot;:1417,&quot;height&quot;:956,&quot;private&quot;:0,&quot;groups&quot;:null,&quot;tags&quot;:&quot;&quot;,&quot;created_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;updated_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;deleted_at&quot;:null}},{&quot;id&quot;:4,&quot;column_id&quot;:1,&quot;status&quot;:1,&quot;title&quot;:&quot;test&quot;,&quot;sub_title&quot;:&quot;test&quot;,&quot;author&quot;:&quot;test&quot;,&quot;source&quot;:&quot;test&quot;,&quot;keyword&quot;:&quot;&quot;,&quot;summary&quot;:&quot;test&quot;,&quot;thumb_pic_id&quot;:1,&quot;content&quot;:&quot;<p>test<\/p>&quot;,&quot;created_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;updated_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;deleted_at&quot;:null,&quot;thumb_pic&quot;:{&quot;id&quot;:1,&quot;member_id&quot;:0,&quot;goods_id&quot;:0,&quot;order_id&quot;:0,&quot;name&quot;:&quot;6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;path&quot;:&quot;2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;full_path&quot;:&quot;http:\/\/7sbwdf.com1.z0.glb.clouddn.com\/2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;extension&quot;:&quot;jpg&quot;,&quot;mime&quot;:&quot;image\/jpeg&quot;,&quot;size&quot;:203247,&quot;is_image&quot;:1,&quot;thumbnail&quot;:null,&quot;width&quot;:1417,&quot;height&quot;:956,&quot;private&quot;:0,&quot;groups&quot;:null,&quot;tags&quot;:&quot;&quot;,&quot;created_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;updated_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;deleted_at&quot;:null}},{&quot;id&quot;:5,&quot;column_id&quot;:1,&quot;status&quot;:1,&quot;title&quot;:&quot;test&quot;,&quot;sub_title&quot;:&quot;test&quot;,&quot;author&quot;:&quot;test&quot;,&quot;source&quot;:&quot;test&quot;,&quot;keyword&quot;:&quot;&quot;,&quot;summary&quot;:&quot;test&quot;,&quot;thumb_pic_id&quot;:1,&quot;content&quot;:&quot;<p>test<\/p>&quot;,&quot;created_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;updated_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;deleted_at&quot;:null,&quot;thumb_pic&quot;:{&quot;id&quot;:1,&quot;member_id&quot;:0,&quot;goods_id&quot;:0,&quot;order_id&quot;:0,&quot;name&quot;:&quot;6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;path&quot;:&quot;2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;full_path&quot;:&quot;http:\/\/7sbwdf.com1.z0.glb.clouddn.com\/2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;extension&quot;:&quot;jpg&quot;,&quot;mime&quot;:&quot;image\/jpeg&quot;,&quot;size&quot;:203247,&quot;is_image&quot;:1,&quot;thumbnail&quot;:null,&quot;width&quot;:1417,&quot;height&quot;:956,&quot;private&quot;:0,&quot;groups&quot;:null,&quot;tags&quot;:&quot;&quot;,&quot;created_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;updated_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;deleted_at&quot;:null}},{&quot;id&quot;:6,&quot;column_id&quot;:1,&quot;status&quot;:1,&quot;title&quot;:&quot;test&quot;,&quot;sub_title&quot;:&quot;test&quot;,&quot;author&quot;:&quot;test&quot;,&quot;source&quot;:&quot;test&quot;,&quot;keyword&quot;:&quot;&quot;,&quot;summary&quot;:&quot;test&quot;,&quot;thumb_pic_id&quot;:1,&quot;content&quot;:&quot;<p>test<\/p>&quot;,&quot;created_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;updated_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;deleted_at&quot;:null,&quot;thumb_pic&quot;:{&quot;id&quot;:1,&quot;member_id&quot;:0,&quot;goods_id&quot;:0,&quot;order_id&quot;:0,&quot;name&quot;:&quot;6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;path&quot;:&quot;2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;full_path&quot;:&quot;http:\/\/7sbwdf.com1.z0.glb.clouddn.com\/2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;extension&quot;:&quot;jpg&quot;,&quot;mime&quot;:&quot;image\/jpeg&quot;,&quot;size&quot;:203247,&quot;is_image&quot;:1,&quot;thumbnail&quot;:null,&quot;width&quot;:1417,&quot;height&quot;:956,&quot;private&quot;:0,&quot;groups&quot;:null,&quot;tags&quot;:&quot;&quot;,&quot;created_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;updated_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;deleted_at&quot;:null}},{&quot;id&quot;:7,&quot;column_id&quot;:1,&quot;status&quot;:1,&quot;title&quot;:&quot;test&quot;,&quot;sub_title&quot;:&quot;test&quot;,&quot;author&quot;:&quot;test&quot;,&quot;source&quot;:&quot;test&quot;,&quot;keyword&quot;:&quot;&quot;,&quot;summary&quot;:&quot;test&quot;,&quot;thumb_pic_id&quot;:1,&quot;content&quot;:&quot;<p>test<\/p>&quot;,&quot;created_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;updated_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;deleted_at&quot;:null,&quot;thumb_pic&quot;:{&quot;id&quot;:1,&quot;member_id&quot;:0,&quot;goods_id&quot;:0,&quot;order_id&quot;:0,&quot;name&quot;:&quot;6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;path&quot;:&quot;2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;full_path&quot;:&quot;http:\/\/7sbwdf.com1.z0.glb.clouddn.com\/2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;extension&quot;:&quot;jpg&quot;,&quot;mime&quot;:&quot;image\/jpeg&quot;,&quot;size&quot;:203247,&quot;is_image&quot;:1,&quot;thumbnail&quot;:null,&quot;width&quot;:1417,&quot;height&quot;:956,&quot;private&quot;:0,&quot;groups&quot;:null,&quot;tags&quot;:&quot;&quot;,&quot;created_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;updated_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;deleted_at&quot;:null}},{&quot;id&quot;:8,&quot;column_id&quot;:1,&quot;status&quot;:1,&quot;title&quot;:&quot;test&quot;,&quot;sub_title&quot;:&quot;test&quot;,&quot;author&quot;:&quot;test&quot;,&quot;source&quot;:&quot;test&quot;,&quot;keyword&quot;:&quot;&quot;,&quot;summary&quot;:&quot;test&quot;,&quot;thumb_pic_id&quot;:1,&quot;content&quot;:&quot;<p>test<\/p>&quot;,&quot;created_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;updated_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;deleted_at&quot;:null,&quot;thumb_pic&quot;:{&quot;id&quot;:1,&quot;member_id&quot;:0,&quot;goods_id&quot;:0,&quot;order_id&quot;:0,&quot;name&quot;:&quot;6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;path&quot;:&quot;2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;full_path&quot;:&quot;http:\/\/7sbwdf.com1.z0.glb.clouddn.com\/2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;extension&quot;:&quot;jpg&quot;,&quot;mime&quot;:&quot;image\/jpeg&quot;,&quot;size&quot;:203247,&quot;is_image&quot;:1,&quot;thumbnail&quot;:null,&quot;width&quot;:1417,&quot;height&quot;:956,&quot;private&quot;:0,&quot;groups&quot;:null,&quot;tags&quot;:&quot;&quot;,&quot;created_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;updated_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;deleted_at&quot;:null}},{&quot;id&quot;:9,&quot;column_id&quot;:1,&quot;status&quot;:1,&quot;title&quot;:&quot;test&quot;,&quot;sub_title&quot;:&quot;test&quot;,&quot;author&quot;:&quot;test&quot;,&quot;source&quot;:&quot;test&quot;,&quot;keyword&quot;:&quot;&quot;,&quot;summary&quot;:&quot;test&quot;,&quot;thumb_pic_id&quot;:1,&quot;content&quot;:&quot;<p>test<\/p>&quot;,&quot;created_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;updated_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;deleted_at&quot;:null,&quot;thumb_pic&quot;:{&quot;id&quot;:1,&quot;member_id&quot;:0,&quot;goods_id&quot;:0,&quot;order_id&quot;:0,&quot;name&quot;:&quot;6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;path&quot;:&quot;2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;full_path&quot;:&quot;http:\/\/7sbwdf.com1.z0.glb.clouddn.com\/2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;extension&quot;:&quot;jpg&quot;,&quot;mime&quot;:&quot;image\/jpeg&quot;,&quot;size&quot;:203247,&quot;is_image&quot;:1,&quot;thumbnail&quot;:null,&quot;width&quot;:1417,&quot;height&quot;:956,&quot;private&quot;:0,&quot;groups&quot;:null,&quot;tags&quot;:&quot;&quot;,&quot;created_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;updated_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;deleted_at&quot;:null}},{&quot;id&quot;:10,&quot;column_id&quot;:1,&quot;status&quot;:1,&quot;title&quot;:&quot;test&quot;,&quot;sub_title&quot;:&quot;test&quot;,&quot;author&quot;:&quot;test&quot;,&quot;source&quot;:&quot;test&quot;,&quot;keyword&quot;:&quot;&quot;,&quot;summary&quot;:&quot;test&quot;,&quot;thumb_pic_id&quot;:1,&quot;content&quot;:&quot;<p>test<\/p>&quot;,&quot;created_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;updated_at&quot;:&quot;2015-12-21 10:06:11&quot;,&quot;deleted_at&quot;:null,&quot;thumb_pic&quot;:{&quot;id&quot;:1,&quot;member_id&quot;:0,&quot;goods_id&quot;:0,&quot;order_id&quot;:0,&quot;name&quot;:&quot;6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;path&quot;:&quot;2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;full_path&quot;:&quot;http:\/\/7sbwdf.com1.z0.glb.clouddn.com\/2015\/02\/05\/ff654ad7_6Z_J9O13$(9UFE89X{OHTPH.jpg&quot;,&quot;extension&quot;:&quot;jpg&quot;,&quot;mime&quot;:&quot;image\/jpeg&quot;,&quot;size&quot;:203247,&quot;is_image&quot;:1,&quot;thumbnail&quot;:null,&quot;width&quot;:1417,&quot;height&quot;:956,&quot;private&quot;:0,&quot;groups&quot;:null,&quot;tags&quot;:&quot;&quot;,&quot;created_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;updated_at&quot;:&quot;2015-02-05 22:24:44&quot;,&quot;deleted_at&quot;:null}}]}">
+    <div class="page page-main page-topic-index">
+        <!--header-->
+        @@include('../_common/header/header.html')
+        <!--/header end-->
+        <div class="container container-border-bottom">
+            <div class="container__wrap">
+                <div class="layout-fixed-inner">
+                    <div class="container__main">
+                        <div class="container__main-inner u-clearfix">
+                            <!--nav-->
+                            <div class="nav">
+                                <ol class="nav__breadcrumb">
+                                    <li class="u-color_red u-f16 u-mr_15">梦想家</li>
+                                    <li>
+                                        <a href="/">首页</a><span>/</span>
+                                    </li>
+                                    <li>
+                                        <a href="/">斯品生活</a><span>/</span>
+                                    </li>
+                                    <li class="_active">梦想家</li>
+                                </ol>
+                            </div>
+                            <!--/nav end-->
+                            <div class="main-layout u-wrap u-clearfix">
+                                <aside class="topic-side-bar u-fl width-400 u-pr_40">
+                                    <div class="u-pt_10 u-pb_20">
+                                        <img src="/images/topic/topic-index-01.png" alt="" />
+                                    </div>
+                                    <ul>
+                                        <li class="u-mb_40">
+                                            <a href="#">
+                                                <img src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/12/22/5678b95764d5a4196809478.jpg?imageView2/2/w/360/h/360/q/100" />
+                                            </a>
+                                            <a href="#" class="u-black-link u-block u-clearfix u-mt_15">
+                                                <div class="topic-title-bg-01 u-fl u-f18">渐变背景墙,巧用色彩让家焕出精彩.</div>
+                                            </a>
+                                            <div class="u-mt_15 u-color_gray">打造一面时尚独特的渐变背景墙，打破单色墙面的单一和乏味，焕新的空间能够让我们去创造生活中的更多可能。</div>
+                                            <a href="#" class="underline-link u-mt_20">阅读更多</a>
+                                        </li>
+                                    </ul>
+                                </aside>
+                                @@include('./_include/topic-aside.html')
+
+                                <div class="topic-list">
+                                    <!-- <ul>
+                                        <li class="u-mb_40">
+                                            <a href="#">
+                                                <img src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/12/22/5678b95764d5a4196809478.jpg?imageView2/2/w/360/h/360/q/100" />
+                                            </a>
+                                            <a href="#">
+                                                <h3 class="u-f30">渐变背景墙,巧用色彩让家焕出精彩.</h3>
+                                            </a>
+                                            <div class="u-f14 u-color_gray">打造一面时尚独特的渐变背景墙，打破单色墙面的单一和乏味，焕新的空间能够让我们去创造生活中的更多可能。</div>
+                                            <a href="#" class="underline-link u-mt_20">阅读更多</a>
+                                        </li>
+                                    </ul>
+                                    <div class="topic-load-more u-f14">
+                                        <a href="javascript:;">发现更多</a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        @@include('../_common/footer/footer.html')
+        <!-- /footer -->
+    </div>
+    <script src="/config.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/topic-index.js"></script>
+</body>
+</html>

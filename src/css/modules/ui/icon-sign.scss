@@ -1,0 +1,202 @@
+/**
+ * @tofishes
+ * 单独的图标定义
+ * 用法：  i.icon.i-xxx
+ */
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    height: 20*$px;
+    width: 20*$px;
+    background-repeat: no-repeat;
+}
+.i-comment {
+    width: 20*$px;
+    height: 15*$px;
+    background-image: url(~images/icon/icon-comment.png)
+}
+.i-contact {
+    width: 30*$px;
+    height: 20*$px;
+    background-image: url(~images/icon/icon-contact.png)
+}
+.i-arrow {
+    width: 20*$px;
+    height: 15*$px;
+    background-image: url(~images/icon/icon-arrow.png)
+}
+@mixin b-icon($icon) {
+    width: 110px;
+    height: 110px;
+    background-image: url(~images/icon/#{$icon}.png);
+}
+.i-b-certified {
+    @include b-icon(icon-b-certified);
+}
+.i-b-thirty {
+    @include b-icon(icon-b-thirty);
+}
+.i-b-warranty {
+    @include b-icon(icon-b-warranty);
+}
+.i-b-five {
+    @include b-icon(icon-b-five);
+}
+@mixin h-icon($icon) {
+    width: 30px;
+    height: 30px;
+    background-image: url(~images/icon/#{$icon}.png);
+}
+.i-h-certified {
+    @include h-icon(icon-h-certified);
+}
+.i-h-thirty {
+    @include h-icon(icon-h-thirty);
+}
+.i-h-warranty {
+    @include h-icon(icon-h-warranty);
+}
+.i-h-five {
+    @include h-icon(icon-h-five);
+}
+.i-shield {
+    margin-top: -2px;
+    height: 18px;
+    background-image: url(~images/slice/icon-shield-green.png)
+}
+.i-real, .i-thirty, .i-warranty {
+    width: 34px;
+    height: 34px;
+}
+.i-real {
+    background-image: url(~images/slice/icon-real.png);
+}
+.i-thirty {
+    width: 37px;
+    background-image: url(~images/slice/icon-thirty.png);
+}
+.i-warranty {
+    background-image: url(~images/slice/icon-warranty.png);
+}
+.i-real-small {
+    background-image: url(~images/slice/icon-real-small.png);
+}
+.i-thirty-small {
+    background-image: url(~images/slice/icon-thirty-small.png);
+}
+.i-warranty-small {
+    background-image: url(~images/slice/icon-warranty-small.png);
+}
+.i-weixin-small {
+    width: 21px;
+    background-image: url(~images/slice/icon-weixin-small.png);
+}
+.i-weibo-small {
+    width: 22px;
+    background-image: url(~images/slice/icon-weibo-small.png);
+}
+.i-smile {
+    background-image: url(~images/slice/icon-smile.png);
+    width: 22*$px;
+    height: 22*$px;
+
+    &:hover {
+        background-image: url(~images/slice/icon-smile-active.png);
+    }
+}
+.i-img {
+    background-image: url(~images/slice/icon-img.png);
+    width: 21*$px;
+    height: 21*$px;
+
+    &:hover {
+        background-image: url(~images/slice/icon-img-active.png);
+    }
+}
+.i-heart {
+    background-image: url(~images/slice/icon-heart.png);
+    width: 23*$px;
+
+    &:hover {
+        background-image: url(~images/slice/icon-heart-active.png);
+    }
+}
+a:hover .i-heart {
+    background-image: url(~images/slice/icon-heart-active.png);
+}
+.i-phone {
+    background-image: url(~images/slice/icon-phone.png);
+    height: 12*$px;
+}
+
+.i-emoji-happy {
+    background-image: url(~images/slice/emoji-happy.png);
+    width: 22px;
+    height: 18px;
+}
+.i-emoji-common {
+    background-image: url(~images/slice/emoji-common.png);
+    width: 22px;
+    height: 22px;
+}
+.i-emoji-bad {
+    background-image: url(~images/slice/emoji-bad.png);
+    width: 22px;
+    height: 22px;
+}
+.i-emoji-cry {
+    background-image: url(~images/slice/emoji-cry.png);
+    width: 22px;
+    height: 22px;
+}
+.i-talk {
+    background-image: url(~images/slice/icon-talk.png);
+    width: 27px;
+    height: 26px;
+}
+.i-write {
+    background-image: url(~images/slice/icon-write.png);
+    height: 24px;
+}
+
+.sign-free-express,
+.sign-free-install,
+.sign-derate {
+    position: relative;
+    display:inline-block;
+    height: 20*$px;
+
+    &:after {
+        content: '\20';
+        position: absolute;
+        top: -8*$px;
+        width: 55*$px;
+        height: 45*$px;
+    }
+}
+.sign-free-express:after {
+    right: -60*$px;
+    background: url(~images/promotion/sign-free-express-ex.png?v1)
+}
+.sign-free-install:after {
+    right: -60*$px;
+    background: url(~images/promotion/sign-free-install.png?v1)
+}
+.sign-derate:after {
+    left: -60*$px;
+    /* background: url(../images/promotion/sign-derate.png) no-repeat; */
+    /* 临时修改 */
+    background: url(~images/promotion/sign-free-install.png?v1)
+}
+
+.service-protection {
+    display: inline-block;
+    padding-left: 35px;
+    height: 31px;
+    color: inherit;
+    background: url(~images/icon/service-mark.png) no-repeat;
+
+    &:hover {
+        color: inherit;
+    }
+}

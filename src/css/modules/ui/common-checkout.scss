@@ -1,0 +1,271 @@
+//订单结算
+.order-info__dropdown {
+    width: 360*$px;
+    line-height: 38*$px;
+}
+
+.order-info-address {
+    padding: 0 20*$px;
+    margin: 20*$px;
+}
+
+.order-info-date {
+    margin: 20*$px;
+}
+
+.order-info-date {
+    .form-field {
+        position: relative;
+    }
+    .form-text {
+        width: 100% !important;
+        background: transparent;
+        color: $color_gold;
+    }
+    .tip {
+        position: absolute;
+        top: 0;
+        left: 150*$px;
+        line-height: 42*$px;
+        z-index: -1;
+    }
+}
+
+.cart-table.order-cart-table {
+    border: 0 none;
+    .cart-table {
+        &__bd,&__ft{
+          padding: 0;
+        }
+        &__item {
+            padding: 20*$px;
+        }
+
+        &__col-01 {
+
+        }
+        &__col-02 {
+            width: 380/1120*100%;
+        }
+        &__col-03 {
+            width: 176/1120*100%;
+        }
+        &__col-04 {
+            width: 212/1120*100%;
+        }
+        &__col-05 {
+            width: 212/1120*100%;
+        }
+        &__col-06 {
+            width: 134/1120*100%;
+        }
+        &__col-07 {
+
+        }
+    }
+    .collocation-item {
+        &__hd {
+            padding-left: 20*$px;
+            padding-right: 20*$px;
+        }
+    }
+}
+
+.order-cart-table {
+    &__count {
+        &-title {
+            margin-right: 64*$px;
+            color: $color_gray;
+            text-align: right;
+        }
+        &-price {
+        }
+        &-line {
+            line-height: 26*$px;
+            .iconfont {
+                margin-right: 50*$px;
+            }
+        }
+    }
+    &__other-info {
+        width: 700*$px;
+    }
+    &__options {
+        width: 100%;
+    }
+    &__options-hd {
+        font-size: 12*$px;
+        color: $color_black;
+        .tip {
+            padding-left: 20*$px;
+            color: $color_gray;
+            &._active {
+                color: $color_emphasis;
+            }
+        }
+    }
+    &__options-bd {
+        font-size: 12*$px;
+        color: $color_gray_text;
+        .form-field {
+            line-height: 40*$px;
+        }
+    }
+    .form-textarea {
+        box-sizing: border-box;
+        width: 100%;
+    }
+}
+
+@mixin hoverEffect {
+    &:hover {
+        border-color: $color_gray_border;
+        &:before {
+            background: url("~images/slice/type_hover.png") no-repeat 0 0;
+        }
+    }
+    &._active {
+        border-color: $color_gold;
+        color: $color_black;
+        &:hover {
+            border-color: $color_gold_hover;
+            &:before {
+                background: url("~images/slice/type_selected.png") no-repeat 0 0;
+            }
+        }
+    }
+}
+
+
+
+//优惠券
+.order-coupon {
+    margin-left: 21*$px;
+    &__bd {
+        margin-right: -10*$px;
+    }
+    &__ft {
+        margin: 12*$px 0;
+    }
+    .ui-tab {
+        margin: 0;
+        &__item {
+            font-size: 12*$px;
+        }
+    }
+    &__list {
+        width: 100%;
+        margin-top: 10*$px;
+    }
+    .item {
+        &-name {
+            display: inline-block;
+            max-width: 50%;
+            font-size: 14px;
+            font-weight: 600;
+            color: $color_black;
+        }
+        &-value {
+            display: inline-block;
+            max-width: 50%;
+            font-size: 14px;
+            font-weight: 600;
+            color: $color_emphasis;
+        }
+        &-req {
+            display: inline-block;
+            width: 100%;
+            padding: 8*$px 0;
+            color: $color_gray;
+        }
+        &-vd {
+            color: $color_gray;
+        }
+    }
+    .ui-lg-checkbox {
+        float: left;
+        box-sizing: border-box;
+        width: 31.6%;
+        padding: 10*$px;
+        margin-right: 10*$px;
+        margin-bottom: 10*$px;
+        box-shadow: 0 1px 2px 2px rgba(234, 234, 234, 0.3);
+        @include hoverEffect;
+        //without hover style
+        &._without-hover {
+            cursor: default;
+            &:hover {
+                border-color: $color_gray_border;
+            }
+            &._active, &._active:hover {
+                border-color: $color_gold_hover;
+            }
+        }
+        &._disable, &.disabled {
+            border-color: $color_line;
+            &:hover {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.order-invoice {
+    margin-left: 21*$px;
+    .invoice-title {
+        font-weight: 600;
+    }
+    .order-info-address {
+        &__checkbox {
+            box-shadow: 0 1px 2px 2px rgba(234, 234, 234, 0.3);
+            @include hoverEffect;
+            &:hover {
+                color: $color_black;
+            }
+        }
+    }
+}
+
+/* 费用明细列表 */
+.cost-list {
+    text-align: right;
+    line-height: 1.5;
+    margin-top: 10*$px;
+    li {
+        position: relative;
+        margin: 0 0 8*$px;
+
+        > * {
+            display: inline-block;
+        }
+    }
+    .label {
+        color: $color_gray_text;
+    }
+    em {
+        margin-left: 60*$px;
+        width: 145*$px;
+        text-align: left;
+    }
+    .help {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 18*$px;
+        color: $color_black;
+    }
+}
+
+.point-use {
+    margin: 10*$px 21*$px;
+    line-height: 30*$px;
+
+    input {
+        box-sizing: border-box;
+        padding: 5*$px 10*$px;
+        width: 150*$px;
+        line-height: 16*$px;
+    }
+}

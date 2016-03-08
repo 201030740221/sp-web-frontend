@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>评价晒单</title>
+    @@include('../_common/header/head.html')
+    @@include('./_include/meta.html')
+</head>
+<body>
+<div class="page page-user-points layout-fixed" data-module="">
+    <!--header-->
+    @@include('../_common/header/header.html')
+    <!--/header end-->
+
+    <main class="wrap">
+        <!--nav-->
+        @@include('../_common/nav/nav.html', { "navName":"卧室" } )
+        <!--/nav end-->
+        <div class="main-layout u-wrap u-clearfix">
+            <div class="main-layout-sidebar">
+                <div class="center-menu">
+                    <a class="center-menu__item" href="#">我的订单</a>
+                    <a class="center-menu__item" href="#">我的购物车</a>
+                    <a class="center-menu__item" href="#">收藏夹</a>
+                    <a class="center-menu__item " href="#">我的积分</a>
+                    <a class="center-menu__item" href="#">我的优惠券</a>
+                    <a class="center-menu__item _active" href="#">评价晒单</a>
+                    <a class="center-menu__item" href="#">用户信息</a>
+                </div>
+            </div>
+            <div class="main-layout-container">
+                <div class="ui-tab u-pb_10 u-clearfix">
+                    <a class="ui-tab__item _active" href="#">待评价商品( <span class="u-color_red">2</span> )</a>
+                    <a class="ui-tab__item" href="#">已评价商品 ( <span class="u-color_red">2</span> )</a>
+                </div>
+
+                <!--无可评价订单-->
+                <div class="comment-tip">说明：评价晒单可以获得一定数量的积分奖励。积分可在积分商城兑换礼品或者购物使用。</div>
+                <div class="comment-empty">
+                    <h1>抱歉，您暂无可评价的商品</h1>
+                    <p>建议您<a href="http://www.sipin.com/">去首页</a>挑选喜欢的商品</p>
+                </div>
+                <!--无可评价订单 end-->
+
+                <!--未评价-->
+                <div class="comment-list u-pb_20">
+                    <div class="comment-list__hd u-clearfix">
+                        <span class="col-1">商品信息</span>
+                        <span class="col-2">订单信息</span>
+                        <span class="col-3">操作</span>
+                    </div>
+                    <div class="comment-list__item" data-goods-id="11" data-order-no="22">
+                        <div class="u-clearfix">
+                            <div class="col-1">
+                                <img class="u-fl" src="../images/goodsTemplate/tpl_01.jpg" alt=""/>
+
+                                <h1>MANDA L曼德尔床架</h1>
+
+                                <p class="u-color_gray">胡桃木饰面+茶镜 1200*500*1800</p>
+
+                                <p class="u-color_gold">¥ 3,000</p>
+                            </div>
+                            <div class="col-2">
+                                <p class="u-pb_5"><span class="u-color_gray">订单编号：</span>13593434930443
+                                </p>
+
+                                <p><span class="u-color_gray">购买时间：</span>2015-08-12 10:49:37</p>
+                            </div>
+                            <div class="col-3">
+                                <p class="u-pb_5"><a class="j-create u-color_black" href="javascript:">评价晒单</a>
+                                </p>
+
+                                <p><a class="u-color_black" href="#">还要买</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-list__item" data-goods-id="14" data-order-no="25">
+                        <div class="u-clearfix">
+                            <div class="col-1">
+                                <img class="u-fl" src="../images/goodsTemplate/tpl_01.jpg" alt=""/>
+
+                                <h1>MANDA L曼德尔床架</h1>
+
+                                <p class="u-color_gray">胡桃木饰面+茶镜 1200*500*1800</p>
+
+                                <p class="u-color_gold">¥ 3,000</p>
+                            </div>
+                            <div class="col-2">
+                                <p class="u-pb_5"><span class="u-color_gray">订单编号：</span>13593434930443
+                                </p>
+
+                                <p><span class="u-color_gray">购买时间：</span>2015-08-12 10:49:37</p>
+                            </div>
+                            <div class="col-3">
+                                <p class="u-pb_5"><a class="j-create u-color_black" href="javascript:">评价晒单</a>
+                                </p>
+
+                                <p><a class="u-color_black" href="#">还要买</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--未评价 end-->
+
+                <!--已评价-->
+                <div class="comment-list u-pb_20">
+                    <div class="comment-list__hd u-pb_10 u-clearfix">
+                        <span class="col-1">商品信息</span>
+                        <span class="col-2">评价详情</span>
+                        <span class="col-3">备注</span>
+                    </div>
+                    <div class="comment-list__item">
+                        <div class="u-clearfix">
+                            <div class="col-1">
+                                <img class="u-fl" src="../images/goodsTemplate/tpl_01.jpg" alt=""/>
+
+                                <h1>MANDA L曼德尔床架</h1>
+
+                                <p class="u-color_gray">胡桃木饰面+茶镜 1200*500*1800</p>
+
+                                <p class="u-color_gold">¥ 3,000</p>
+                            </div>
+                            <div class="col-2">
+                                <p class="u-pb_20 u-color_cyan">好评</p>
+                                <p>很漂亮很可爱，面料也很不错，手感很好，老婆很喜欢。</p>
+                                <p class="u-color_gray">2015-03-03 14:40</p>
+                                <div class="comment-list__img u-clearfix">
+                                    <div class="img-wrap"><img src="/images/goodsTemplate/tpl_01.jpg" alt=""></div>
+                                    <div class="img-wrap"><img src="/images/goodsTemplate/tpl_02.jpg" alt=""></div>
+                                    <div class="img-wrap"><img src="/images/goodsTemplate/tpl_03.jpg" alt=""></div>
+                                    <div class="img-wrap"><img src="/images/goodsTemplate/tpl_04.jpg" alt=""></div>
+                                </div>
+                                <div><span class="u-label">毛毯</span><span class="u-label">文艺</span></div>
+                            </div>
+                            <div class="col-3">
+                                <p class="u-pb_5 u-color_cyan">审核中</p>
+                                <p class="u-pb_5 u-color_red">审核不通过</p>
+                                <p class="u-pb_5"><a class="j-del u-color_black" href="#">删除</a></p>
+                                <p class="u-pb_5">完成</p>
+                                <p class="u-pb_5">获得300积分</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--已评价 end-->
+
+                <!--pager-->
+                <div class="u-clearfix u-mlr_20 u-mb_20">
+                    <div class="pages u-fr">
+                        <a href="#" class="pages__prev pages__btn btn btn-primary _disable">
+                            &#xf0115;</a>
+                        <a href="#" class="pages__next pages__btn btn btn-primary">&#xf0116;</a>
+                    </div>
+                </div>
+                <!--/pager end-->
+            </div>
+        </div>
+    </main>
+    @@include('../_common/footer/footer.html')
+</div>
+@@include('../_common/footer/foot.html')
+<script src="/config.js"></script>
+<script src="/js/member-comment.js"></script>
+</body>
+</html>

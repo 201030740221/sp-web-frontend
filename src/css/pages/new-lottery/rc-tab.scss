@@ -1,0 +1,13 @@
+@import "../../modules/settings/_setting_pages";
+
+.rc-tabs {
+    .item {
+        float: left;
+        display: inline-block;
+        margin: 5*$px 10*$px;
+        cursor: pointer;
+        &.active {
+            color: $color_gold;
+        }
+    }
+}

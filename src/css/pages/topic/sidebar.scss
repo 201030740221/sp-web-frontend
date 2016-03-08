@@ -1,0 +1,50 @@
+@import "../../modules/settings/_setting_pages";
+.topic{
+    //side-bar
+    &-side-bar{
+        &.width-400{
+            width: 400/1600*100%;
+            padding-right: 40*$px;
+        }
+        &.width-420{
+            width: 420/1600*100%;
+            padding-left:40*$px;
+        }
+        ul{
+            overflow: hidden;
+            img{
+                display: block;
+                width:100%;
+            }
+            h4{
+                font-weight: normal;
+                margin-bottom: 6px;
+            }
+        }
+        .u-highlight{
+            color: #9d6050;
+        }
+        table{
+            h4{
+                font-size:16px;
+            }
+        }
+        tr{
+            td{
+                width: 140/380*100%;
+                background: #fff;
+
+                &:first-child{
+                    width: 240/380*100%;
+                }
+            }
+        }
+
+        .has-border-bottom{
+            border-bottom: 2px solid $color_gray_border;
+            &.last-item{
+                border-bottom-width: 5px;
+            }
+        }
+    }
+}

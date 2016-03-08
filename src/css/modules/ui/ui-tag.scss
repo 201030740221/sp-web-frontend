@@ -1,0 +1,61 @@
+.ui-tag {
+    position: relative;
+    display: inline-block;
+    padding: 3*$px 15*$px;
+    margin-right: 5*$px;
+    color: $color_black;
+    border: 1px dashed $color_gray;
+    cursor: pointer;
+    &._active {
+        border-color: $color_gold;
+        border-style: solid;
+        color: $color_gold;
+    }
+    &:hover {
+        border-color: $color_gold_hover;
+        border-style: solid;
+        color: $color_gold_hover;
+    }
+    &:hover,
+    &._active {
+        &:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 20*$px;
+            height: 20*$px;
+            background: url("~images/slice/type_selected.png") no-repeat 0 0;
+        }
+    }
+    //without hover style
+    &._without-hover {
+        cursor: default;
+        &:hover {
+            border-color: $color_gray_border;
+            color: $color_black;
+        }
+        &:hover {
+            &:before {
+                display: none;
+            }
+        }
+        &._active,
+        &._active:hover {
+            border-color: $color_gold_hover;
+            color: $color_gold_hover;
+            &:before {
+                display: block;
+            }
+        }
+    }
+    &._disable, &.disabled {
+        cursor: default;
+        border-color: transparent;
+        &:hover {
+            &:before {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+/* 多个页面用到... */
+/*购物车*/
+.header-cart-progress{
+  // margin-top: 30px;
+  // margin-right: -130px;
+  width:40%;
+  &._with-5-step{
+    width:760/1160*100%;
+  }
+}
+.main-title{
+  line-height:30*$px;
+  padding:24*$px 0 18*$px;
+  margin-left: 20*$px;
+  margin-right: 20*$px;
+
+  &._with-border-bottom{
+    border-bottom:1px solid $color_gray_border;
+  }
+}
+/* 购物车右上角数量 */
+.cart-goods-quantity {
+  position: relative;
+
+  sup {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: -10*$px;
+    min-width: 20*$px;
+    height: 20*$px;
+    line-height: 20*$px;
+    border-radius: 10*$px;
+    background: $color_emphasis;
+    color: #fff;
+    text-align: center;
+    font-size: 12*$px;
+
+    .global-sidebar & {
+      right: 2px;
+    }
+
+  }
+}
+
+.collocation-item {
+  &__hd {
+    padding-top: 10*$px;
+    padding-bottom: 10*$px;
+    line-height: 44*$px;
+  }
+  .amount-box {
+    line-height: 1.5;
+  }
+  &__bd {
+    border-top: solid 4px $color_gray_border;
+    border-bottom: solid 4px $color_gray_border;
+    .amount-box__input input {
+      padding: 0;
+      border: none;
+    }
+  }
+  .cart-table__item {
+    border-bottom: 1px dashed $color_gray_border;
+    &:last-of-type {
+      border: none;
+    }
+  }
+}

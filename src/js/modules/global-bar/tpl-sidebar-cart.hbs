@@ -1,0 +1,101 @@
+<div id="global-sidebar-cart" class="global-sidebar-cart">
+    <p class="sidebar-head cart-head padding">
+        <span class="ui-checkbox j-checkbox-check-all" _checked='true'>全选</span>
+        <a class="u-fr" href="/cart" target="_blank">全屏查看</a>
+    </p>
+
+    <div class="sidebar-content cart-content">
+        <p id="sidebar-tip-cart" class="sidebar-tip"><a class="login-trigger u-fr">现在登录</a>登录即可永久保存购物车商品</p>
+
+        <table class="cart-goods-items">
+            {{#each items}}
+                {{#if is_multiple}}
+                    <tbody class="item cart-collocation" data-item-id="{{id}}" data-on-sale="{{on_sale}}" data-price="{{price}}"
+                           data-quantity={{quantity}} data-total-quantity={{total_quantity}}>
+                    <tr class="cart-collocation__hd">
+                        <td colspan="3">
+                            <span class="ui-checkbox" _checked={{#if on_sale}}true{{else}}false{{/if}}></span>
+                            {{name}}（共 <span class="ui-emphasis">{{total_quantity}}</span> 件商品）
+                        </td>
+                        <td>
+                            <a class="delete-item">删除</a>
+                        </td>
+                    </tr>
+                    <tr class="cart-collocation__hd">
+                        <td></td>
+                        <td class="amount" colspan="2">
+                            <span class="u-color_gold u-mr_5 u-fl">数量：{{quantity}}</span>
+                            <a href="javascript:;" class="amount__btn amount__up u-mr_5 u-fl">&#xe628;</a>
+                            <a href="javascript:;" class="amount__btn amount__down u-fl">&#xe629;</a>
+                        </td>
+                        <td class="cart-table__item-price">¥ {{price}}</td>
+                    </tr>
+                    {{#each items}}
+                        <tr class="cart-collocation__item">
+                            <td></td>
+                            <td>
+                                <a href="/item/{{sku}}.html" target="_blank">
+                                    <img src="{{image}}?imageView2/2/w/60/h/60/q/80" alt="{{title}}"/>
+                                </a>
+                            </td>
+                            <td class="v-top">
+                                <a class="u-block u-mb_10" href="/item/{{sku}}.html" target="_blank">{{title}}</a>
+                                {{#unless on_sale}}
+                                <span class="cart-table__item-state">已下架</span>
+                                {{/unless}}
+                                <div class="amount u-clearfix">
+                                    <span class="u-color_gold u-mr_5 u-fl">数量：{{quantity}}</span>
+                                </div>
+                            </td>
+                            <td class="cart-table__item-price">
+                                <!--<a class="delete-item"> </a>-->
+                                <span class="item-total-price u-block u-mt_20">¥ {{price}}</span>
+                            </td>
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                {{else}}
+                    <tbody class="item" data-item-id="{{id}}" data-on-sale="{{items.on_sale}}" data-price="{{price}}" data-quantity={{items.quantity}} data-total-quantity={{items.quantity}}>
+                    <tr>
+                        <td>
+                            <span class="ui-checkbox" _checked={{#if items.on_sale}}true{{else}}false{{/if}}></span>
+                        </td>
+                        <td>
+                            <a href="/item/{{items.sku}}.html" target="_blank">
+                                <img src="{{items.image}}?imageView2/2/w/60/h/60/q/80" alt="{{items.title}}"/>
+                            </a>
+                        </td>
+                        <td class="v-top">
+                            <a class="u-block u-mb_10" href="/item/{{items.sku}}.html" target="_blank">{{items.title}}</a>
+                            {{#unless items.on_sale}}
+                            <span class="cart-table__item-state">已下架</span>
+                            {{/unless}}
+                            <div class="amount u-clearfix">
+                                <span class="u-color_gold u-mr_5 u-fl">数量：{{items.quantity}}</span>
+                                <a href="javascript:;" class="amount__btn amount__up u-mr_5 u-fl">&#xe628;</a>
+                                <a href="javascript:;" class="amount__btn amount__down u-fl">&#xe629;</a>
+                            </div>
+                        </td>
+                        <td class="v-top cart-table__item-price">
+                            <a class="delete-item">删除</a>
+                            <span class="item-total-price u-block u-mt_10">¥ {{price}}</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                {{/if}}
+            {{/each}}
+        </table>
+
+    </div>
+    <div class="sidebar-foot cart-foot">
+        <p class="total-info padding">
+            <span class="u-fr">总计（不含送装）: <span id="sidebar-goods-total-price"
+                                               class="u-color_price">￥ {{total_price}}</span></span>
+            共<em id="sidebar-goods-total-pieces"></em>件商品
+        </p>
+
+        <p class="u-text-center">
+            <button id="sidebar-cart-checkout" class="btn btn-color-orange j-cart-submit">去结算</button>
+        </p>
+    </div>
+</div>

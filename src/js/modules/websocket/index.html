@@ -1,0 +1,51 @@
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>sipin-pusher test</title>
+  <script type="text/javascript">
+  //WebSocket = null;
+  </script>
+  <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css" rel="stylesheet">
+  <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js" rel="stylesheet">
+  <!-- https://github.com/swfobject/swfobject -->
+  <script type="text/javascript" src="lib/swfobject-2.3.min.js"></script>
+  <!-- https://github.com/gimite/web-socket-js -->
+  <script type="text/javascript" src="lib/web_socket.js"></script>
+
+  <script type="text/javascript" src="js/client.js"></script>
+  <script type="text/javascript">
+    function show_msg(data) {
+    	//console.log('from_client_id:'+data['from_client_id'] + ' to_client_id:' + data['to_client_id'] + '消息:' +data['content'] + '时间:' + data['time']);
+      if(data['type']=='broadcast'){
+        console.log('信息:'+flashSale.constantNames[data['code']]);
+      }else if (data['type']=='loot'){
+        console.log('抢购:'+flashSale.constantNames[data['code']]);
+      }
+    }
+
+    function send_loot() {
+      ws.send(JSON.stringify({"type":"loot","userKey":"1989","flashSaleId":"123"}));
+    }
+    function send_status() {
+      ws.send(JSON.stringify({"type":"status","userKey":"1989","flashSaleId":"123"}));
+    }
+
+  </script>
+</head>
+<body>
+    <div class="container">
+	    <div class="row clearfix">
+	        <div class="col-md-1 column">
+	        </div>
+	        <div class="col-md-10 column">
+	        <br>
+	        <h3>sipin-pusher</h3>
+          <input type="button" value="刷新状态" onclick='send_status()' />
+          <input type="button" value="抢购" onclick='send_loot()' />
+	        </div>
+	        <div class="col-md-1 column">
+	        </div>
+	    </div>
+    </div>
+</body>
+</html>

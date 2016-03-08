@@ -1,0 +1,119 @@
+@import "../../modules/settings/_setting_pages";
+
+$line-size: 16px;
+$drop-width: 150px;
+.drop-filter {
+    line-height: $line-size;
+
+    > li {
+        position: relative;
+        z-index: 3;
+        display: inline-block;
+        margin: 0 80px 15px 0;
+
+        &.active {
+            z-index: 4;
+
+            .arrow {
+                border-color: $color_gray_light;
+                border-bottom-color: #fff;
+                background: #fff;
+            }
+        }
+    }
+
+    .name {
+        margin-right: 5px;
+        font-size: 14px;
+    }
+
+    .arrow {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        width: $line-size;
+        height: $line-size;
+        border: 1px solid $color_black;
+        font-style: normal;
+        text-align: center;
+
+        &:before {
+            content: '\f0118';
+        }
+    }
+
+    .drop-name {
+        cursor: pointer;
+    }
+    
+    .drop-con {
+        display: none;
+        position: absolute;
+        top: $line-size - 1;
+        left: 0;
+        padding: 10px;
+        min-width: $drop-width;
+        border: 1px solid $color_gray_light;
+        background: #fff;
+
+        .row {
+            margin: 0 0 10px;
+        }
+
+        .actions {
+            padding-top: 10px;
+            border-top: 1px solid $color_gray_light;
+            text-align: center;
+
+            > * {
+                margin: 0 15px;
+                color: inherit;
+
+                &:hover {
+                    color: $color_gold_hover;
+                }
+            }
+        }
+    }
+}
+
+.btn-major {
+    padding: 5px 50px;
+    background: $color_gold;
+    color: #fff;
+    font-size: 14px;
+
+    &:hover {
+        background: $color_gold_hover;
+    }
+}
+
+.theme-filter {
+    padding: 15px 0 0;
+    border: 0 solid $color_line;
+    border-width: 1px 0;
+}
+
+.theme-load {
+    padding: 10px 0 0;
+    text-align: center;
+    font-size: 14px;
+
+    .btn-major {
+        min-width: 480px;
+    }
+
+    .complete {
+        display: none;
+    }
+
+    .pager {
+        display: none;
+
+        > a {
+            position: static;
+            margin: 0 2px;
+            background: #fff;
+        }
+    }
+}

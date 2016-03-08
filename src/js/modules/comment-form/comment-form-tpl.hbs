@@ -1,0 +1,61 @@
+<div class="comment-form u-mt_20">
+    <form class="form form-horizontal">
+        <div class="form-item">
+            <label class="form-label" for="">
+                <span class="form-required">*</span>
+                商品评价:
+            </label>
+
+            <div class="form-field u-color_black form-radios">
+                <span class="ui-radio _active" data-rate="0" _checked="true"> 好评</span>
+                <span class="ui-radio" data-rate="1"  _checked="false"> 中评</span>
+                <span class="ui-radio" data-rate="2" _checked="false"> 差评</span>
+            </div>
+        </div>
+        <div class="form-item">
+            <label for="content" class="form-label">
+                <span class="form-required">*</span>
+                评价详情:
+            </label>
+
+            <div class="form-field">
+                <textarea class="form-textarea" name="content" minlength="10" required></textarea>
+                <p class="tip-1">10-500字，还可以输入<span class="ui-emphasis">500</span> 字</p>
+            </div>
+        </div>
+        <div class="form-item" style="display: none;">
+            <label for="comment-tags" class="form-label">
+                商品印象:
+            </label>
+
+            <div class="form-field">
+                <div class="tags">
+                </div>
+            </div>
+        </div>
+        <div class="form-item">
+            <label for="comment-file" class="form-label">
+                我要晒单:
+            </label>
+
+            <div class="form-field">
+                <!--<input class="form-file" type="file"/>-->
+                <div class="upload-picker u-fl">上传</div>
+
+                <p class="tip-2">支持的格式：<span class="ui-emphasis">JPG, PNG</span>；最大不超过<span
+                        class="ui-emphasis">2MB</span>；建议图片大小600×600 像素.</p>
+            </div>
+            <div class="form-field img-preview u-mt_20 u-clearfix">
+            </div>
+        </div>
+
+        <div class="form-item form-submit u-mt_20">
+            <div class="form-field">
+                <button class="submit btn btn-primary">立即评价</button>
+                <span class="j-anonymous ui-checkbox" _checked=true>匿名评价</span>
+                <span class="u-pl_10 u-pr_10">|</span>
+                <a class="j-cancel u-color_black" href="javascript:">取消评价</a>
+            </div>
+        </div>
+    </form>
+</div>

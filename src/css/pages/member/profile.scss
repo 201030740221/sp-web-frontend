@@ -1,0 +1,66 @@
+@import "../../modules/settings/_setting_pages";
+
+//用户基础信息
+.user-info {
+    margin: 0 20*$px;
+    &__hd {
+        font-size: 14*$px;
+        line-height: 1;
+        padding: 20*$px 0 10*$px;
+    }
+    &__bd {
+
+    }
+    &__item {
+        line-height: 40*$px;
+        margin-bottom: 20*$px;
+        position: relative;
+    }
+    &__title {
+        color: $color_gray_text;
+        @extend %float;
+    }
+    &__content {
+        margin-left: 5em;
+        max-width: 524*$px;
+    }
+    &__operate {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &__tips {
+        position: absolute;
+        top: 0;
+        right: 160*$px;
+        color: $color_gray_text;
+    }
+}
+.user-info-address {
+    margin: 0 20*$px;
+    .address-list {
+        &__manage {
+            display: none;
+        }
+        &__checkbox {
+            cursor: default;
+            &:hover {
+                border-color: $color_gray_border;
+                color: $color_black;
+            }
+            &:hover {
+                &:before {
+                    display: none;
+                }
+            }
+            &._active,
+            &._active:hover {
+                border-color: $color_gold_hover;
+                color: $color_gold_hover;
+                &:before {
+                    display: block;
+                }
+            }
+        }
+    }
+}

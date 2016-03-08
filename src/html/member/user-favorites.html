@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>用户收藏</title>
+    @@include('../_common/header/head.html')
+    @@include('./_include/meta.html')
+
+<!--[if lt IE 9]>
+<script src="/js/ie.dev.js"></script>
+<![endif]-->
+
+    <link rel="stylesheet" href="/css/member.css">
+</head>
+<body>
+<div class="page page-favorites layout-fixed" data-module="favorites">
+    <!--header-->
+    @@include('../_common/header/header.html')
+    <!--/header end-->
+
+    <div class="container container-border-bottom">
+        <div class="container__wrap">
+            <div class="layout-fixed-inner">
+                <div class="container__main">
+                    <div class="container__main-inner u-clearfix">
+                        <!--nav-->
+                        @@include('../_common/nav/nav.html', { "navName":"卧室" } )
+                        <!--/nav end-->
+                        <div class="main-layout u-wrap u-clearfix">
+                            <div class="main-layout-sidebar">
+                                <!--<div class="center-menu">
+                                    <a class="center-menu__item" href="#">我的订单</a>
+                                    <a class="center-menu__item" href="#">我的购物车</a>
+                                    <a class="center-menu__item _active" href="#">收藏夹</a>
+                                    <a class="center-menu__item" href="#">我的积分</a>
+                                    <a class="center-menu__item" href="#">用户信息</a>
+                                </div>-->
+                                <div class="center-menu-v2">
+                                    <dl>
+                                        <dd>
+                                            <a href="#">购物车</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>个人中心</dt>
+                                        <dd class="_active">
+                                            <a href="#">我的订单</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">我的收藏</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">我的积分</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">我的评论</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">我的信息</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>客户服务</dt>
+                                        <dd>
+                                            <a href="#">售后服务</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">意见反馈</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="#">帮助中心</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="main-layout-container">
+                                <!--table-->
+                                <div class="cart-table favorites-table">
+                                    <div class="cart-table__hd">
+                                        <div class="cart-table__inner u-clearfix">
+                                            <div class="cart-table__col-01 u-fl">
+                                                <!--<span class="ui-checkbox j-checkbox-check-all">全选</span>-->
+                                            </div>
+                                            <div class="cart-table__col-02 u-fl u-text-center">商品描述</div>
+                                            <div class="cart-table__col-03 u-fl">单价</div>
+                                            <div class="cart-table__col-04 u-fl">
+                                                <select name="" id=""></select>
+                                            </div>
+                                            <div class="cart-table__col-05 u-fl">
+                                                <span class="u-ml_10">备注</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-table__bd">
+                                        <div class="cart-table__inner">
+                                            <div class="cart-table__item u-clearfix">
+                                                <div class="cart-table__col-01 u-fl">
+                                                    <span class="ui-checkbox"></span>
+                                                </div>
+                                                <div class="cart-table__col-02 u-fl">
+                                                    <div class="cart-table__item-img-box">
+                                                        <img src="/images/index/1F_01.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="cart-table__item-title">MANDA L曼德尔床架 <span class="cart-table__item-state">已下架</span></div>
+                                                    <div class="cart-table__item-desc">
+                                                        <span class="u-color_gray">商品编号: </span>
+                                                        <span class="u-color_black">1234567889</span>
+                                                    </div>
+                                                    <div class="cart-table__item-desc">胡桃木饰面+茶镜 1200*500*1800</div>
+                                                </div>
+                                                <div class="cart-table__col-03 u-fl">
+                                                    <div class="cart-table__item-price">¥ 3,000</div>
+                                                    <div class="cart-table__item-price-info u-del">¥ 3,500</div>
+                                                </div>
+                                                <div class="cart-table__col-04 u-fl">
+                                                    <div class="u-ml_20">有货</div>
+                                                </div>
+                                                <div class="cart-table__col-05 u-fl">
+                                                    <div class="favorites-table__remarks">
+                                                        <a class="u-black-link u-block" href="#">加入购物车</a>
+                                                        <a class="u-black-link u-block" href="#">取消收藏</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-table__ft">
+                                        <div class="cart-table__inner u-clearfix">
+                                            <div class="u-fl">
+                                                <span class="ui-checkbox j-checkbox-check-all">全选</span>
+                                                <a href="#" class="btn btn-primary-big u-ml_10">取消收藏</a>
+                                                <a href="#" class="btn btn-primary-big u-ml_20">加入购物车</a>
+                                            </div>
+                                            <div class="u-fr">
+                                                <div class="pages">
+                                                    <a href="#" class="pages__prev pages__btn btn btn-primary _disable">&#xf0115;</a>
+                                                    <a href="#" class="pages__next pages__btn btn btn-primary">&#xf0116;</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/table end-->
+                            </div>
+                            <!--/main-layout-container end-->
+                            <!--u-line-horizontal-->
+                            <div class="u-line-horizontal u-mlr_20 u-clear"></div>
+                            <!--/u-line-horizontal end-->
+                        </div>
+
+                        <div class="favorites-recommendation">
+                            <div class="main-title _with-border-bottom">
+                                <h2 class="u-f18">商品推荐</h2>
+                            </div>
+                            <!--recommendation-list-->
+                            <div class="goods-list recommendation-list swipe-container" id="j-swipe">
+                                <div id="referral-goods-list">
+                                    <ul class="swipe-wrap grid grid-4">
+                                        <li>
+                                            <a href="" class="thumb">
+                                                <img src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/04/30/5f03ce94_pic_show01.jpg?imageView/1/w/360/h/360/q/80" alt="">
+                                            </a>
+
+                                            <h3 class="title">
+                                                <span class="sale"><span class="desc">销量：</span><em>350</em></span>
+                                                <a href="#">MANDA L曼德尔床架</a>
+                                            </h3>
+
+                                            <div class="desc">
+                                                <p>胡桃木饰面+茶镜 1200*500*1800</p>
+                                            </div>
+                                        </li><li>
+                                            <a href="" class="thumb">
+                                                <img src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/02/08/3b030482_pic_show01.jpg" alt="">
+                                            </a>
+
+                                            <h3 class="title">
+                                                <span class="sale"><span class="desc">销量：</span><em>350</em></span>
+                                                <a href="#">MANDA L曼德尔床架</a>
+                                            </h3>
+
+                                            <div class="desc">
+                                                <p>胡桃木饰面+茶镜 1200*500*1800</p>
+                                            </div>
+                                        </li><li>
+                                            <a href="" class="thumb">
+                                                <img src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/02/08/3b030482_pic_show01.jpg" alt="">
+                                            </a>
+
+                                            <h3 class="title">
+                                                <span class="sale"><span class="desc">销量：</span><em>350</em></span>
+                                                <a href="#">MANDA L曼德尔床架</a>
+                                            </h3>
+
+                                            <div class="desc">
+                                                <p>胡桃木饰面+茶镜 1200*500*1800</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="" class="thumb">
+                                                <img src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/04/30/5f03ce94_pic_show01.jpg?imageView/1/w/360/h/360/q/80" alt="">
+                                            </a>
+
+                                            <h3 class="title">
+                                                <span class="sale"><span class="desc">销量：</span><em>350</em></span>
+                                                <a href="#">MANDA L曼德尔床架</a>
+                                            </h3>
+
+                                            <div class="desc">
+                                                <p>胡桃木饰面+茶镜 1200*500*1800</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="" class="thumb">
+                                                <img src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/02/08/3b030482_pic_show01.jpg" alt="">
+                                            </a>
+
+                                            <h3 class="title">
+                                                <span class="sale"><span class="desc">销量：</span><em>350</em></span>
+                                                <a href="#">MANDA L曼德尔床架</a>
+                                            </h3>
+
+                                            <div class="desc">
+                                                <p>胡桃木饰面+茶镜 1200*500*1800</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="" class="thumb">
+                                                <img src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/02/08/3b030482_pic_show01.jpg" alt="">
+                                            </a>
+
+                                            <h3 class="title">
+                                                <span class="sale"><span class="desc">销量：</span><em>350</em></span>
+                                                <a href="#">MANDA L曼德尔床架</a>
+                                            </h3>
+
+                                            <div class="desc">
+                                                <p>胡桃木饰面+茶镜 1200*500*1800</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--swipe actions-->
+                                <a id="referral-goods-prev" class="swipe-action swipe-prev iconfont">&#xf0115;</a>
+                                <a id="referral-goods-next" class="swipe-action swipe-next iconfont">&#xf0116;</a>
+                                <span class="mask-line"></span>
+                                <!--/swipe actions end-->
+                            </div>
+                            <!--/recommendation-list end-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../_common/footer/footer.html')
+</div>
+@@include('../_common/footer/foot.html')
+<script src="/js/member-favorite.js"></script>
+</body>
+</html>

@@ -1,0 +1,786 @@
+//是否启用水平表单样式
+$formHorizontalSwitch: true !default;
+
+/* 最小适配至ipad，最大到$max_page_width */
+.page {
+    min-width: $min_page_width;
+    margin: 0 auto;
+    .container {
+        margin: 0 auto;
+        max-width: $max_page_width;
+    }
+}
+/* 主要页面：首页，列表页，详情页，主题页，其他有同样背景页面 */
+.page-main {
+    background: $color_page_bg;
+}
+
+/* 专题模板设置 */
+.page-topic-show {
+    font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "helvetica neue", arial;
+}
+
+/* wrap 外页宽度, 首页，列表页，详情页 */
+.wrap,
+.inner {
+    margin: auto;
+    padding: 0 10px;
+    max-width: $max_page_width;
+    min-width: $min_page_width;
+    @extend %clearfix;
+}
+/* inner 内页宽度， 一般是个人中心的页面及特殊要求页面 */
+.inner,
+.layout-fixed .wrap {
+    max-width: $max_inner_width;
+}
+/* Layout */
+.layout-fixed {
+    .footer {
+        margin-top: 0;
+    }
+    .layout-fixed-inner {
+        max-width: 1200*$px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.ui-loading {
+    position: relative;
+    min-width: 60px;
+    min-height: 60px;
+    background-image: url(~images/loading.gif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    span {
+        display: none;
+    }
+}
+
+/* 浅灰色，删除线 */
+.ui-deprecated {
+    color: $color_gray_text;
+    text-decoration: line-through;
+}
+/* 强调  */
+.ui-emphasis {
+    color: $color_emphasis;
+}
+
+/* UI-Kits */
+.ui-kits-box {
+    margin: 20*$px 0;
+    padding: 20*$px;
+}
+.ui-kits-box h6 {
+    padding-bottom: 10*$px;
+    margin-bottom: 10*$px;
+    border-bottom: 1*$px solid #eee;
+}
+
+.captcha-image {
+    border: 1px solid $color_line;
+    height: 39px;
+}
+
+.item_link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    left: 0;
+    top: 0;
+}
+
+.ui-collapse {
+    position: relative;
+    padding-left: 22*$px;
+    cursor: pointer;
+    &:before {
+        content: '+';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -9*$px;
+        width: 14*$px;
+        height: 14*$px;
+        line-height: 14*$px;
+        text-align: center;
+        border: 1*$px solid $color_gray_border;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, .08) inset;
+
+        //iconfont
+        font-family: "iconfont" !important;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    &._active {
+        &:before {
+            font-size: 12*$px;
+            content: '-';
+        }
+    }
+}
+
+/* 自动完成 */
+.autocomplete-box {
+    display: block;
+    background-color: #FFFFFF;
+    border: 1*$px solid $color_gray_border;
+    position: absolute;
+    z-index: 100;
+    max-height: 350*$px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        background: #fff;
+        width: 100%;
+        cursor: default;
+    }
+    table tr {
+        background: #fff;
+    }
+    tfoot {
+        border-top: 1*$px solid $color_gray_border;
+        td {
+            text-align: right;
+            padding-right: 15*$px;
+            padding-top: 5*$px;
+            padding-bottom: 5*$px;
+        }
+        a {
+            color: $color_black;
+        }
+    }
+    &__item {
+        word-wrap: break-word;
+        word-break: break-all;
+        padding: 5*$px 15*$px;
+        cursor: pointer;
+        span {
+            color: $color_gray_text;
+        }
+    }
+    ._selected {
+        background: #f8f8f8;
+    }
+}
+
+/* 问题按钮 */
+.help-link {
+    font-family: "iconfont" !important;
+    font-smoothing: antialiased;
+    text-stroke-width: 0.2px;
+    font-size: 18*$px;
+    color: $color_gray_text;
+}
+.help-link:before {
+    content: "\344f";
+}
+.help-link:hover {
+    color: $color_gold_hover;
+}
+
+/* 提示组件 */
+.tooltip-box {
+    border: 1*$px solid $color_gold;
+    background-color: $color_gold;
+    position: relative;
+    margin-bottom: 20*$px;
+    width: 300*$px;
+    z-index: 1020;
+}
+.tip-arrow-top,
+.tip-arrow-right,
+.tip-arrow-bottom,
+.tip-arrow-left {
+    font-style: normal;
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+.tip-arrow-top {
+    border-bottom: 8*$px solid $color_gold;
+    border-left: 8*$px dashed transparent;
+    border-right: 8*$px dashed transparent;
+    top: -8*$px;
+    left: 10*$px;
+}
+.tooltip-box .tip-content {
+    padding: 10*$px;
+    color: #fff;
+}
+
+/* 商品列表item */
+.good-list-item {
+    &:hover {
+        .scene-cover {
+            display: block;
+        }
+    }
+    &__img {
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .scene-cover {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__title {
+        margin-top: 10*$px;
+        font-size: 14*$px;
+        color: $color_black;
+        line-height: 14*$px;
+        margin-bottom: 5*$px;
+        a {
+            color: $color_black;
+        }
+        span {
+            float: right;
+            font-size: 12*$px;
+            color: $color_gray;
+            em {
+                color: $color_black;
+                font-style: normal;
+            }
+        }
+    }
+    &__description {
+        font-size: 12*$px;
+        line-height: 14*$px;
+        color: $color_gray;
+        margin-bottom: 5*$px;
+        max-height: 14*$px;
+        overflow: hidden;
+    }
+    &__price {
+        font-size: 16*$px;
+        color: $color_price;
+    }
+    &__btn-box {
+        a {
+            font-size: 12*$px;
+        }
+    }
+}
+
+
+/* 登录弹框 */
+.j-login-submit._disable {
+    opacity: 0.6;
+    color: #fff;
+    &:hover {
+        background: $color_gold;
+        color: #fff;
+    }
+}
+._sale_img {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+._tips_p {
+    display: none;
+}
+._pop-verify-text {
+    padding-left: 55*$px;
+    padding-right: 55*$px;
+}
+.add_imitate_logo {
+    float: left;
+    width: 107px;
+    height: 55px;
+}
+
+/* 确认框 */
+.modal-confirm {
+    &-footer {
+        margin-top: 20px;
+        text-align: center;
+        .btn {
+            margin: 0 10px;
+            padding: 0 30px;
+        }
+    }
+}
+
+/* 登录框 */
+.login-modal-box {
+    background: #fff;
+    padding: 10*$px 15*$px 0;
+    position: relative;
+    &__content {
+        .placeholder-wrap {
+            display: block;
+        }
+        .form-text {
+            width: 100%;
+        }
+        .formbtn {
+            background: $color_gold;
+            color: #fff;
+            border: none;
+            width: 100%;
+            padding: 10*$px 0;
+            font-size: 14*$px;
+            height: auto;
+            cursor: pointer;
+            &:hover {
+                background: $color-gold_hover;
+                border: none;
+            }
+        }
+    }
+    &__error {
+        line-height: 16*$px;
+        margin: 4*$px 0 0;
+        &._username {
+            height: 16*$px;
+        }
+    }
+}
+.order-reset-cancel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    width: 38px;
+    height: 38px;
+    background-color: #e9c998;
+    color: #e9c998;
+    &:before {
+        display: block;
+        content: " ";
+        position: absolute;
+        lef: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(~images/close-icon.png) center center no-repeat;
+    }
+    &:hover {
+        background-color: #e9c998;
+    }
+}
+.reset-modal-ok {
+    margin-left: 0;
+    border: 1px solid #e9c998;
+    color: #e9c998;
+}
+
+/* 用户协议 */
+.agreement-modal-box {
+    width: 800*$px;
+    background: #fff;
+    padding: 10*$px 15*$px 0;
+    position: relative;
+    &__content {
+
+    }
+    .agreement-content {
+        height: 400*$px;
+        overflow-y: scroll;
+        line-height: 24*$px;
+        color: $color_666;
+        h6 {
+            margin: 10*$px 0;
+        }
+    }
+}
+#js-agreement {
+    background: $color_gold;
+    color: #fff;
+    border: none;
+    width: 200*$px;
+    padding: 10*$px 0;
+    font-size: 14*$px;
+    height: auto;
+    margin: 15*$px 0 15*$px 280*$px;
+    &:hover {
+        background: $color-gold_hover;
+    }
+}
+
+/* 加入购物车 */
+.add-cart-modal-box {
+    width: 730*$px;
+    background: #fff;
+    padding: 10*$px 15*$px 0;
+    position: relative;
+    min-height: 350*$px;
+    &__content {
+        text-align: center;
+    }
+    &__info-box {
+        display: inline-block;
+    }
+    &__info {
+        padding-left: 50*$px;
+        padding-top: 10*$px;
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 4*$px;
+        }
+    }
+}
+
+/* 通用弹框 */
+.common-modal-box {
+    background: #fff;
+    padding: 10*$px 15*$px 0;
+    position: relative;
+    &__content {
+
+    }
+}
+.ui-icon {
+    &__dropdown {
+        position: relative;
+        cursor: pointer;
+        & * {
+            cursor: pointer;
+        }
+        &:before {
+            content: '\f0122';
+            font-family: "iconfont" !important;
+            font-smoothing: antialiased;
+            text-stroke-width: 0.2px;
+            position: absolute;
+            z-index: -1;
+            right: 8*$px;
+            top: 0;
+            line-height: 38*$px;
+            color: $color_gray_text;
+            font-size: 12*$px;
+        }
+    }
+    /*+-号*/
+    &-plus,
+    &-minus {
+        color: $color_black;
+        &:before {
+            content: '\e628';
+            font-family: "iconfont" !important;
+            font-smoothing: antialiased;
+            text-stroke-width: 0.2px;
+            border: 1*$px solid $color_gray_border;
+            width: 28*$px;
+            height: 18*$px;
+            line-height: 18*$px;
+            margin-right: 4*$px;
+            display: inline-block;
+            text-align: center;
+        }
+        &:hover {
+            &,
+            &:before {
+                color: $color_gold_hover;
+            }
+        }
+    }
+    &-minus {
+        &:before {
+            content: '\e629';
+        }
+    }
+}
+
+/* 地区选择空心小箭头 */
+.place-arrow-top {
+    &__wrap {
+        position: relative;
+    }
+    &__inner {
+        font-style: normal;
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        border-bottom: 8*$px solid #ccc;
+        border-left: 8*$px dashed transparent;
+        border-right: 8*$px dashed transparent;
+        top: 0;
+        left: 0;
+    }
+    &__outer {
+        font-style: normal;
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        border-bottom: 8*$px solid #fff;
+        border-left: 7*$px dashed transparent;
+        border-right: 7*$px dashed transparent;
+        top: 0;
+        left: 1*$px;
+    }
+}
+
+/* 下拉框 */
+.ui-drop-down-box {
+    position: absolute;
+    z-index: 99;
+    display: none;
+}
+
+/* 成功图标 √ */
+.ui-complete-icon,
+.ui-error-icon {
+    position: relative;
+    &:before {
+        font-family: "iconfont" !important;
+        font-size: 16px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        content: '\e63b';
+        width: 24*$px;
+        height: 24*$px;
+        background: #5ab26d;
+        color: #fff;
+        font-size: 24*$px;
+        text-align: center;
+        line-height: 22*$px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+/* 失败图标 */
+.ui-error-icon {
+    &:before {
+        content: '\e617';
+        font-weight: 800;
+        font-size: 16*$px;
+        background: $color_error;
+    }
+}
+
+/*search bar*/
+.ui-search {
+    position: relative;
+    padding: 0 40*$px 0 10*$px;
+    width: 228*$px;
+    height: 38*$px;
+    border: 1px solid $color_gray_border;
+    &._active {
+        border-color: $color_gold_hover;
+    }
+    input {
+        height: 38*$px;
+        line-height: 38*$px;
+        border: 0 none;
+        outline: 0 none;
+        margin: 0;
+        padding: 0;
+        background: none;
+    }
+    &__ipt {
+        width: 100%;
+    }
+    &__submit {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40*$px;
+        font-size: 24*$px;
+    }
+    &._active &__submit {
+        color: $color_gold_hover;
+    }
+}
+
+/*密码强度*/
+.ui-strength {
+    &__item {
+        display: inline-block;
+        height: 6*$px;
+        width: 13*$px;
+
+        //margin-right: 5*$px;
+        background: $color_gray_border;
+    }
+    &._level-01 {
+        ._01 {
+            background: $color_error;
+        }
+    }
+    &._level-02 {
+        ._01,
+        ._02 {
+            background: $color_orange;
+        }
+    }
+    &._level-03 {
+        ._01,
+        ._02,
+        ._03 {
+            background: $color_orange;
+        }
+    }
+    &._level-04 {
+        ._01,
+        ._02,
+        ._03,
+        ._04 {
+            background: $color_success;
+        }
+    }
+    &._level-05 {
+        ._01,
+        ._02,
+        ._03,
+        ._04,
+        ._05 {
+            background: $color_success;
+        }
+    }
+}
+
+/* 表格控制 */
+.form-captcha img {
+    height: 36px;
+}
+
+/*SelectBox*/
+.ui-select-box {
+    @extend .u-black-link;
+    display: inline-block;
+    border: 1px solid $color_gray_border;
+    min-width: 88*$px;
+    height: 30*$px;
+    line-height: 30*$px;
+    padding: 0 18*$px;
+    cursor: pointer;
+    &._icon-dropdown {
+        position: relative;
+        &:after {
+            content: '\f0122';
+            @extend .iconfont;
+            font-size: 12*$px;
+            position: absolute;
+            right: 6*$px;
+            color: $color_gray_text;
+        }
+    }
+}
+.ui-options {
+    cursor: pointer;
+    display: none;
+    line-height: 30*$px;
+    padding: 0 20*$px;
+    background: #fff;
+    color: $color_black;
+    &:first-child {
+        border-top: 0 none;
+    }
+    &._active {
+        background: $color_gold;
+        color: #fff;
+        &:hover {
+            color: $color_black;
+            background: $color_gold;
+        }
+    }
+    &:hover {
+        background: $color_gray_hover;
+    }
+    &-box {
+        border: 1px solid $color_gray_border;
+        line-height: 2;
+        box-shadow: 0 3px 2px rgba(0, 0, 0, .04);
+    }
+    &-box & {
+        display: block;
+    }
+}
+
+//u-placeholder-fix
+.u-placeholder-fix {
+    color: $color_gray_text;
+}
+
+// 标签ui
+.ui-label,
+.ui-labels > * {
+    display: inline-block;
+    margin-right: 3*$px;
+    padding: 0 8*$px;
+    border: 1px solid #666;
+    color: $color_black;
+    &:hover {
+        color: $color_gold_hover;
+        border-color: $color_gold_hover;
+        i {
+            color: inherit;
+        }
+    }
+    > i {
+        padding-left: 8*$px;
+        width: 18*$px;
+        vertical-align: middle;
+        font-size: 10px;
+        text-align: center;
+        color: $color_gray_text;
+        cursor: pointer;
+        &:after {
+            content: '\e617';
+        }
+    }
+}
+
+//组件 sliderList
+//@import "sliderList";
+// 顶部分类菜单
+.layer-show {
+    z-index: 99;
+}
+/* 说明文字标识 */
+.intro-mark {
+    display: inline-block;
+    margin: 2px 0;
+    background: $color_emphasis;
+    color: #f8f8f8;
+    > * {
+        display: inline-block;
+        padding: 0 5*$px;
+        border: 2px dotted $color_yellow;
+        font-size: 13*$px;
+    }
+}
+em.num {
+    color: $color_emphasis;
+}
+.split-line {
+    display: inline-block;
+    margin: 0 5px;
+    height: 10px;
+    border-left: 1px solid #d1b282;
+}
+
+/* 遭遇全国哀悼事件，即可在首页或相关页面用js给html标签加上此class */
+.page-gray {
+    filter:grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter:gray;
+    /* IE6-9 */
+    /*filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); */
+    /* Firefox 10+, Firefox on Android */
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .page-gray {
+        -webkit-transform: translateZ(0);
+    }
+}

@@ -1,0 +1,70 @@
+/*checkbox*/
+.ui-checkbox {
+  position: relative;
+  padding-left: 22*$px;
+  cursor: pointer;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -8*$px;
+    width: 16*$px;
+    height: 16*$px;
+    line-height: 14*$px;
+    text-align: center;
+    border: 1*$px solid $color_gray_border;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .08) inset;
+
+    //iconfont
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  &._active {
+    &:before {
+      color: #fff;
+      font-size: 12*$px;
+      content: '\e63b';
+      background: $color_gold;
+      border-color: $color_gold;
+    }
+    &:hover:before {
+      border-color: $color_gold_hover;
+      background: $color_gold_hover;
+    }
+  }
+  &:hover:before {
+    border-color: $color_gold_hover;
+  }
+}
+
+.ui-radio {
+    position: relative;
+    padding-left: 22*$px;
+    cursor: pointer;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -8*$px;
+        width: 16*$px;
+        height: 16*$px;
+        background-image: url(~images/icon/radio-normal.png);
+        background-repeat: no-repeat;
+        // border: 1*$px solid $color_gray_border;
+        // box-shadow: 0 2px 2px rgba(0, 0, 0, .08) inset;
+        // border-radius: 14*$px;
+    }
+    &._active {
+        &:before, &:hover:before {
+            background-image: url(~images/icon/radio-selected.png);
+        }
+    }
+    &:hover:before {
+        background-image: url(~images/icon/radio-hover.png);
+    }
+}

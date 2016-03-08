@@ -1,0 +1,28 @@
+.coupon-activate {
+    label {
+        line-height: 30*$px;
+    }
+    input {
+        padding: 5*$px 10*$px;
+        margin-right: 20*$px;
+        font-size: 12*$px;
+        line-height: 18*$px;
+    }
+}
+
+.coupon-modal {
+    padding: 20*$px;
+    background-color: #fff;
+    &__hd {
+        line-height: 1;
+    }
+    &__bd {
+        padding-top: 20*$px;
+    }
+    .form-text {
+        width: 70%;
+        padding-top: 10*$px;
+        padding-bottom: 10*$px;
+        margin-right: 10*$px;
+    }
+}

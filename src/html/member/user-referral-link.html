@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>我要推荐</title>
+    @@include('../_common/header/head.html')
+    @@include('./_include/meta.html')
+</head>
+<body>
+<div class="page page-user-points layout-fixed" data-module="">
+    <!--header-->
+    @@include('../_common/header/header.html')
+    <!--/header end-->
+
+    <div class="container container-border-bottom">
+        <div class="container__wrap">
+            <div class="layout-fixed-inner">
+                <div class="container__main">
+                    <div class="container__main-inner u-clearfix">
+                        <!--nav-->
+                        @@include('../_common/nav/nav.html', { "navName":"卧室" } )
+                        <!--/nav end-->
+                        <div class="main-layout u-wrap u-clearfix">
+                            <div class="main-layout-sidebar">
+                                <div class="center-menu">
+                                    <a class="center-menu__item" href="#">我的订单</a>
+                                    <a class="center-menu__item" href="#">我的购物车</a>
+                                    <a class="center-menu__item" href="#">收藏夹</a>
+                                    <a class="center-menu__item _active" href="#">我的推荐</a>
+                                    <a class="center-menu__item" href="#">用户信息</a>
+                                </div>
+                            </div>
+                            <div class="main-layout-container">
+                                @@include('./_include/referral_tabs.html')
+
+                                <h2>访问推荐链接</h2>
+                                <ol class="order-list">
+                                    <li>如果您的朋友通过下面的邀请链接访问站点并且注册成会员，
+                                    您将获得<em class="u-color_red">500</em>积分奖励；
+                                    </li>
+                                    <li>如果您的朋友通过下面的邀请链接访问站点并且注册成会员，您的朋友将同时获得<em class="u-color_red">300</em>积分奖励。
+                                    </li>
+                                </ol>
+                                
+                                <h2>获取推荐链接</h2>
+                                <p>
+                                    <span class="label">推荐链接：</span>
+                                    <input id="referral-link" readonly class="referral-link-input" type="text" value="http://sipin.com/us2342">
+
+                                    <button id="select-referral-link" class="btn btn-big">复制链接</button>
+                                </p>
+                                <p class="u-mb_20 u-mt_20">
+                                    <span class="label">分享至：</span>
+
+                                    <img class="share share-weibo" src="/images/icon/weibo.png" alt="">
+                                    <img class="share share-weixin" src="/images/icon/weixin.png" alt="">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../_common/footer/footer.html')
+</div>
+@@include('../_common/footer/foot.html')
+<script src="/js/member-referral.js"></script>
+</body>
+</html>

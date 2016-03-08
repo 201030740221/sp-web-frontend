@@ -1,0 +1,241 @@
+@import "../../modules/settings/_setting_pages";
+@import "../topic/common";
+@import "../topic/sidebar";
+
+.page-topic-index{
+    > .footer{
+        margin-top: 0;
+    }
+}
+
+.article-section {
+    float: left;
+    width: 72%;
+    padding: 15px 0 10015px;
+    margin-bottom: -10000px;
+    border-right: 1px solid $color_line;
+
+    .article-title {
+        font-size: 24px;
+        color: $color_black;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .article-meta{
+        text-align: center;
+        font-size: 12px;
+
+        span {
+            margin: 0 10px;
+        }
+    }
+
+    .article-content {
+        padding: 1em 0 2em;
+        color: #555;
+        line-height: 1.8;
+
+        p {
+            margin: 1.5em 0;
+            text-indent: 2em;
+        }
+    }
+
+    .article-footer {
+        margin: 1.6em 0;
+        line-height: 40px;
+
+        &:after {
+            content: '\20';
+            display: block;
+            clear: both;
+        }
+    }
+    .article-keywords {
+        span {
+            margin: 0 15px;
+        }
+    }
+
+    .main-section {
+        width: 80%;
+        margin: auto;
+        font-size: 14px;
+
+        img {
+            max-width: 100%;
+            margin: 1em auto;
+            display: block;
+        }
+    }
+    .bottom-nav {
+        width: 80%;
+        margin: 0 auto 30px;
+        .share-to-section {
+            position: relative;
+            width: 76%;
+            margin: auto;
+            padding-left: 16%;
+            .dec-title {
+                position: relative;
+                top: -28px;
+                left: 10px;
+                font-size: 14px;
+            }
+
+            .page-content {
+                @include clearfix;
+                padding-top: 6px;
+                border-top: 1px solid #eaeaea;
+                border-bottom: 1px solid #eaeaea;
+                li{
+                    float: left;
+                    width: 50%;
+                    margin-bottom: 6px;
+                }
+               /* li:nth-child(even){
+                    text-align: right;
+                }*/
+
+            }
+        }
+
+        .this-page-nav {
+            @include clearfix;
+            text-align: center;
+            margin-top: 15px;
+            .page-dec {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                background: #fff;
+                margin-right: 10px;
+                text-align: center;
+                line-height: 30px;
+                font-size: 14px;
+                font-weight: bold;
+                color: #444444;
+
+                &.active{
+                    background: #9d6050;
+                    color: #fff;
+                }
+                &.the-all {
+                    width: 78px;
+                    background: #E8E8E8;
+                    font-weight: normal;
+                    font-size: 12px;
+                    color: #7D7D7D;
+                }
+            }
+        }
+
+        .share-nav {
+            margin-top: 40px;
+        }
+    }
+}
+
+.lesson-bottom-section {
+    margin-right: 10px;
+    .recommend-list {
+        ul {
+            @include clearfix;
+            li {
+                float: left;
+                margin-right: 10px;
+                width: 32%;
+                background: #fff;
+                border-top: 4px solid #eaeaea;
+                .img-section {
+                    float: left;
+                    width: 50%;
+                    margin-right: 10*$px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .dec-section {
+                    padding-top: 30*$px;
+                    padding-right: 10*$px;
+                    .price{
+                       color: $color_price;
+                    }
+                }
+            }
+        }
+    }
+    .host-section {
+        border-top: 4px solid #eaeaea;
+        width: 98%;
+        padding: 5px 0 20px 0;
+        ul {
+            @include clearfix;
+            li {
+                float: left;
+                width: 50%;
+
+                p {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+/*share*/
+.icon-section {
+    line-height: 1.5;
+
+    .share-title {
+        padding-top: 12px;
+    }
+
+    a, a:hover {
+        color: $color_black;
+    }
+
+    .social-share-icon {
+        float: right;
+        margin-left: 8px;
+        &.weibo-pic {
+            &:before {
+                display: block;
+                width: 40px;
+                height: 40px;
+                content: '';
+                background: url(~images/lesson/weibo.png);
+            }
+
+        }
+        &.weixin-pic {
+            position: relative;
+            &:before {
+                display: block;
+                width: 40px;
+                height: 40px;
+                content: '';
+                background: url(~images/lesson/weixin.png);
+            }
+            .wechat-qrcode{
+                position: absolute;
+                left: 0;
+                display: none;
+                top: -226px;
+                background: #fff;
+                border: 1px solid #AFA1A1;
+                padding: 14px;
+            }
+        }
+        &.qzone-pic {
+            &:before {
+                display: block;
+                width: 40px;
+                height: 40px;
+                content: '';
+                background: url(~images/lesson/qzone.png);
+            }
+        }
+    }
+}

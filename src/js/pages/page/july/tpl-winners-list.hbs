@@ -1,0 +1,16 @@
+<ul class="scroll-inner">
+    {{#each lists}}
+        <li><span class="_name">
+            {{#unless this.is_name_init}}
+                {{this.member_name}}
+            {{else}}
+                {{#if this.member_mobile}}
+                    {{this.member_mobile}}
+                {{else}}
+                    {{this.member_email}}
+                {{/if}}
+            {{/unless}}
+        </span>获得<span class="_prize">{{this.prize_name}}</span>
+        </li>
+    {{/each}}
+</ul>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>支付成功</title>
+    @@include('../_common/header/head.html')
+    @@include('./_include/meta.html')
+</head>
+<body>
+<div class="page page-order-pay layout-fixed">
+    <!--header-->
+    @@include('../_common/header/header.html')
+    <!--/header end-->
+
+    <div class="container container-border-bottom">
+        <div class="container__wrap">
+            <div class="layout-fixed-inner">
+                <div class="container__main">
+                    <div class="container__main-inner u-clearfix">
+                        <div class="main-layout u-wrap u-clearfix">
+                            
+                            <div class="wechat-pay">
+                                <h3>支付金额<em class="num">￥200.00</em>，请使用微信扫描下方二维码</h3>
+                                <p class="qrcode">
+                                    <img src="https://pay.ly.com/pc/Payment/CreateQrcode?content=T8PthSZVWZEYvnfP%2bFWthh8F819SZzU5oXiEr9XrL06jTv%2bZDwDK4g%3d%3d" alt="">
+                                </p>
+                                <p class="intro">
+                                    请打开手机微信的“扫一扫”<br>扫描上方二维码进行支付
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../_common/footer/footer.html')
+    <script src="/js/common.js"></script>
+    <script src="/js/payment-wechat.js"></script>
+</div>
+@@include('../_common/footer/foot.html')
+</body>
+</html>

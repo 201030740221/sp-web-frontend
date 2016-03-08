@@ -1,0 +1,132 @@
+.goods-list {
+    .thumb img {
+        width: 100%;
+    }
+
+    li {
+        padding: 15*$px;
+        border-left: 1px solid $color_gray_border;
+        border-bottom: 1px solid $color_gray_border;
+
+        &:first-child {
+            border-left-color: #fff
+        }
+    }
+
+    .sale {
+        float: right;
+        margin-top: 2px;
+        font-weight: 400;
+        font-size: 12*$px;
+    }
+
+    .title {
+        a {
+            color: inherit;
+
+            &:hover {
+                color: $color_gold_hover;
+            }
+        }
+    }
+}
+
+/* 购物车提示层内的图片滚动 */
+.ui-good-photos {
+    &__content {
+        width: 100%;
+        //height: 760*$px;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+    &__lists {
+        position: relative;
+    }
+    &__prev {
+        position: absolute;
+        left: 0;
+        top: 45%;
+    }
+    &__next {
+        position: absolute;
+        right: 0;
+        top: 45%;
+    }
+    &__list-wrap {
+        overflow: hidden;
+        margin-left: 50*$px;
+        margin-right: 50*$px;
+    }
+    &__list-inner {
+        width: 1000%;
+        img {
+            width: 100%;
+        }
+        li {
+            width: 118*$px;
+            height: 118*$px;
+            float: left;
+            margin-right: 20*$px;
+            padding-bottom: 2*$px;
+            img {
+                border: 1px solid $color_gray_border;
+            }
+        }
+        li._active {
+            img {
+                border: 1px solid $color_gold;
+            }
+        }
+    }
+}
+
+.cart-shop-slider {
+    &__inner {
+        position: relative;
+        padding-top: 20*$px;
+        padding-bottom: 20*$px;
+    }
+    &__prev {
+        position: absolute;
+        left: 0;
+        top: 35%;
+        width: 38*$px;
+        text-align: center;
+    }
+    &__next {
+        position: absolute;
+        right: 0;
+        top: 35%;
+        width: 38*$px;
+        text-align: center;
+    }
+    .ui-good-photos__list-wrap {
+        margin-left: 65*$px;
+        margin-right: 65*$px;
+    }
+    .ui-good-photos__list-inner li {
+        margin-right: 30*$px;
+        text-align: left;
+        height: auto;
+        h3 {
+            margin-top: 10px;
+            max-height: 16*$px;
+            line-height: 16*$px;
+            overflow-y: hidden;
+            a {
+                font-size: 12*$px;
+                color: $color_black;
+                max-width: 118*$px;
+                display: block;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                &:after {
+                    content: "...";
+                }
+            }
+        }
+    }
+}

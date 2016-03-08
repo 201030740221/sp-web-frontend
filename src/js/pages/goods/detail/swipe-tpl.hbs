@@ -1,0 +1,16 @@
+<div class="swipe-view">
+    <div class="swipe__hd u-clearfix u-pb_10">
+        <a class="j-close u-fr u-color_black" href="javascript:"><i class="iconfont">&#xe617;</i> 关闭</a>
+        <span class="u-fr u-ml_10 u-mr_10">|</span>
+        <a class="j-view u-fr u-color_black" href="#" target="_blank"><i class="iconfont">&#xe621;</i> 完整图</a>
+    </div>
+    <div class='swipe'>
+        <div class='swipe-wrap'>
+            {{#each data}}
+                <div><img src="{{this}}" alt=""/></div>
+            {{/each}}
+        </div>
+        <div class="trigger _prev"></div>
+        <div class="trigger _next"></div>
+    </div>
+</div>

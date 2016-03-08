@@ -1,0 +1,20 @@
+<form class="common-form common-form-nolabel change-mobile-form">
+    <div class="row">
+        {{#if isNew}}
+        <input id="change-mobile-input" class="mobilephone full-width" type="text" name="mobile" placeholder="请输入手机号码" required>
+        {{else}}
+        <p class="text">已验证手机：{{mobile}}</p>
+        <input id="change-mobile-input" type="hidden" name="mobile" value="{{mobile}}">
+        {{/if}}
+    </div>
+
+    <div class="row">
+        <input id="change-mobile-sms-code" type="text" name="sms_code" required size="6" aria-describedby="sms_code-error" placeholder="短信验证码">
+        <a class="btn get-sms-code" style="float: right">获取短信验证码</a>
+        <p id="sms_code-error" class="error"></p>
+    </div>
+
+    <div class="row">
+        <a class="btn btn-confirm">确定修改</a>
+    </div>
+</form>

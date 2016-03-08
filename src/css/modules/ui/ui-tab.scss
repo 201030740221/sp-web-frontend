@@ -1,0 +1,105 @@
+/**
+* ui-tab
+* @author remiel.
+**/
+//
+.order-list-tab,
+.ui-tab {
+  margin:14*$px 20*$px 12*$px;
+  &__item{
+    display:block;
+    font-size:18*$px;
+    line-height: (34 / 18);
+    color:$color_black;
+    margin:4*$px 96/1920*100% 0 0;
+    @extend %float;
+    &:hover{
+      color:$color_gold_hover;
+      border-bottom:2px solid $color_gold_hover;
+    }
+    &._active{
+      color:$color_gold;
+      border-bottom:2px solid $color_gold;
+    }
+  }
+}
+/**
+ * @example
+ * div.tabs-simple > a{选项1} + a.active{选项2} + p.ref{右侧参考内容}
+ * 实例： 我要推荐
+ */
+.tabs-simple {
+  position: relative;
+  margin: 20*$px 0;
+  > a {
+    display: inline-block;
+    margin:4*$px 96/1920*100% 0 0;
+    font-size:18*$px;
+    line-height: (34 / 18);
+    color:$color_black;
+
+    &:hover{
+      color:$color_gold_hover;
+      border-bottom:2px solid $color_gold_hover;
+    }
+
+    &.active{
+      color:$color_gold;
+      border-bottom:2px solid $color_gold;
+    }
+  }
+
+  .ref {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 14*$px;
+    font-weight: 400;
+    line-height: (34 / 12);
+    color: $color_gray_text;
+  }
+
+  em {
+    color: $color_gold;
+  }
+
+  .num {
+    font-size: 16*$px;
+  }
+
+  .normal {
+    font-size: 12*$px;
+    color: $color_black;
+  }
+}
+
+/**
+ * @tofishes
+ * 简单tab样式
+ * .tabs > .tabs_title + .tabs_content
+ */
+.tabs_title {
+    margin-right: 35*$px;
+    font-size: 14*$px;
+    cursor: pointer;
+    &.this--active {
+        position: relative;
+        display: inline-block;
+        color: $color_gold;
+        &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            content: '';
+            border-bottom: 2px solid $color_gold;
+        }
+    }
+}
+.tabs_content {
+    display: none;
+    margin: 20*$px 0;
+    &.this--active {
+        display: block;
+    }
+}

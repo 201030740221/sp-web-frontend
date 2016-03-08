@@ -1,0 +1,244 @@
+@import "../../modules/settings/_setting_pages";
+
+/* 12月年底活动页面 */
+
+.end-carnival {
+
+
+    .content-bg {
+        width: 100%;
+        background: #022636;
+        padding-bottom: 15px;
+
+        .one, .two , .three {
+            padding: 0px;
+            background: none;
+            background-size: none;
+            background-color: none;
+            color: none;
+        }
+
+        .this_content {
+            width: 80%;
+            margin: 0 auto;
+
+            .point-dec {
+                padding-top: 30px;
+
+                .point-content {
+                    height: 130px;
+                    background: #0f7669;
+                    position: relative;
+                    margin: 40px 0 20px 60px;
+
+                    .point-icon {
+                        width: 200px;
+                        position: absolute;
+                        top: -39px;
+                        left: -68px;
+                    }
+                }
+
+                .point-dec-list {
+                    color: #fff;
+                    margin-left: 150px;
+                    position: relative;
+                    top: 34px;
+
+                    P {
+                        margin-bottom: 6px;
+                    }
+                }
+            }
+
+            .content-title {
+                padding-top: 10px;
+            }
+
+            .pic-content {
+                margin-right: -3%;
+
+                li {
+                    float: left;
+                    width: 23%;
+                    margin-right: 1.5%;
+                    margin-bottom: 1.5%;
+
+                    .each-content {
+                        position: relative;
+
+                        .end-show{
+                            position: absolute;
+                            bottom: 10px;
+                            left: 50%;
+                            margin-left: -40px;
+                            width: 80px;
+                            height: 35px;
+                            line-height: 35px;
+                            text-align: center;
+                            font-size: 16px;
+                            color: #D6D5D5;
+                            background: #333333;
+                        }
+
+                        .kill-time {
+                            position: absolute;
+                            top: 6px;
+                            left: 50%;
+                            width: 80%;
+                            margin-left: -40%;
+
+                            img{
+                                height: 41px;
+                            }
+
+                            p {
+                                position: absolute;
+                                top: 0;
+                                width: 100%;
+                                line-height: 41px;
+                                font-size: 14px;
+                                color: #fff;
+                                text-align: center;
+
+                                &.end-class{
+                                    color: #D6D5D5;
+                                }
+                            }
+                        }
+                    }
+
+                    .title-shape {
+                        position: relative;
+                        z-index: 3;
+                    }
+
+                    .this_dec_content {
+                        position: relative;
+                        width: 100%;
+                        height: 45px;
+                        background: #0f7669;
+                        margin-top: -6px;
+                        padding: 6px 0 6px 6px ;
+
+                        p {
+                            font-size: 12px;
+                            color: #fff;
+                            &.dec-price{
+                                text-decoration: line-through;
+                            }
+                        }
+
+                        .this-price-content {
+                            position: absolute;
+                            right: 3px;
+                            top: 0px;
+                            width: 133px;
+                            height: 45px;
+
+                            .price-dec {
+                                position: absolute;
+                                top: 0px;
+                                left: 20px;
+                                font-size: 12px;
+                                padding: 5px;
+
+                                p{
+                                    color: #ffeb8d;
+
+                                    &.end-class{
+                                        color: #D6D5D5;
+                                    }
+                                }
+
+                            }
+
+                            .kill-price {
+                                font-weight: bold;
+                                position: absolute;
+                                top: 10px;
+                                left: 54px;
+                                font-size: 18px;
+                                border-left: 1px solid #ffeb8d;
+                                padding-left: 8px;
+                                color: #ffeb8d;
+
+                                &.end-class{
+                                    color: #D6D5D5;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:after {
+                    display: block;
+                    content: ' ';
+                    clear: both;
+                }
+            }
+        }
+    }
+}
+
+.sidebar li {
+    &:nth-child(1) {
+        background-color: #e39f4e;
+    }
+    &:nth-child(2) {
+        background-color: #e61849;
+    }
+    &:nth-child(3){
+        background-color: #1da695;
+    }
+
+}
+.sidebar {
+
+    &.lantern{
+        width: 50px;
+        .home-link{
+          position: relative;
+            display: block;
+            height: 38*$px;
+            line-height: 38*$px;
+            background: #7d7d7d;
+            span {
+              display: none;
+            }
+            &:hover {
+              span{
+                display: inline-block;
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;
+                  background: $color_gold;
+                  color: white;
+              }
+            }
+        }
+        .home-icon{
+            display: block;
+            width: 26px;
+            height: 20px;
+            background: url('~images/activity/lantern-2016/home-icon.png') no-repeat;
+            background-size: cover;
+            position: relative;
+            left: 12px;
+            top: 8px;
+        }
+        .goto-top {
+            background: #7d7d7d;
+            em {
+              background: #7d7d7d;
+            }
+            &:hover {
+              background: $color_gold;
+              color: white;
+            }
+        }
+    }
+
+}

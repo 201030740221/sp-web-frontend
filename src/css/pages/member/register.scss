@@ -1,0 +1,87 @@
+@import "../../modules/settings/_setting_pages";
+.header-nav-guarantee {
+    line-height: 40*$px;
+}
+.register-banner {
+    float: left;
+    margin: 100px 0 0 100px;
+}
+.register-box {
+    float: right;
+    min-height: 400*$px;
+    margin-top: 40*$px;
+    margin-left: 115*$px;
+    width: 442*$px;
+    .login-box__auth-item {
+        color: $color_gray;
+        &:hover {
+            color: $color_gold_hover;
+        }
+    }
+}
+.register-box-bd {
+    padding-left: 20*$px;
+    padding-bottom: 70*$px;
+    .form-field {
+        position: relative;
+    }
+    .form-text {
+        width: 318*$px;
+    }
+    .text-captcha {
+        width: 155*$px;
+    }
+    .text-verifycode {
+        width: 185*$px;
+    }
+    .form-verifycode {
+        > * {
+            height: 42*$px;
+        }
+    }
+    .form-regetcode {
+        position: absolute;
+        right: -150*$px;
+        top: 0;
+        .btn-big {
+            background: #fff;
+        }
+    }
+    .formbtn {
+        background: $color_gold;
+        color: #fff;
+        border: none;
+        width: 160*$px;
+        padding: 10*$px 0;
+        font-size: 14*$px;
+        height: auto;
+        &:hover {
+            background: $color-gold_hover;
+        }
+    }
+    .formbtn.disabled {
+        background: $color_gold;
+        border: 1*$px solid $color_gold;
+        color: $color_gray_border;
+        opacity: 0.7;
+        cursor: default;
+    }
+    .forgot_code_input {
+        width: 160*$px;
+    }
+}
+._register-email-complete-width {
+    width: 600*$px;
+    .ui-complete-icon:before {
+        background-image: url(~images/email_verify_icon.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        width: 48px;
+        height: 31px;
+        content: '';
+    }
+}
+.register-note {
+    position: relative;
+    top: 25*$px;
+}

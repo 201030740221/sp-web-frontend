@@ -1,0 +1,192 @@
+/* 按钮 */
+input[type="button"] {
+    &,
+    &:focus {
+        outline: 0 none;
+    }
+}
+.#{$btnBaseClass} {
+    text-stroke-width: 0.2px;
+    border: 1*$px solid $color_gold;
+    &:hover {
+        background-color: $color_gold_hover;
+        color: #fff;
+    }
+}
+.#{$btnBaseClass}-primary {
+    @include btn-color(#fff, #666);
+    border: 1*$px solid $color_gray_border;
+    &:hover {
+        background-color: #fff;
+        color: $color_gold_hover;
+        border: 1*$px solid $color_gold_hover;
+    }
+}
+.#{$btnBaseClass}-page {
+    @include btn-color(#fff, #666);
+    border: 1*$px solid $color_gray_border;
+    width: 38*$px;
+    height: 38*$px;
+    line-height: 38*$px;
+    display: inline-block;
+    text-align: center;
+    &:hover {
+        background-color: #fff;
+        color: $color_gold_hover;
+        border: 1*$px solid $color_gold_hover;
+    }
+}
+.#{$btnBaseClass}-page-small {
+    @include btn-color(#fff, #666);
+    border: 1*$px solid $color_gray_border;
+    width: 20*$px;
+    height: 28*$px;
+    line-height: 28*$px;
+    display: inline-block;
+    text-align: center;
+    &:hover {
+        background-color: #fff;
+        color: $color_gold_hover;
+        border: 1*$px solid $color_gold_hover;
+    }
+}
+.#{$btnBaseClass}-primary-big {
+    @include btn-color(#fff, #666);
+    border: 1*$px solid $color_gray_border;
+    height: 38*$px;
+    line-height: 38*$px;
+    display: inline-block;
+    text-align: center;
+    &:hover {
+        background-color: #fff;
+        color: $color_gold_hover;
+        border: 1*$px solid $color_gold_hover;
+    }
+}
+.#{$btnBaseClass}-primary-larger-big {
+    @include btn-color(#fff, #666);
+    border: 1*$px solid $color_gray_border;
+    height: 55*$px;
+    line-height: 55*$px;
+    display: inline-block;
+    text-align: center;
+    font-size: 18*$px;
+    &:hover {
+        background-color: #fff;
+        color: $color_gold_hover;
+        border: 1*$px solid $color_gold_hover;
+    }
+}
+.#{$btnBaseClass}-big {
+    height: 38*$px;
+    line-height: 38*$px;
+    display: inline-block;
+    text-align: center;
+    &:hover {
+        border: 1px solid $color_gold_hover;
+    }
+}
+.#{$btnBaseClass}-larger-big {
+    height: 55*$px;
+    line-height: 55*$px;
+    display: inline-block;
+    text-align: center;
+    font-size: 18*$px;
+}
+.btn-color-orange {
+    background: $color_orange;
+    color: #fff;
+    border: none;
+    &:hover {
+        background: $color_gold_hover;
+    }
+}
+.btn-color-red {
+    background: $color_error;
+    color: #fff;
+    border: none;
+    &:hover {
+        background: $color_error;
+        opacity: 0.9;
+    }
+}
+.btn-color-black {
+    background: $color_black;
+    color: #fff;
+    border: none;
+    &:hover {
+        background: $color_black;
+        opacity: 0.9;
+    }
+}
+.btn-color-peach {
+    background: $color_gold;
+    color: #fff;
+}
+.#{$btnBaseClass}-simple {
+    border: none;
+    color: $color_black;
+    &:hover {
+        background: none;
+        color: $color_gold_hover;
+    }
+}
+.btn-color-orange:hover {
+    color: #fff;
+    border: none;
+}
+.btn-larger-big,
+.btn-big,
+.btn-primary,
+.btn-page,
+.btn-page-small,
+.btn-primary-big,
+.btn-primary-larger-big,
+.btn {
+    &._disable,
+    &.disabled {
+        border: 1*$px solid $color_gray_border;
+        cursor: default;
+        color: $color_gray_border;
+        &:hover {
+            cursor: default;
+            background-color: #fff;
+            color: $color_gray_border;
+            border: 1*$px solid $color_gray_border;
+        }
+    }
+}
+.btn-primary._disable,
+.btn-primary.disabled {
+    background: #fff;
+}
+.#{$btnBaseClass}-larger-big._disable.btn-color-orange,
+.#{$btnBaseClass}-larger-big.disabled.btn-color-orange {
+    &,
+    &:hover,
+    &:active {
+        border: 0 none;
+        background: $color_ccc;
+        color: $color_gray_border;
+        cursor: default;
+    }
+}
+.#{$btnBaseClass}-ipt {
+    width: 40*$px;
+    padding: 0;
+    color: $color_black;
+}
+.btn-em {
+    background: $color_emphasis;
+    border-color: $color_emphasis;
+    color: #fff;
+    &.large {
+        padding: 10*$px 40*$px;
+        font-size: 16*$px;
+    }
+    &:hover {
+        background: $color_emphasis;
+        border-color: $color_emphasis;
+        opacity: 0.9;
+    }
+}

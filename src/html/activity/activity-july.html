@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>活动页</title>
+    @@include('../_common/header/head.html')
+    <!--@@include('./_include/meta.html')-->
+    <link rel="stylesheet" href="/css/page.css"/>
+</head>
+<body>
+<div class="page page-index" data-module="index">
+    @@include('../_common/header/header.html')
+    <div class="container-border-bottom">
+        <div class="container__wrap">
+            <div class="layout-fixed-inner">
+                <div class="container__main">
+                    <div class="container__main-inner">
+                        <!--banner-->
+                        <div class="activity-banner">
+                            <img src="../images/activity/activity-july-banner.jpg" alt=""/>
+                        </div>
+
+                        <!--/banner-->
+                        <!--goods-->
+                        <div id="goods-section" class="goods-section">
+                            <div class="goods-section-wrap">
+                                <div class="goods-header">
+                                    <h1 class="goods-header__title">我有积分</h1>
+                                    <p class="goods-header__link"><a href="/article/17.html" target="_blank">查看积分详细规则>></a></p>
+
+                                    <p class="goods-header__intro">
+                                        <em>兑换规则：</em><br/>
+                                        1.礼品兑换成功后，我们将在15个工作日内进行发货。 <br/>
+                                        2.会员兑换礼品数量 不设上限，直至礼品被兑换完为止。</p>
+                                </div>
+
+                                <div class="goods-grid u-clearfix">
+                                    @@include('./_include/activity-goods-grid-item.html')
+                                    @@include('./_include/activity-goods-grid-item.html')
+                                    @@include('./_include/activity-goods-grid-item.html')
+                                </div>
+                            </div>
+
+                            <a href="#referral-section" class="get-point-link"></a>
+                        </div>
+                        <!--/goods-->
+
+                        @@include('./_include/activity-referral-section.html')
+
+                        @@include('./_include/activity-lottery-section.html')
+
+                        @@include('./_include/activity-flash-section.html')
+
+                        <!--recommend-->
+                        @@include('./_include/activity-recommend-section.html')
+                        <!--/recommend-->
+
+                        <div id="j-aside-nav" class="aside-navigation">
+                            <ul class="nav">
+                                <li class="nav__item _nav-active"><a href="#goods-section">积分兑换</a></li>
+                                <li class="nav__item"><a href="#referral-section">推荐获取积分</a></li>
+                                <li class="nav__item"><a href="#lottery-section">抽奖赢 <br/> Apple Watch</a></li>
+                                <li class="nav__item"><a href="#flash-section">一元秒杀</a></li>
+                                <li class="nav__item"><a href="#recommend-section">精品推荐</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../_common/footer/footer.html')
+</div>
+@@include('../_common/footer/foot.html')
+<script>
+    var LOTTERY_ID = 20;
+</script>
+<script src="../js/page-july.js"></script>
+</body>
+</html>

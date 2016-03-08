@@ -1,0 +1,36 @@
+@import "~css/modules/settings/_setting_pages";
+.referral-reference {
+    padding: 0 0 20*$px;
+    border-bottom: 1px solid $color_gray_border;
+    h2 {
+        font-size: 20*$px;
+        margin:25*$px 0 15*$px;
+    }
+}
+
+.table-referral {
+    margin-top: -20*$px;
+}
+
+.share {
+    margin-right: 5*$px;
+    cursor: pointer;
+}
+
+.referral-link-input {
+    padding: 0 5*$px;
+    margin: 0 10*$px 0 0;
+    height: 34*$px;
+    line-height: 34*$px;
+    width: 400*$px;
+    vertical-align: middle;
+}
+button {
+    vertical-align: middle;
+}
+
+span.label {
+    display: inline-block;
+    width: 8em;
+    color: $color_gray;
+}

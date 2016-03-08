@@ -1,0 +1,258 @@
+@import "../../../../modules/settings/_setting_pages";
+
+// 新品大片模板
+.show-main-section {
+    position: relative;
+    .section {
+        position: relative;
+        margin: auto;
+        // padding: 1% 0;
+        max-width: 1580px;
+        overflow: hidden;
+    }
+    .show-host-goods {
+        padding-top: 20*$px;
+    }
+    .show-banner {
+        .banner-image {
+            width: 100%;
+        }
+        .banner-link {
+            position: absolute;
+            display: block;
+            top: 3%;
+            left: 14%;
+        }
+        .banner-scroll-btn {
+            position: absolute;
+            display: block;
+            bottom: 8%;
+            left: 50%;
+            margin-left: -73px;
+            animation: pulse 1.5s ease-in-out 0s infinite normal forwards;
+        }
+    }
+    .goods-show {
+        .goods-banner {
+            padding: 20px 0 0;
+            width: 100%;
+        }
+    }
+    .sub-goods-section {
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+        .sub-list {
+            float: right;
+            width: 42%;
+            margin: 0 20px;
+            padding: 10px 10px 40px;
+            background: rgba(255, 255, 255, .4);
+            border-radius: 10px;
+            &:first-child {
+                float: left;
+            }
+            .sub-img {
+                position: relative;
+                float: left;
+                margin-right: 20px;
+                .shape-icon {
+                    position: absolute;
+                    right: -30px;
+                    bottom: -45px;
+                }
+            }
+            .dec-section {
+                overflow: hidden;
+                min-width: 165px;
+                .title {
+                    border-bottom: 3px solid #e6be99;
+                    font-size: 20px;
+                    color: black;
+                }
+                .dec {
+                    margin-top: 6px;
+                }
+                .small-title {
+                    background: black;
+                    color: #fff;
+                    padding: 2px 0 2px 2px;
+                    margin-right: 5px;
+                }
+                .shape-btn-icon {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+    .two-host {
+        display: table;
+        border-collapse: collapse;
+        width: 100%;
+        .this-list {
+            width: 50%;
+            display: table-cell;
+        }
+    }
+    .preview-icon {
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
+    .preview-section {
+        position: relative;
+        // left: 0;
+        // bottom: 0;
+        // width: 90%;
+        margin: 30px 5%;
+        line-height: 45px;
+        border: 1px solid #e5bd98;
+        border-left: none;
+        border-right: none;
+        text-align: center;
+        .line-shape {
+            width: 12px;
+            height: 10px;
+            background: url(~images/topic/show-two/line-icon.png) no-repeat 0 0;
+            position: absolute;
+            left: 50%;
+            top: -5px;
+        }
+        .list-item {
+            display: inline-block;
+            margin: 0 1%;
+            .dec {
+                font-size: 16px;
+                &.dec-content {
+                    color: #e5bd98;
+                }
+            }
+            .item-icon {
+                background: black;
+                border-radius: 100%;
+                display: inline-block;
+                width: 6px;
+                height: 6px;
+            }
+            .item-shape-icon {
+                display: inline-block;
+                width: 21px;
+                height: 21px;
+                background: url(~images/topic/show-two/item-shape-icon.png) no-repeat 0 0;
+                position: relative;
+                top: 5px;
+            }
+        }
+        img {
+            margin: auto;
+            display: block;
+        }
+    }
+}
+
+// 图片轮播
+.dg-container {
+    margin: 20*$px 0;
+    width: 100%;
+    position: relative;
+}
+.dg-wrapper {
+    // max-width: 480px;
+    width: 30%;
+    // height: 600px;
+    margin: 0 auto;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    padding-bottom: 40%;
+}
+.dg-wrapper a {
+    width: 100%;
+    // height: 600px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.dg-wrapper a.dg-transition {
+    transition: all 0.5s ease-in-out;
+}
+.dg-wrapper a img {
+    width: 100%;
+}
+.dg-container nav {
+    width: 100px;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+}
+.dg-container nav span {
+    cursor: pointer;
+    font-size: 90px;
+    color: #fff;
+    &:hover {
+        color: $color_gold_hover;
+    }
+    &.prev {
+        left: -390px;
+    }
+    &.next {
+        right: -390px;
+    }
+}
+.dg-center {
+    z-index: 3;
+}
+
+/*动画 section*/
+.animate-down-style,
+.animate-up-style {
+    opacity: 0;
+}
+.active {
+    .animate-down-style {
+        animation: fadeInDown 0.5s ease-in-out 0s 1 normal forwards;
+    }
+    .animate-up-style {
+        animation: fadeInUp 0.5s ease-in-out 0s 1 normal forwards;
+        animation-delay: 0.5s;
+    }
+}
+
+/*动画效果*/
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -40%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes pulse {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}

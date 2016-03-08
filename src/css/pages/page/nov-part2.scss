@@ -1,0 +1,204 @@
+@import "../../modules/settings/_setting_pages";
+
+$em: #cf1f1c;
+$yellow: #fff100;
+$brown: #9d6050;
+
+.s-zero {
+    // padding-top: 35%;
+    padding-top: 670*$px;
+    padding-bottom: 3%;
+    background-image: url('~images/activity/nov-2015/2th/zero-bg-1.jpg');
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-color: #f07848;
+    // background-size: contain;
+    .grid {
+        max-width: 1000*$px;
+    }
+    .item {
+        width: 23%;
+        padding: 20*$px 10*$px;
+        margin: 0 10*$px;
+        background-color: #eeb7a8;
+        p {
+            line-height: 3;
+        }
+        a {
+            color: $em;
+            &:before {
+                content: '\025B8'
+            }
+        }
+        span {
+            font-weight: bolder;
+        }
+    }
+    h1 {
+        line-height: 1;
+    }
+    em {
+        color: $em;
+        font-weight: bolder;
+    }
+    .links {
+        max-width: 1000*$px;
+        margin: auto;
+        a {
+            display: inline-block;
+            width: 48%;
+            margin: 10*$px;
+            padding: 10*$px;
+            font-size: 18*$px;
+            color: white;
+            text-align: center;
+        }
+        .item-1 {
+            background-color: #cf1f1c;
+        }
+        .item-2 {
+            background-color: #f0b247;
+        }
+    }
+}
+
+.s-one {
+    // padding-top: 8%;
+    padding-top: 160*$px;
+    // padding-bottom: 20*$px;
+    background: url('~images/activity/nov-2015/2th/one-bg.jpg') 50% 0 no-repeat;
+    background-color: #f07848;
+    // background-size: contain;
+    .empty-link {
+        display: block;
+        width: 80%;
+        height: 300*$px;
+        // padding-bottom: 15%;
+        margin: auto;
+    }
+}
+
+
+
+.s-two {
+    // padding-top: 25%;
+    padding-top: 460*$px;
+    // padding-bottom: 3%;
+    background: url('~images/activity/nov-2015/2th/two-bg.jpg') 50% 0 no-repeat;
+    background-color: #9826a0;
+    // background-size: contain;
+    .row {
+        text-align: center;
+    }
+    .item {
+        display: inline-block;
+        width: 24%;
+        max-width: 320*$px;
+        padding: 0 20*$px 55*$px;
+    }
+    .caption {
+        position: relative;
+        padding: 10*$px 20*$px;
+        text-align: left;
+        background-color: #7a3d71;
+        color: white;
+        h2 {
+            line-height: 1;
+        }
+        a {
+            position: absolute;
+            top: 10*$px;
+            right: 20*$px;
+            display: inline-block;
+            padding: 7*$px 10*$px;
+            background-color: #ef2976;
+            border-radius: 30*$px;
+            color: white;
+        }
+    }
+}
+
+// @media screen and (max-width: 1600*$px) {
+//     .s-two {
+//         padding-bottom: 0;
+//     }
+// }
+
+.s-three {
+    // padding-top: 32%;
+    padding-top: 640*$px;
+    background: url('~images/activity/nov-2015/2th/three-bg.jpg') 50% 0 no-repeat;
+    background-color: #950c33;
+    // background-size: contain;
+    .grid {
+        max-width: 1600*$px;
+        & > div {
+            padding: 0 10*$px 20*$px;
+        }
+    }
+    .item {
+        box-shadow: 2px 2px 1.6px 0.6px rgba(0, 0, 0, 0.2);
+    }
+    .caption {
+        position: relative;
+        padding: 10*$px 20*$px;
+        background-color: #ef084a;
+        color: white;
+        h2 {
+            line-height: 1;
+            padding-bottom: 10*$px;
+        }
+        p {
+            line-height: 1;
+            color: $yellow;
+        }
+        a {
+            position: absolute;
+            top: 10*$px;
+            right: 20*$px;
+            display: inline-block;
+            padding: 0 20*$px;
+            line-height: 38*$px;
+            background-color: $yellow;
+            color: #ef084a;
+            border-radius: 5*$px;
+        }
+    }
+}
+
+.s-four {
+    @extend .s-three;
+    // padding-top: 38%;
+    padding-top: 530*$px;
+    // padding-bottom: 4%;
+    // margin-top: -10%;
+    // margin-top: -200*$px;
+    background-image: url('~images/activity/nov-2015/2th/four-bg-1.jpg');
+    background-color: #f0b247;
+    background-position: 50% -200*$px;
+    background-repeat: no-repeat;
+    // background-size: contain;
+    .bg-wrap {
+        padding-bottom: 60*$px;
+        background-image: url('~images/activity/nov-2015/2th/four-bg-2.jpg');
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+.s-tip {
+    h1 {
+        margin: 20*$px 0;
+        text-align: center;
+        line-height: 3;
+        border-bottom: 1px dashed $color_gray;
+    }
+    p {
+        line-height: 2;
+    }
+}
+
+.bottom-banner {
+    max-width: 1600*$px;
+    margin: 30*$px auto 0;
+}

@@ -1,0 +1,145 @@
+@import "../../modules/settings/_setting_pages";
+
+/* 8月产品体验页面 */
+.august-experience {
+    .banner {
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
+    .see-flow {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100px;
+        margin: auto;
+    }
+
+    .flow-show {
+        margin: 60*$px 0 30px;
+        text-align: center;
+
+        h2 {
+            font-size: 24px;
+        }
+        h4 {
+            margin: 0 0 5px;
+            font-size: 16px;
+            font-weight: 400;
+            color: $color_emphasis;
+        }
+        span {
+            margin: 0 10px;
+        }
+
+        > img {
+            margin: 70px 0 120px;
+            width: 83%;
+        }
+
+        .intro {
+            font-size: 14px;
+
+            > img {
+                margin: 0 0 15px;
+            }
+        }
+    }
+
+    section {
+        margin: 0 0 60px;
+
+        h3 {
+            font-size: 20px;
+        }
+        h4 {
+            font-size: 14px;
+            font-weight: 400;
+            color: #333;
+            margin: 0 0 5px;
+        }
+        img {
+            width: 100%;
+        }
+        .desc, .price {
+            color: #676767 !important;
+        }
+        .goods-show {
+            position: relative;
+        }
+        .info {
+            position: absolute;
+        }
+
+        .main {
+            .info {
+                left: 50px;
+                top: 50px;
+            }
+
+            p.desc {
+                margin-top: -8px;
+            }
+            .price .num {
+                font-size: 18px;
+            }
+
+            .b-l {
+                top: auto;
+                bottom: 50px;
+            }
+        }
+        .sub {
+            margin: 10px 0 0;
+
+            &:after {
+                content: '\20';
+                display: block;
+                clear:both;
+            }
+
+            > .goods-show {
+                box-sizing: border-box;
+                width: 49.7%;
+
+                &:nth-child(2n + 1) {
+                    float: left;
+                }
+                &:nth-child(2n) {
+                    float: right;
+                }
+
+                .t-l {
+                    top: 20px;
+                    left: 40px;
+                }
+
+                .b-r {
+                    bottom: 20px;
+                    right: 40px;
+                    text-align: right;
+                }
+
+                .t-r {
+                    top: 20px;
+                    right: 40px;
+                    text-align: right;
+                }
+
+                .b-l {
+                    left: 40px;
+                    bottom: 20px;
+                }
+            }
+
+        }
+    }
+
+    .weixin-qrcode {
+        margin: 20px 0 70px;
+        font-size: 14px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,21 @@
+<div class="lottery-inform">
+    <div class="lottery-inform__info">
+        <p>恭喜您获得了斯品商城提供的</p>
+
+        <p class="_prize-name">{{prizeName}}</p>
+
+        {{#unless isAddressRequired}}
+            <p>{{prizeType}}已计入您的账户，您可以在个人中心-我的{{prizeType}}中查看</p>
+        {{/unless}}
+
+        <p class="prize_img u-mb_20 {{prizeImgClass}}"></p>
+        <button id="j-result-close" class="lottery-inform__btn btn">
+            {{#if isAddressRequired}}
+                填写地址
+            {{else}}
+                我知道了
+            {{/if}}
+        </button>
+    </div>
+    <div id='j-address-form' class='lottery-address-form'></div>
+</div>

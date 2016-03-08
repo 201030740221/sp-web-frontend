@@ -1,0 +1,13 @@
+.placeholder-wrap {
+    position: relative;
+    display: inline-block;
+    .placeholder-label {
+        position: absolute;
+        left: 15*$px;
+        right: 15*$px;
+        top: 12*$px;
+        height: 16*$px;
+        color: $color_gray_text;
+        font-style: normal;
+    }
+}

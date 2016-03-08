@@ -1,0 +1,123 @@
+/*ui-date-picker*/
+.ui-date-picker {
+    position: absolute;
+    z-index: 9;
+    background: #fff;
+    border: 1*$px solid $color_gray_border;
+    text-align: center;
+    color: $color_black;
+    width: 611*$px;
+    box-sizing: content-box;
+    &__date-box,
+    &__time-box {
+        border-top: 1*$px solid $color_gray_border;
+    }
+    &__date-item,
+    &__checkbox {
+        border-left: 1*$px solid $color_gray_border;
+    }
+    &__hd {
+        text-align: center;
+        position: relative;
+        line-height: 48*$px;
+    }
+    &__title {
+        font-size: 14*$px;
+    }
+    &__prev,
+    &__next {
+        width: 54*$px;
+        position: absolute;
+        top: 0;
+        color: $color_black;
+        &:hover {
+            color: $color_gold_hover;
+        }
+        &._disabled {
+            &,
+            &:hover {
+                color: $color_gray_text;
+                cursor: default;
+            }
+        }
+    }
+    &__prev {
+        left: 0;
+    }
+    &__next {
+        right: 0;
+    }
+    &__bd {
+
+    }
+    &__date {
+        &-box {
+
+        }
+        &-title,
+        &-item {
+            padding-top: 10*$px;
+            height: 40*$px;
+        }
+    }
+    &__time {
+        &-title {
+            line-height: 40*$px;
+        }
+    }
+    &__checkbox {
+        line-height: 40*$px;
+        color: $color_success;
+        cursor: pointer;
+        &._active,
+        &:hover {
+            position: relative;
+            z-index: 9;
+            border: 1*$px solid $color_gold_hover;
+            margin: (-1px) (-1px) (-1px) 0;
+            &:before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 20*$px;
+                height: 20*$px;
+                background-image: url(~images/slice/type_selected.png);
+                background-repeat: no-repeat;
+                background-position: 0 0;
+            }
+        }
+        &._active {
+            color: $color_gold;
+        }
+        &:hover {
+            color: $color_gold_hover;
+        }
+        &._disabled {
+            &,
+            &:hover {
+                color: $color_gray_text;
+                cursor: default;
+                border: 0 none;
+                margin: 0;
+                border-left: 1*$px solid $color_gray_border;
+                &:before {
+                    display: none;
+                    background: none;
+                }
+            }
+        }
+    }
+
+    //width 560
+    &__date-title,
+    &__time-title {
+        width: 77*$px;
+        @extend %float;
+    }
+    &__date-item,
+    &__checkbox {
+        width: 75*$px;
+        @extend %float;
+    }
+}

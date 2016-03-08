@@ -1,0 +1,114 @@
+<!-- goods-detail-box -->
+<div class="goods-detail-box">
+    <div class="goods-detail-box__main">
+        <h3 class="goods-detail-box__main-title">KUKA顾家真皮沙发头层牛皮大小户型客厅皮艺沙发组合</h3>
+
+        <div class="goods-detail-box__main-description">
+            实木框架+胡桃木饰面+茶镜 1200*500*1800mm
+        </div>
+        <div class="goods-detail-summary u-clearfix">
+            <ul>
+                <li class="goods-detail-summary__flash-price u-clearfix">
+                    <p>
+                        <span class="ui-emphasis">秒杀价：</span>
+                        <span class="flash-prize ui-emphasis">¥ 2222.00</span>
+                    </p>
+                    <span class="ui-deprecated">原价：¥ 200</span>
+
+                </li>
+                <li class="goods-detail-summary__stock u-clearfix">
+                    <div class="dt">
+                        配送至：
+                    </div>
+                    <div class="dd">
+                        <div class="stock-btn" id="stock-btn">
+                            <a class="btn" href="#">
+                                <i class="_place_province" data-id="6">广东</i>
+                                <i class="_place_city" data-id="76">广州</i>
+                                <i class="_place_area" data-id="692">从化市</i>
+                                <i class="_place_town" data-id=""></i>
+                                <span class="iconfont">&#xf0122;</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="goods-detail-summary__logistic u-clearfix">
+                    <div class="dt">
+                        物流费：
+                    </div>
+                    <div class="dd u-mr_20">
+                        ¥ <span id="j-delivery">150</span> <a class="u-ml_5 help-link" href="#"></a>
+                    </div>
+                    <div class="dt">
+                        安装费：
+                    </div>
+                    <div class="dd">
+                        <span class="ui-deprecated">¥ 200</span>
+                        <span class="ui-emphasis">¥ 0.00</span>
+                        <i class="sign-free-install">&nbsp;</i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--<div class="quality-box u-mt_15">
+            <img src="/images/quality_icon1.png" alt=""/>
+            <img src="/images/quality_icon2.png" alt=""/>
+            <img src="/images/quality_icon3.png" alt=""/>
+        </div>-->
+        <form id="j-buy-now-form" style="display: none;" action="/checkout" method="POST">
+            <input type="hidden" name="type" value="quick_buy"/>
+            <input type="hidden" name="region" value="1"/>
+            <input type="hidden" name="goods_sku_id" value="1"/>
+            <input type="hidden" name="goods_sku_quantity" value="1"/>
+        </form>
+
+        <div class="flash-buy">
+            <div id="time-countdown-show">
+                <div class="flash-buy__title">离秒杀倒数时间还有</div>
+                <div id="j-flash-time" class="flash-buy__time" data-begintime="1437113744"  data-endtime="1447223744"></div>
+            </div>
+            <div id="flash-sale-btns" class="flash-buy__button">
+                <button id="ready-to-start" class="btn ui-before u-none">即将开始</button>
+                <button id="flash-sale-starting" class="btn ui-now u-none">立即秒杀</button>
+                <button id="sale-frozen" class="btn ui-now u-none">还有机会</button>
+                <button id="sale-end" class="btn ui-after u-none">已结束</button>
+            </div>
+        </div>
+
+        <div class="flash-notice">
+            <div class="u-clearfix">
+                <p>一步设置，贴心提醒！
+                    <a href="#" id="j-flash-setting">马上设置</a>
+                </p>
+                <p class="u-mt_10">如何在千军万马中杀出重围？教你放大招！ <a  id="j-detail-falsh-sale-intro">查看攻略</a></p>
+
+            </div>
+
+            <div id="j-flash-notice" class="flash-notice__form">
+                <form action="" class="form u-clearfix">
+                    <div class="form-field">
+                        <label class="u-fl"><input class="form-text" type="text" name="mobile" placeholder="请输入手机号码"/></label>
+                        <button class="btn form-submit-button u-fl" type="submit">提交</button>
+                        <a class="flash-notice__cancel" href="#">取消</a>
+                        <p class="notice-error">号码格式错误！</p>
+                    </div>
+                </form>
+                <span>我们将会在活动当天秒杀前1个小时以短信的形式通知您</span>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="goods-detail-box__photos">
+        <div class="goods-photos">
+            <div class="goods-photos__preview">
+                <img src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/02/09/2964d272_pic_show01.jpg" alt=""
+                     id="j-goods-photos__preview"/>
+            </div>
+            <div class="goods-photos__list goods-detail-slider-list" id="j-slider-list">
+                正在加载...
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /goods-detail-box -->

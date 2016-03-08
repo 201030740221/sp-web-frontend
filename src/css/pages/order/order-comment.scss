@@ -1,0 +1,71 @@
+@import "../../modules/settings/_setting_pages";
+
+.order-comment {
+    &__hd {
+        border-bottom: 1*$px solid $color_line;
+    }
+    &__info {
+        line-height: 3;
+        border-bottom: 1*$px solid $color_line;
+    }
+    &__submit {
+        background-color: $color_gold;
+        color: #fff;
+    }
+}
+
+.col-1 {
+    float: left;
+    display: inline-block;
+    width: 50%;
+}
+
+.col-2 {
+    float: left;
+    display: inline-block;
+    width: 40%;
+}
+
+.col-3 {
+    float: left;
+    display: inline-block;
+    width: 10%;
+}
+
+.comment-list {
+    &__hd {
+        line-height: 3;
+        border-bottom: 1px solid $color_line;
+    }
+    &__item {
+        padding: 20*$px 0;
+        border-bottom: 1px solid $color_line;
+        .col-1 img {
+            width: 100*$px;
+            margin-right: 10*$px;
+        }
+    }
+    &__img {
+        padding-bottom: 10*$px;
+        .img-wrap {
+            float: left;
+            width: 80*$px;
+            height: 80*$px;
+            overflow: hidden;
+            margin-right: 10*$px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.comment-form {
+    &:before, &:after {
+        right: 100*$px;
+    }
+}
+
+/*.form-submit {
+    display: none;
+}*/

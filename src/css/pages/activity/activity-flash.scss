@@ -1,0 +1,225 @@
+@import "~css/modules/settings/_setting_pages";
+$lottery_red: #be3247;
+$lottery_yellow: #ffff00;
+
+.flash-section {
+  padding: 40px 0;
+  background-color: #eaeaea;
+}
+
+.flash-header {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  &__title {
+    display: block;
+    text-indent: -10000px;
+    padding: 40px 0;
+    background-image: url("~images/activity/activity-july-s5-1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__text {
+    text-align: center;
+    span {
+      color: $lottery_red;
+    }
+    a {
+      color: $lottery_red;
+    }
+  }
+}
+
+.flash-goods {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  h2 {
+    display: inline-block;
+    margin-bottom: 20px;
+    border-bottom: solid 2px $lottery_red;
+    color: $lottery_red;
+    font-weight: 600;
+  }
+}
+
+.flash-goods-info {
+  width: 70%;
+  box-sizing: border-box;
+  padding-right: 30px;
+  border-right: solid 2px #e2e2e2;
+  .goods-info {
+    &__img {
+      width: 40%;
+      margin-right: 20px;
+      margin-left: 60px;
+      img {
+        max-width: 100%;
+      }
+    }
+    &__name {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    &__detail {
+      //font-weight: 600;
+    }
+    &__intro {
+      color: #7d7d7d;
+    }
+    &__price {
+      padding-top: 30px;
+      font-size: 16px;
+      vertical-align: baseline;
+      span {
+        font-size: 24px;
+      }
+    }
+    &__price-o {
+      padding-bottom: 30px;
+    }
+  }
+  .goods-flash {
+    &__text {
+      font-size: 16px;
+    }
+    &__time {
+      padding: 10px 0;
+      font-size: 18px;
+      font-weight: 600;
+      span {
+        color: $lottery_red;
+      }
+    }
+  }
+}
+
+.flash-goods-rule {
+  width: 30%;
+  padding-left: 30px;
+  box-sizing: border-box;
+  ._intro {
+    line-height: 2;
+  }
+}
+
+.flash-goods-grid {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  .grid-tabs {
+    border-top: solid 2px #3a3a3a;
+    border-bottom: solid 2px #3a3a3a;
+  }
+  .ui-tab {
+    margin: 0;
+    &__item {
+      margin: 0;
+      line-height: 1;
+      float: left;
+      display: inline-block;
+      width: 33.3333%;
+      text-align: center;
+      &:hover {
+        border: none;
+      }
+      a {
+        display: inline-block;
+        width: 120px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-weight: 600;
+      }
+      a._active, a:hover {
+        background-color: $lottery_red;
+        ._title {
+          color: $lottery_yellow;
+        }
+        ._time {
+          color: white;
+        }
+      }
+      span {
+        display: inline-block;
+        width: 100%;
+      }
+      ._title {
+        font-size: 18px;
+        color: $lottery_red;
+      }
+      ._time {
+        font-size: 12px;
+        color: #3a3a3a;
+      }
+    }
+  }
+
+  .grid-content {
+    padding-top: 30px;
+  }
+  .grid-item {
+    position: relative;
+    width: 33.33333%;
+    .goods-img {
+      width: 60%;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .goods-info {
+    position: absolute;
+    left: 45%;
+    top: 0;
+    width: 150px;
+    &__name {
+      font-weight: 600;
+    }
+  }
+  .goods-caption {
+    margin-top: 20px;
+    &__tt {
+      width: 200px;
+      border-top: solid 2px #3a3a3a;
+      font-weight: 600;
+    }
+    ._time {
+      padding-top: 10px;
+      padding-bottom: 20px;
+      font-weight: 600;
+      span {
+        color: $lottery_red;
+      }
+    }
+  }
+}
+.flashsale-time .ui-emphasis {
+  vertical-align: top;
+}
+
+.grid-nav {
+  padding-top: 40px;
+  text-align: center;
+  ul {
+    display: inline-block;
+  }
+  li {
+    display: inline-block;
+    font-size: 16px;
+  }
+  &__item {
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    color: $lottery_red;
+    &._disable {
+      color: #3a3a3a;
+    }
+  }
+}

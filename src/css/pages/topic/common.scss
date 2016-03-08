@@ -1,0 +1,34 @@
+@import "../../modules/settings/_setting_pages";
+.topic{
+    &-title-bg-01{
+        line-height:39px;
+        padding:0 .5em;
+        background: url("~images/topic/topic-index-05.jpg") repeat;
+    }
+}
+.underline-link{
+    display: inline-block;
+    position: relative;
+    line-height:1.5;
+    color: $color_gray;
+    &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background: $color_gray;
+    }
+    &:hover{
+        &:after{
+            background: $color_gold_hover;
+        }
+    }
+}
+.u-black-link{
+    color: $color_black;
+    &:hover{
+        color: $color_gold_hover;
+    }
+}

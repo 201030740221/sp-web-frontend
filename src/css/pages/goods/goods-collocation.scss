@@ -1,0 +1,230 @@
+.collocation {
+    margin-top: 20*$px;
+    padding: 20*$px;
+    background-color: white;
+    h1 {
+        padding-bottom: 20*$px;
+        font-size: 20*$px;
+        line-height: 1;
+    }
+    .tabs {
+        &__item {
+            cursor: pointer;
+            &._active {
+                font-size: 14*$px;
+                color: $color_title;
+                // position: relative;
+                // &:after {
+                //     position: absolute;
+                //     left: 0;
+                //     bottom: -16*$px;
+                //     content: '\f0118';
+                //     display: inline-block;
+                //     width: 100%;
+                //     text-align: center;
+                // }
+            }
+        }
+    }
+
+    &-content {
+        box-sizing: border-box;
+        width: 85%;
+    }
+
+    &-wrap {
+        position: relative;
+        padding-left: 60*$px;
+        padding-right: 40*$px;
+        height: 150*$px;
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        width: 50*$px;
+        height: 50*$px;
+        margin-top: -25*$px;
+        cursor: pointer;
+        border-radius: 50%;
+        text-align: center;
+        &:before {
+            position: absolute;
+            font-size: 20*$px;
+            color: $color_black;
+        }
+        &:hover {
+            color: #fff;
+            background-color: #e4e4e4;
+        }
+    }
+
+    .prev {
+        left: 0;
+        &::before {
+            left: 14*$px;
+        }
+    }
+
+    .next {
+        right: 10*$px;
+        &::before {
+            left: 17*$px;
+        }
+    }
+
+    &__item {
+        box-sizing: border-box;
+        width: 33%;
+        height: 100%;
+        padding-right: 20*$px;
+        img {
+            float: left;
+            width: 40%;
+        }
+    }
+
+    &__caption {
+        position: relative;
+        margin-left: 45%;
+        height: 100%;
+    }
+
+    &__title {
+        font-size: 14*$px;
+        a {
+            color: inherit;
+            &:hover {
+                color: $color_gold_hover;
+            }
+        }
+    }
+
+    &__text {
+        word-wrap: break-word;
+    }
+
+    &__price {
+        padding-top: 10*$px;
+    }
+
+    &__action {
+        position: absolute;
+        bottom: 0;
+        span {
+            cursor: pointer;
+            color: $color_gold;
+        }
+    }
+
+    &__spec {
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding: 10*$px;
+        background-color: #fff;
+        min-height: 100%;
+        box-shadow: 0 0 1px 0.6px rgba(0, 0, 0, .1);
+        span {
+            display: inline-block;
+        }
+        .title {
+            display: inline-block;
+            line-height: 20*$px;
+            color: $color_gray;
+        }
+        .color {
+            position: relative;
+            padding-left: 40*$px;
+            .title {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &__item {
+                box-sizing: border-box;
+                width: 20*$px;
+                height: 20*$px;
+                margin-right: 5*$px;
+                margin-bottom: 5*$px;
+                cursor: pointer;
+                &._active {
+                    border: 1px solid $color_gold;
+                }
+            }
+        }
+        .spec {
+            position: relative;
+            padding-left: 40*$px;
+            .title {
+                position: absolute;
+                top: 0;
+                left: 0;
+                line-height: 26*$px;
+            }
+            &__item {
+                box-sizing: border-box;
+                padding: 3*$px 5*$px;
+                position: relative;
+                cursor: pointer;
+                border: 1px solid $color_gray_border;
+                margin-right: 5*$px;
+                margin-bottom: 5*$px;
+                &._active {
+                    color: $color_gold;
+                    border: 1px solid $color_gold;
+                    &:after {
+                        content: ' ';
+                        display: inline-block;
+                        width: 10*$px;
+                        height: 10*$px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        background: url('~images/slice/type_selected_s.png') 0 0 no-repeat;
+                    }
+                }
+            }
+        }
+        .quantity {
+            margin-bottom: 40*$px;
+            &__item {
+                margin-left: 5*$px;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                border: solid 1px $color_gray_border;
+                cursor: pointer;
+            }
+        }
+
+        .select {
+            position: absolute;
+            left: 10*$px;
+            bottom: 10*$px;
+            span {
+                margin-right: 5*$px;
+            }
+            &__item {
+                color: $color_gold;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &-summary {
+        box-sizing: border-box;
+        width: 15%;
+        padding-left: 15*$px;
+        border-left: solid 1px $color_gray_border;
+        p {
+            margin-bottom: 10*$px;
+        }
+        button {
+            padding: 0 15%;
+        }
+    }
+}

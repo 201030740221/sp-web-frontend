@@ -1,0 +1,7 @@
+.order-list {
+    list-style: decimal inside;
+
+    > li {
+        margin: 10*$px 0;
+    }
+}

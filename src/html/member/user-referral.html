@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>我的推荐</title>
+    @@include('../_common/header/head.html')
+    @@include('./_include/meta.html')
+</head>
+<body>
+<div class="page page-user-points layout-fixed" data-module="">
+    <!--header-->
+    @@include('../_common/header/header.html')
+    <!--/header end-->
+
+    <div class="container container-border-bottom">
+        <div class="container__wrap">
+            <div class="layout-fixed-inner">
+                <div class="container__main">
+                    <div class="container__main-inner u-clearfix">
+                        <!--nav-->
+                        @@include('../_common/nav/nav.html', { "navName":"卧室" } )
+                        <!--/nav end-->
+                        <div class="main-layout u-wrap u-clearfix">
+                            <div class="main-layout-sidebar">
+                                <div class="center-menu">
+                                    <a class="center-menu__item" href="#">我的订单</a>
+                                    <a class="center-menu__item" href="#">我的购物车</a>
+                                    <a class="center-menu__item" href="#">收藏夹</a>
+                                    <a class="center-menu__item _active" href="#">我的推荐</a>
+                                    <a class="center-menu__item" href="#">用户信息</a>
+                                </div>
+                            </div>
+                            <div class="main-layout-container">
+                                @@include('./_include/referral_tabs.html')
+                                <!--table-->
+                                <table class="table-line table-referral">
+                                    <thead>
+                                        <tr>
+                                            <th>用户名</th>
+                                            <th>注册时间</th>
+                                            <th>奖励积分</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>hero</td>
+                                            <td><time>2015-07-06 11:01:17</time></td>
+                                            <td class="u-color_green">+500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>neao</td>
+                                            <td><time>2015-07-06 11:01:17</time></td>
+                                            <td class="u-color_green">+500</td>
+                                        </tr>
+                                        <!--/item end-->
+                                    </tbody>
+                                </table>
+                                <!--/table end-->
+                                <!--pager-->
+                                <div class="u-clearfix u-mlr_20 u-mt_20 u-mb_20">
+                                    <div class="pages u-fr">
+                                        <a href="#" class="pages__prev pages__btn btn btn-primary _disable">&#xf0115;</a>
+                                        <a href="#" class="pages__next pages__btn btn btn-primary">&#xf0116;</a>
+                                    </div>
+                                </div>
+                                <!--/pager end-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../_common/footer/footer.html')
+</div>
+@@include('../_common/footer/foot.html')
+</body>
+</html>

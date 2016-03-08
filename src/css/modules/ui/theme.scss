@@ -1,0 +1,266 @@
+/* 搭配场景 */
+.scene {
+    float: left;
+    position: relative;
+    width: 61%;
+
+    > img, >a img {
+        width: 100%;
+    }
+
+    &:hover {
+        figure {
+            display: block;
+        }
+    }
+
+    figure {
+        display: none;
+        position: absolute;
+        min-width: 30px;
+        min-height: 30px;
+        color: #fff;
+        background: #8bb450;
+        cursor: pointer;
+        z-index: 1;
+
+        @media (max-width: $small_screen) {
+            & {
+                display: block;
+            }
+        }
+
+        .scene-tag {
+            position: relative;
+            width: 100%;
+            min-height: 30px;
+            display: block;
+            &:before {
+                content: "\e628";
+                position: absolute;
+                top: 5px;
+                left: 8px;
+                font-size: 9px;
+                font-family: 'iconfont';
+                transform: scale(0.875);
+            }
+
+            a {
+                display: block;
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                color: inherit;
+                transition: width 0.2s linear, height 0.2s linear;
+            }
+
+            h6 {
+                padding: 5px 10px 5px 22px;
+                height: 30px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            .detail {
+                padding: 0 15px 15px 22px;
+
+                p {
+                    max-height: 54px;
+                    line-height: 18px;
+                    overflow: hidden;
+                }
+            }
+
+            .price {
+                color: $color_price;
+            }
+
+            &:hover {
+                &:before {
+                    content: "\e629";
+                }
+
+                a {
+                    height: 110px;
+                    width: 190px;
+                }
+            }
+        }
+
+    }
+}
+
+.channel-title {
+    h2 {
+        font-size: 26px;
+        text-align: center;
+        line-height: 1.5;
+
+        > * {
+            display: inline-block;
+            border: 0 solid $color_gray_text;
+            border-width: 3px 0;
+        }
+    }
+    h5 {
+        margin: 10px 0;
+        font-size: 12px;
+        color: #bcbcbc;
+        text-align: center;
+    }
+}
+
+.theme-collocation {
+
+    section {
+        @extend %clearfix;
+        margin: 20px 0;
+        background: #fff;
+    }
+
+    .label {
+        > * {
+            display: inline-block;
+            margin: 5px 3px 0 0;
+            padding: 1px 20px;
+            border: 2px dotted $color_gray_text;
+            color: inherit;
+
+            &:hover {
+                border: 2px solid $color_gold_hover;
+                color: $color_gold_hover;
+            }
+        }
+    }
+
+    .theme {
+        padding: 0 8%;
+        overflow: hidden;
+        color: $color_gray;
+
+        .description {
+            margin: 0 0 10px;
+            padding: 20% 0 0;
+        }
+
+        .avatar {
+            float: left;
+            margin: -12px 20px 0 0;
+        }
+
+        .info {
+            overflow: hidden;
+        }
+
+        h3 {
+            margin: 0 0 15px;
+            font-size: 18px;
+            line-height: 1.5;
+
+            a {
+                color: inherit;
+
+                &:hover {
+                    color: $color_gold_hover;
+                }
+            }
+        }
+
+        .theme-desc {
+            display: none; /* 设计图改掉了这个地方，先用样式隐藏 */
+        }
+
+        .price {
+            display: block;
+            margin-top: 20px;
+            color: $color_price;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 6px 35px;
+            background: $color_gold;
+            color: #fff;
+
+            &:hover {
+                background: $color_gold_hover;
+            }
+        }
+    }
+
+    .slider .inner-wrap{
+        max-height: 260px;
+        overflow: hidden;
+    }
+    .slider li {
+        max-width: 180px;
+
+        img {
+            max-width: 120px;
+        }
+    }
+
+    .more-theme {
+        text-align: center;
+        font-size: 14px;
+
+        > * {
+            display: inline-block;
+            width: 25%;
+            height: 40px;
+            line-height: 40px;
+            background: $color_gold;
+            color: #fff;
+
+            &:hover {
+                background: $color_gold_hover;
+            }
+        }
+    }
+
+    @media (max-width: $medium_screen) {
+        & {
+            .scene {
+                width: 63%;
+            }
+            .theme {
+                padding: 0 3%;
+
+                .description {
+                    padding-top: 5%;
+                }
+
+                .slider {
+                    margin: 0 10%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $small_screen) {
+        & {
+            .scene {
+                float: none;
+                width: 100%;
+            }
+            .theme {
+                padding: 20px 10px;
+
+                .description {
+                    float: left;
+                    padding-top: 50px;
+                    width: 40%;
+                }
+                .slider {
+                    float: right;
+                    margin-top: 40px;
+                    margin-right: 50px;
+                    width: 35%;
+                }
+            }
+        }
+    }
+}

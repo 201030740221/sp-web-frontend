@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fullpage demo</title>
+    <style>
+
+        header, footer {
+            height: 200px;
+            background: #f60;
+        }
+        
+        .sec1 {
+            background: #ccc;
+        }
+        .sec2 {
+            background: #a8a8a8;
+        }
+        .sec3 {
+            background: #f667ac;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        header
+    </header>
+    <div id="fullpage-demo">
+        <section class="sec1">
+            first
+        </section>
+        <section class="sec2">
+            two
+        </section>
+        <section class="sec3">
+            three
+        </section>
+    </div>
+    <footer>
+        footer
+    </footer>
+    <script src="/config.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/topic-show-3.js"></script>
+    <script>
+    $.fn.fullscreen = function (options) {
+        options = $.extend({
+            'item': 'section',
+            'firstScreenOffset': 0,
+            'lastScreenOffset': 0,
+            'speed': 500,
+            'responsive': true
+        }, options);
+
+        var $this = this
+        ,   $win = $(window)
+        ,   $page = $('body')
+        ,   $items = $this.find(options.item)
+        ,   count = $items.length
+        ,   $firstItem = $items.eq(0)
+        ,   $lastItem = $items.eq(count - 1)
+
+        ,   eventspace = '.full-screen'
+        ,   events = {
+            'wheel': 'mousewheel' + eventspace,
+            'resize': 'resize' + eventspace 
+        }
+        ,   isRunning = false
+        ,   active_index = 0;
+
+        function setActiveItem(index) {
+            index = index || 0
+            $items.removeClass('active').eq(index).addClass('active');
+        }
+        function init() {
+            $win.scrollTop(0);
+            setActiveItem(0);
+        }
+
+        if (options.responsive) {
+            $win.on(events.resize, function (e) {
+                var screen_height = $win.height();
+                $items.height(screen_height);
+
+                if (options.firstScreenOffset) {
+                    $firstItem.height(screen_height - options.firstScreenOffset);
+                }
+                if (options.lastScreenOffset) {
+                    $lastItem.height(screen_height - options.lastScreenOffset);
+                }
+
+            }).trigger(events.resize);
+        };
+
+        $this.on('mousewheel', function (e) {
+            e.preventDefault();
+
+            var delta = e.originalEvent.wheelDelta
+            ,   dir = 1
+            ,   isDown = delta > 0
+
+            if (isRunning || delta === 0) {
+                return;
+            }
+
+            if (isDown) {
+                dir = -1
+            }
+            if ((active_index === 0 && dir < 0) || (active_index === (count - 1) && dir > 0)) {
+                return;
+            }
+
+            var screen_height = $win.height()
+            ,   curr_top = $win.scrollTop();
+
+            isRunning = true;
+            $page.animate({
+                'scrollTop': dir * screen_height + curr_top
+            }, options.speed, function () {
+                active_index += dir;
+                setActiveItem(active_index);
+                isRunning = false;
+            });
+
+        });
+
+        init();
+    }
+
+    $wrap = $('#fullpage-demo');
+    $wrap.fullscreen({
+        'firstScreenOffset': $('header').outerHeight()
+    });
+    </script>
+</body>
+</html>

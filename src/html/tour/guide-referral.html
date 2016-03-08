@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>推荐注册</title>
+    @@include('../_common/header/head.html')
+    <link rel="stylesheet" href="/css/website.css">
+</head>
+<body>
+<div class="page page-categroy-all">
+    @@include('../_common/header/header.html')
+    <div class="container container-border-bottom">
+        <div class="container__wrap">
+            <div class="layout-fixed-inner">
+                <div class="container__main">
+                    <div class="container__main-inner">
+                        <!--nav-->
+                        <div class="nav">
+                            <ol class="nav__breadcrumb">
+                                <li><a href="/">首页</a><span class="iconfont">󰄖</span></li>
+                                <li><a href="#">推荐注册</a></li>
+                            </ol>
+                        </div>
+                        <!--/nav end-->
+
+                        <div class="guide-referral">
+                            <!-- 注册前进入引导页 -->
+                            <p>您的朋友向您推荐了斯品家居商城的活动。完成注册后您将获得<em class="num">300</em>斯品积分。</p>
+                            <p>您可以用积分兑换相应的商品,完成注册后再推荐给您的好友可获更多积分。每推荐一人成功注册便可获得<em class="num">500</em>积分。</p>
+                            
+                            <div class="u-mt_30 u-mb_30">
+                                <a href="/register?referral_code=123122" class="btn btn-em large">完成注册领取积分</a>
+
+                                <a id="goto-referral" href="/member/referral" class="goto-referral ui-emphasis">我已经是注册用户，我也要推荐！</a>
+                            </div>
+                            <!-- 注册前进入引导页 end-->
+                            
+                            <!-- 注册后进入引导页 -->
+                            <p>您已成功获取<em class="num">300</em>积分！</p>
+                            <p>您可以用积分兑换相应的商品,完成注册后再推荐给您的好友可获更多积分。每推荐一人成功注册便可获得<em class="num">500</em>积分。</p>
+
+                            <div class="u-mt_30 u-mb_30">
+                                <a href="" class="btn btn-em large">查看我的积分</a>
+                            </div>
+                            <!-- 注册后进入引导页 end-->
+
+                            <h3>积分积累到一定程度可以免费兑换以下商品</h3>
+
+                            <ul class="gift-list gift-container">
+                                <li class="grid grid-2">
+                                    <div>
+                                        <img class="thumb" src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/04/30/54fe458a_pic_show01.jpg?imageView2/2/w/210/h/210/q/80" alt="">
+                                    </div>
+
+                                    <div>
+                                        <h4 class="title">安吉 沙发椅</h4>
+                                        <ul class="sku-list">
+                                            <li>品名：沙发</li>
+                                            <li>面料：麻纺面料</li>
+                                            <li>框架：实木框架</li>
+                                            <li>填充物：高密度优质海绵</li>
+                                            <li>沙发脚：金属脚</li>
+                                            <li>可否拆洗：是</li>
+                                            <li>可否拆装：否</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+
+                            <h3>参与活动还有机会抽奖赢取Apple Watch</h3>
+                            <div style="display:inline-block; padding:20px 100px 20px 50px;position:relative;min-width:230px;min-height:230px;">
+                                <img src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/07/15/a4c06ccc_apple-watch.png" alt="apple watch">
+                                <div style="position:absolute;top: 60px;right: 20px;">
+                                    <h4 style="font-size: 22px">Apple Watch</h4>
+                                    <p>价格：<em style="font-size:18px;color: #fb0000">￥2218</em></p>
+                                </div>
+                            </div>
+
+                            <div class="u-mt_30 u-mb_30">
+                                <a href="" class="btn btn-em large">查看活动详情</a>
+                            </div>
+
+
+                            <h3>使用积分还可兑换以下礼品</h3>
+                            <div class="grid grid-3" style="width: 660px;text-align:center">
+                                <div>
+                                    <img src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/07/%E7%A4%BC%E5%93%811.png" alt="apple watch">
+                                    <h4>暖男公仔（绅士）</h4>
+                                </div>
+                                <div>
+                                    <img src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/07/%E7%A4%BC%E5%93%812.png" alt="apple watch">
+                                    <h4>暖男公仔（淑女）</h4>
+                                </div>
+                                <div>
+                                    <img src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/07/%E7%A4%BC%E5%93%813.png" alt="apple watch">
+                                    <h4>斯品帆布袋</h4>
+                                </div>
+                            </div>
+
+                            <div class="u-mt_30 u-mb_30">
+                                <a href="/member/point/mall" target="_blank" class="btn btn-primary btn-larger-big">查看积分商城</a>
+                            </div>
+                        </div>
+        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../_common/footer/footer.html')
+</div>
+@@include('../_common/footer/foot.html')
+<script src="/js/website-referral_dispatch.js"></script>
+</body>
+</html>

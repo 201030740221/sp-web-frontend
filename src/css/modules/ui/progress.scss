@@ -1,0 +1,276 @@
+/*进度条*/
+.ui-progress {
+    $ui-progress-grey: #dcdcdc;
+    height: 50*$px;
+    &__bar {
+        position: relative;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            height: 12*$px;
+            top: 6*$px;
+            background: $ui-progress-grey;
+            border-radius: 12*$px;
+        }
+        &:before {
+            right: 0;
+        }
+        &:after {
+            background: $color_success;
+        }
+        &._0 {
+            &:after {
+                width: 0;
+            }
+            ._0 {
+                background: $color_success;
+            }
+        }
+        &._25 {
+            &:after {
+                width: 25%;
+            }
+            ._0,
+            ._25 {
+                background: $color_success;
+            }
+        }
+        &._50 {
+            &:after {
+                width: 50%;
+            }
+            ._0,
+            ._25,
+            ._50 {
+                background: $color_success;
+            }
+        }
+        &._75 {
+            &:after {
+                width: 75%;
+            }
+            ._0,
+            ._25,
+            ._50 {
+                background: $color_success;
+            }
+        }
+        &._100 {
+            &:after {
+                width: 100%;
+            }
+            ._0,
+            ._25,
+            ._50,
+            ._100 {
+                background: $color_success;
+            }
+        }
+
+        //分五步
+        ._with-5-step & {
+            ._step-2 {
+                left: 25%;
+            }
+            ._step-3 {
+                left: 50%;
+            }
+            ._step-4 {
+                left: 75%;
+            }
+            &._step-1 {
+                &:after {
+                    width: 0;
+                }
+                ._step-1 {
+                    background: $color_success;
+                }
+            }
+            &._step-2 {
+                &:after {
+                    width: 25%;
+                }
+                ._step-1,
+                ._step-2 {
+                    background: $color_success;
+                }
+            }
+            &._step-3 {
+                &:after {
+                    width: 50%;
+                }
+                ._step-1,
+                ._step-2,
+                ._step-3 {
+                    background: $color_success;
+                }
+            }
+            &._step-4 {
+                &:after {
+                    width: 75%;
+                }
+                ._step-1,
+                ._step-2,
+                ._step-3,
+                ._step-4 {
+                    background: $color_success;
+                }
+            }
+            &._step-5 {
+                &:after {
+                    width: 100%;
+                }
+                ._step-1,
+                ._step-2,
+                ._step-3,
+                ._step-4,
+                ._step-last {
+                    background: $color_success;
+                }
+            }
+        }
+
+        //分四步
+        ._with-4-step & {
+            ._step-2 {
+                left: 33.333%;
+            }
+            ._step-3 {
+                left: 66.667%;
+            }
+            &._step-1 {
+                &:after {
+                    width: 0;
+                }
+                ._step-1 {
+                    background: $color_success;
+                }
+            }
+            &._step-2 {
+                &:after {
+                    width: 33.33%;
+                }
+                ._step-1,
+                ._step-2 {
+                    background: $color_success;
+                }
+            }
+            &._step-3 {
+                &:after {
+                    width: 66.6%;
+                }
+                ._step-1,
+                ._step-2,
+                ._step-3 {
+                    background: $color_success;
+                }
+            }
+            &._step-4 {
+                &:after {
+                    width: 100%;
+                }
+                ._step-1,
+                ._step-2,
+                ._step-3,
+                ._step-last {
+                    background: $color_success;
+                }
+            }
+        }
+
+        //分三步
+        ._with-3-step & {
+            ._step-2 {
+                left: 50%;
+            }
+            &._step-1 {
+                &:after {
+                    width: 0;
+                }
+                ._step-1 {
+                    background: $color_success;
+                }
+            }
+            &._step-2 {
+                &:after {
+                    width: 50%;
+                }
+                ._step-1,
+                ._step-2 {
+                    background: $color_success;
+                }
+            }
+            &._step-3 {
+                &:after {
+                    width: 100%;
+                }
+                ._step-1,
+                ._step-2,
+                ._step-last {
+                    background: $color_success;
+                }
+            }
+        }
+    }
+    &__No {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        margin-left: -12*$px;
+        width: 24*$px;
+        height: 24*$px;
+        line-height: 24*$px;
+        border-radius: 24*$px;
+        background: $ui-progress-grey;
+        color: #fff;
+        font-size: 14*$px;
+        text-align: center;
+        &._active {
+            background: $color_success;
+        }
+        &._0,
+        &._step-1 {
+            left: 0;
+            margin-left: 0;
+        }
+        &._25 {
+            left: 25%;
+        }
+        &._50 {
+            left: 50%;
+        }
+        &._75 {
+            left: 75%;
+        }
+        &._100,
+        &._step-last {
+            right: 0;
+            margin-left: 0;
+        }
+        &._0 &-desc,
+        &._step-1 &-desc {
+            text-align: left;
+            margin-left: 0;
+            left: 0;
+        }
+        &._100 &-desc,
+        &._step-last &-desc {
+            text-align: right;
+            left: auto;
+            right: 0;
+        }
+        &-desc {
+            position: absolute;
+            top: 36*$px;
+            left: 50%;
+            width: 8em;
+            margin-left: -4em;
+            text-align: center;
+            color: $color_black;
+            font-size: 12*$px;
+            line-height: 1;
+        }
+    }
+}

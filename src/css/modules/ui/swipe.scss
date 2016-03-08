@@ -1,0 +1,252 @@
+//swipe组件基本样式
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-item {
+  float:left;
+  width:100%;
+  position: relative;
+  overflow:hidden;
+}
+.swipe-points {
+  position: absolute;
+  bottom: 20*$px;
+  left: 47%;
+  height:18*$px;
+}
+.swipe-points span {
+  display: inline-block;
+  width:17*$px;
+  height:17*$px;
+  margin-right:10*$px;
+  /*border: 2px solid #fff;
+  border-radius: 100%;
+  background: rgba(255,255,255,0.5);*/
+  background-image: url("~images/index/dot-icon.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.swipe-points span._active {
+ /* border: 2px solid #bb9a83;
+  background: rgba(187,154,131,0.5);*/
+  background-image: url("~images/index/_active-icon.png");
+  background-repeat: no-repeat;
+}
+
+.swipe-actions {
+  &__prev,&__next{
+    background: rgba(0,0,0,0.1);
+    border-radius: 100%;
+    color: #fff;
+    font-size:24*$px;
+    width:50*$px;
+    height:50*$px;
+    line-height:50*$px;
+    position: absolute;
+    top:47%;
+    text-align: center;
+    &:hover {
+      background: rgba(0,0,0,0.2);
+      color: #fff;
+    }
+  }
+  &__prev{
+    left:20*$px;
+    &-icon{
+      &:before{
+        content:'\f0115';
+      }
+    }
+  }
+  &__next{
+    right:20*$px;
+    &-icon{
+      &:before{
+        content:'\f0116';
+      }
+    }
+  }
+}
+
+// new swipe style
+$actionSize: 48*$px;
+
+.swipe-container {
+  position: relative;
+
+  .swipe-action {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    height: $actionSize;
+    width: $actionSize;
+    line-height: $actionSize;
+    border-radius: 24*$px;
+    background: $color_line;
+    color: #fff;
+    text-align: center;
+    font-size: 26*$px;
+  }
+  .swipe-next {
+    right: -$actionSize;
+  }
+  .swipe-prev {
+    left: -$actionSize;
+  }
+  .disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .swipe-wrap {
+     height: 355 *$px;
+     overflow: hidden;
+
+    li {
+      min-height: 354*$px;
+    }
+  }
+  // 遮挡商品列表左侧边框线
+  .mask-line {
+    position: absolute;
+    z-index: 2;
+    top:0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    background: #fff;
+  }
+}
+
+/* 上一个，下一个按钮 */
+.prev, .next {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    margin-top: -40px;
+    padding: 10px;
+    font-size: 16px;
+    color: $color_gray_text;
+    text-shadow: 0 0 1px $color_gray_text;
+    font-family: 'iconfont';
+
+    &.disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+
+        &:hover {
+            color: $color_gray_text !important;
+        }
+    }
+}
+.prev {
+    &:before {
+        content: "\f0115";
+    }
+}
+.next {
+    &:before {
+        content: "\f0116";
+    }
+}
+/* v1.2版 banner样式 jquery.swipe */
+.swiper {
+    position: relative;
+    overflow: hidden;
+
+    > ul {
+        position: relative;
+
+        > li {
+            position: relative;
+            float: left;
+        }
+    }
+
+    .points {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 20px;
+        text-align: center;
+        user-select: none;
+
+        &::selection {
+            background-color: transparent;
+        }
+
+        > span {
+            display: inline-block;
+            margin: 0 4px;
+            width: 12px;
+            height: 12px;
+            background: $color_inactive;
+            background: rgba(160, 160, 160, .57);
+            border: 2px solid #fff;
+            cursor: pointer;
+
+            &:hover {
+                border-color: $color_gold_hover;
+            }
+
+            &.active {
+                border-color: $color_active;
+                background: $color_active;
+            }
+        }
+    }
+    .prev, .next {
+        color: #fff;
+        font-size: 25px;
+    }
+    .prev {
+        left: 0;
+    }
+    .next {
+        right: 0;
+    }
+}
+/* v1.2新版 商品列表滚动 jquery.slider */
+.slider {
+    position: relative;
+
+    .prev {
+        left: -30px;
+    }
+    .next {
+        right: -30px;
+    }
+
+    .prev, .next {
+        color: $color_black;
+        &:hover {
+            color: $color_gold_hover;
+        }
+    }
+
+    ul {
+        @extend %clearfix;
+    }
+    li {
+        float: left;
+        width: 50%;
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+    }
+    h4 {
+        margin: 0 0 10px;
+        font-size: 14px;
+    }
+    a {
+        color: inherit;
+    }
+}

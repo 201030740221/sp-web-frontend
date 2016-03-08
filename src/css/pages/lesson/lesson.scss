@@ -1,0 +1,207 @@
+@import "../../modules/settings/_setting_pages";
+@import "./index";
+@import "./list";
+
+main {
+    position: relative;
+}
+
+.menu {
+    float: left;
+    width: 400*$px;
+    &.fixed {
+        position: fixed;
+    }
+    h1 {
+        margin: 30*$px 0;
+        text-indent: -999em;
+        line-height: 60*$px;
+        background-image: url(~images/lesson/lesson-title.png);
+        background-repeat: no-repeat;
+    }
+    h2 {
+        padding-bottom: 10*$px;
+    }
+    &-list {
+        display: inline-block;
+        // float: left;
+        width: 48%;
+        vertical-align: top;
+        padding: 0 20*$px 50*$px 0;
+        a {
+            color: $color_gray;
+            line-height: 2;
+            &:hover {
+                color: $color_gold;
+            }
+        }
+    }
+}
+
+.content {
+    margin-left: 400*$px;
+    padding-left: 40*$px;
+    min-height: 500*$px;
+    overflow: auto;
+    border-left: 1px solid $color_line;
+    section {
+        @include clearfix;
+        padding: 40*$px 0;
+        &:not(:last-of-type) {
+            border-bottom: 4px solid $color_line;
+        }
+    }
+    .text {
+        // display: none;
+        strong, h2 {
+            margin-top: 25*$px;
+            display: block;
+            font-size: 16*$px;
+            margin-bottom: 10*$px;
+            & + br {
+                display: none;
+            }
+        }
+        p {
+            line-height: 22*$px;
+            margin-bottom: 10*$px;
+        }
+    }
+    h1 {
+        margin-top: 10*$px;
+        font-size: 20*$px;
+        line-height: 1;
+        font-weight: 600;
+        a {
+            color: $color_black;
+        }
+        span {
+            @include inline-block;
+            padding: 0 10*$px;
+            line-height: 1.8;
+            margin-bottom: 4*$px;
+            background: #ebebeb;
+            // background-image: repeating-linear-gradient(-40deg, #dedede, #dedede 5px, transparent 0, transparent 10px);
+            background-image: url(~images/topic/topic-index-05.jpg);
+        }
+    }
+    h2 {
+        color: $color_black;
+        span {
+            border-bottom: 2px solid $color_line;
+        }
+    }
+    h3 {
+        padding-top: 20*$px;
+    }
+    img {
+        max-width: 100%;
+    }
+    .left {
+        @include float;
+        // position: relative;
+    }
+    .right {
+        @include float(right);
+        // position: relative;
+    }
+    // .more {
+    //     display: block;
+    //     max-width: 480*$px;
+    //     margin: 30*$px auto;
+    //     color: $color_gray;
+    //     background-color: #f0f0f0;
+    //     text-align: center;
+    //     border: 1px solid $color_line;
+    //     border-radius: 3px;
+    //     font-size: 14*$px;
+    //     height: 30*$px;
+    //     line-height: 2;
+    //     transition: border-color 0.3s, background-color 0.3s;
+    //     transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    //     &:hover {
+    //         background-color: $color_gold_hover;
+    //         border-color: $color_gold_hover;
+    //         color: white;
+    //     }
+    // }
+}
+
+.read-more {
+    @include inline-block;
+    margin-top: 30*$px;
+    padding: 3*$px 0 20*$px 35*$px;
+    color: $color_gray_text;
+    background-image: url(~images/lesson/lesson-arrow.png);
+    background-repeat: no-repeat;
+}
+
+.section-1, .section-2 {
+    h1 {
+        margin-top: 0;
+        margin-bottom: 20*$px;
+    }
+}
+
+.section-1 {
+    .left {
+        width: 55%;
+    }
+    .right {
+        width: 40%;
+    }
+}
+
+.section-2 {
+    .left {
+        width: 40%;
+    }
+    .right {
+        width: 55%;
+    }
+}
+
+.section-3 {
+    .left {
+        width: 35%;
+    }
+    .right {
+        width: 60%;
+    }
+    .text {
+    }
+}
+
+.section-4 {
+    .left {
+        width: 60%;
+    }
+    .right {
+        width: 35%;
+    }
+}
+
+.footer {
+    margin-top: 0;
+}
+
+.finished {
+    display: block;
+    max-width: 480*$px;
+    margin: 30*$px auto;
+    color: $color_gray;
+    background-color: #f0f0f0;
+    text-align: center;
+    border: 1px solid $color_line;
+    border-radius: 3px;
+    font-size: 14*$px;
+    height: 40*$px;
+    line-height: 40*$px;
+    // transition: border-color 0.3s, background-color 0.3s;
+    // transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    // &:hover {
+    //     background-color: $color_gold_hover;
+    //     border-color: $color_gold_hover;
+    //     color: white;
+    // }
+}

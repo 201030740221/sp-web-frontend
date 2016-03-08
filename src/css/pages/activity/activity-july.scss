@@ -1,0 +1,112 @@
+@import "../../modules/settings/_setting_pages";
+
+.activity-banner {
+  position: relative;
+  img {
+    width: 100%;
+  }
+  .banner-click {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -50px;
+    width: 100px;
+    height: 60px;
+  }
+}
+
+._activity-btn {
+  display: inline-block;
+  padding: 0 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  line-height: 32px;
+  background-color: #c33232;
+  color: #ffff00;
+  &:hover {
+    background-color: #a72d2d;
+    color: #ffff00;
+  }
+  &._gray {
+    background-color: #a0a0a0;
+    color: white;
+  }
+}
+
+._link-btn {
+  display: inline-block;
+  li {
+    float: left;
+    display: inline-block;
+    margin: 0 5px;
+    line-height: 40px;
+  }
+  ._weibo, ._weixin {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+  }
+  ._weibo {
+    background-image: url("~images/activity/wb.png");
+  }
+  ._weixin {
+    background-image: url("~images/activity/wx.png");
+  }
+}
+
+
+.wx-share-box {
+  ._text {
+    padding-top: 5px;
+    color: #c33232;
+  }
+  .form {
+    margin-left: 90px;
+    .form-text {
+      width: 200px;
+      padding: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.aside-navigation {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 40px;
+  margin-top: -166px;
+  z-index: 10;
+  .nav {
+    &__item {
+      margin-bottom: 5px;
+      width: 90px;
+      text-align: center;
+      background-color: #a0a0a0;
+      //line-height: 2;
+      a {
+        display: inline-block;
+        width: 100%;
+        padding: 20px 0;
+        //line-height: 1;
+        color: white;
+      }
+      &._nav-active {
+        background-color: #c33232;
+        a {
+          color: yellow;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .aside-navigation {
+    display: block;
+  }
+}

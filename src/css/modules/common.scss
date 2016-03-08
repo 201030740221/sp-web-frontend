@@ -1,0 +1,87 @@
+@import "~css/modules/settings/_setting";
+@import "~css/modules/base/_setting";
+@import "~css/modules/base/_css3";
+@import "~css/modules/base/_media-queries";
+@import "~css/modules/base/_mixin";
+@import "~css/modules/base/_grid";
+@import "~css/modules/base/_reset";
+
+/*
+/*自动转换px To rem
+/*$html_base_font_size: 设置页面基础字体大小, 设置值与html的font-size一致
+/*$ratio,移动端相关,默认1*1
+/*  1*0.5: 用于ratio = 1, scale=1的场景;或用于ratio = 2, scale=0.5的场景;
+/*  2*0.5: 用于ratio = 2, scale=1的场景
+/*$exchange:px的值转换为rem
+/*$px:用于开发;
+/*用法说明:
+/*例如设计稿上80px的宽度,
+/*一般写法:width:80px;
+/*rem一般写法: width:80/16rem;(假设html字体为16px)
+/*自动转换写法: width:80*$px;
+**/
+$sy_html_base_font_size: 16;   //设置值与html的font-size一致
+$sy_ratio: 1*1;
+$sy_exchange: ($sy_ratio/$sy_html_base_font_size)*1rem;//px的值转换为rem
+//$sy_exchange: 1px; 不转换直接输出px
+//$px: $sy_exchange;
+$px: 1px;
+
+/*
+ * Max page width
+ */
+$max_page_width: 1600*$px;
+$lottery-red: red;
+
+// 字体
+//==============
+
+$font_h1: 20*$px;
+$font_title: 18*$px;
+$font_sub_title: 14*$px;
+$font_text:12*$px;
+
+@import "~css/modules/utils/_util";
+@import "~css/modules/ui/activity";
+@import "~css/modules/ui/address-list";
+@import "~css/modules/ui/amount-box";
+@import "~css/modules/ui/breadcrumb";
+@import "~css/modules/ui/btn";
+@import "~css/modules/ui/button";
+@import "~css/modules/ui/comment-form";
+@import "~css/modules/ui/common-cart";
+@import "~css/modules/ui/common-checkout";
+@import "~css/modules/ui/complete";
+@import "~css/modules/ui/coupon";
+@import "~css/modules/ui/fonticon";
+@import "~css/modules/ui/footer";
+@import "~css/modules/ui/form";
+@import "~css/modules/ui/global-sidebar";
+@import "~css/modules/ui/goods-list";
+@import "~css/modules/ui/grid";
+@import "~css/modules/ui/header-dropdown-menu";
+@import "~css/modules/ui/header";
+@import "~css/modules/ui/icon-sign";
+@import "~css/modules/ui/lightModal-box";
+@import "~css/modules/ui/list";
+@import "~css/modules/ui/main-layout";
+@import "~css/modules/ui/pagination";
+@import "~css/modules/ui/place-selector";
+@import "~css/modules/ui/placeholder";
+@import "~css/modules/ui/progress";
+@import "~css/modules/ui/react-checkbox";
+@import "~css/modules/ui/recommendation-list";
+@import "~css/modules/ui/sider-menu";
+@import "~css/modules/ui/sliderList";
+@import "~css/modules/ui/style_ie8";
+@import "~css/modules/ui/swipe";
+@import "~css/modules/ui/table";
+@import "~css/modules/ui/theme";
+@import "~css/modules/ui/ui";
+@import "~css/modules/ui/ui-checkbox";
+@import "~css/modules/ui/ui-date-picker";
+@import "~css/modules/ui/ui-lg-checkbox";
+@import "~css/modules/ui/ui-list";
+@import "~css/modules/ui/ui-modal";
+@import "~css/modules/ui/ui-tab";
+@import "~css/modules/ui/ui-table";

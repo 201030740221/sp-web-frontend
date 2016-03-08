@@ -1,0 +1,402 @@
+@import "../../modules/settings/_setting_pages";
+@import "../new-lottery/lottery.scss";
+@import "../new-lottery/rc-tab.scss";
+
+$color-bg: #f006a0;
+$yellow: #fff100;
+
+$path: '~images/activity/nov-2015/4th/';
+
+.wraper {
+    margin: auto;
+    padding: 0 10*$px;
+    max-width: 1420*$px;
+    min-width: 1024*$px;
+}
+
+.p4-one, .p4-two, .p4-three, .p4-four {
+    padding: 20*$px 0;
+    background-color: $color-bg;
+    h1 {
+        line-height: 100*$px;
+        text-align: center;
+        text-indent: -9999*$px;
+    }
+}
+
+.p4-one {
+    h1 {
+        background-image: url($path + 'one-title.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    h2 {
+        color: #00a0e9;
+    }
+    .wraper > div {
+        position: relative;
+        background-color: white;
+    }
+}
+
+.lottery {
+    // float: left;
+    width: 70%;
+    padding: 20*$px;
+    background-color: white;
+    h2, p {
+        padding-left: 15*$px;
+    }
+    h2 em {
+        color: #f6ba95;
+    }
+    h2:nth-of-type(2) span {
+        border-bottom: 2px solid #00a0e9;
+    }
+}
+
+.lottery-aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    padding-top: 80*$px;
+    background-image: url($path + 'one-1.png');
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: contain;
+    background-color: #26bbff;
+    .rc-tabs {
+        max-width: 250*$px;
+        margin: auto;
+    }
+    li {
+        line-height: 24*$px;
+    }
+}
+
+.rc-tabs {
+    .item {
+        margin-right: 30*$px;
+        font-size: 16*$px;
+        color: white;
+        &.active {
+            color: $yellow;
+            border-bottom: 2px solid $yellow;
+        }
+    }
+    &-content {
+        height: 300*$px;
+        overflow: hidden;
+        margin: 20*$px 10*$px;
+        color: white;
+        span {
+            display: inline-block;
+        }
+        .user-name {
+            width: 100px;
+            margin-right: 5px;
+        }
+    }
+    .my-result {
+        height: 100%;
+        overflow-y: auto;
+    }
+}
+
+.p4-two {
+    $color-s-1: #1ac0bc;
+    h1 {
+        background-image: url($path + 'two-title.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .row-hd {
+        padding: 17*$px 40*$px;
+        font-size: 18*$px;
+        color: white;
+        background-image: url($path + 'row-hd.png');
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        background-color: $color-s-1;
+        h2 {
+            font-size: 18*$px;
+        }
+    }
+    .row {
+        padding: 40*$px 20*$px 10*$px;
+        margin-bottom: 20*$px;
+        background-color: white;
+        > div {
+            float: left;
+        }
+    }
+    .item, .final {
+        width: 25%;
+    }
+    .plus {
+        position: relative;
+        width: 12.5%;
+        height: 300*$px;
+        // background-image: url($path + 'two-plus-1.png');
+        // background-repeat: no-repeat;
+        // background-position: center;
+        span {
+            position: absolute;
+            display: inline-block;
+            top: 50%;
+            left: 50%;
+            background-color: $color-s-1;
+        }
+        &-1 {
+            width: 80*$px;
+            height: 10*$px;
+            margin-left: -40*$px;
+            margin-top: -5*$px;
+        }
+        &-2 {
+            width: 10*$px;
+            height: 80*$px;
+            margin-left: -5*$px;
+            margin-top: -40*$px;
+        }
+    }
+    .eq {
+        position: relative;
+        width: 12.5%;
+        height: 300*$px;
+        > span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: inline-block;
+            width: 80*$px;
+            height: 40*$px;
+            margin-left: -40*$px;
+            margin-top: -20*$px;
+            border-top: 10*$px solid $color-s-1;
+            border-bottom: 10*$px solid $color-s-1;
+        }
+    }
+    .final {
+        padding: 85*$px 10*$px;
+        text-align: center;
+        background-image: url($path + 'two-hg-1.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        &-1 {
+            font-size: 18*$px;
+            color: $color-s-1;
+        }
+        &-2 {
+            font-size: 30*$px;
+            color: $color-s-1;
+            span {
+                font-size: 14*$px;
+            }
+        }
+        &-3 {
+            display: inline-block;
+            padding-left: 30*$px;
+            font-size: 15*$px;
+            line-height: 2;
+            color: #e5004f;
+            border-top: 1px dashed $color_gray;
+            border-bottom: 1px dashed $color_gray;
+            background-image: url($path + 'icon-1.png');
+            background-repeat: no-repeat;
+            background-position: 0 center;
+        }
+        &-4 {
+            display: inline-block;
+            padding: 0 20*$px;
+            margin-top: 10*$px;
+            font-size: 18*$px;
+            line-height: 2;
+            color: white;
+            background-color: $color-s-1;
+            border-radius: 50*$px;
+        }
+    }
+    .caption {
+        position: relative;
+        padding: 10*$px 20*$px;
+        background-color: $color-s-1;
+        p {
+            font-size: 16*$px;
+            color: white;
+            .em {
+                color: $yellow;
+            }
+            .deprecated {
+                font-size: 14*$px;
+                text-decoration: line-through;
+            }
+        }
+    }
+    .text {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: inline-block;
+        padding: 10*$px;
+        background-color: $yellow;
+        // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ccfff100,endColorstr=#ccfff100, GradientType=1);
+        // background-image: linear-gradient(135deg, transparent 50%, $yellow 0);
+        color: $color-s-1;
+        font-size: 16*$px;
+        &:before {
+            position: absolute;
+            top: 0;
+            right: 100%;
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border: 34*$px solid transparent;
+            border-right-color: $yellow;
+            border-bottom-color: $yellow;
+        }
+    }
+    $map: (
+        '2': #e023cc,
+        '3': #fc7338,
+        '4': #8fce20,
+        '5': #6b6bf8,
+    );
+    @each $key, $value in $map {
+        .hd-#{$key} {
+            background-color: $value;
+        }
+        .row-#{$key} {
+            .caption {
+                background-color: $value;
+            }
+            .text {
+                color: $value;
+            }
+            .plus span {
+                background-color: $value;
+            }
+            .eq > span {
+                border-color: $value;
+            }
+            .final {
+                background-image: url($path + 'two-hg-#{$key}.png');
+                &-1, &-2 {
+                    color: $value;
+                }
+                &-4 {
+                    background-color: $value;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1400*$px) {
+    .p4-two .text {
+        display: none;
+    }
+}
+
+.p4-three {
+    h1 {
+        background-image: url($path + 'three-title.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .hd {
+        padding: 40*$px 20*$px;
+        text-align: center;
+        background-image: url($path + 'three-1.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: white;
+        font-size: 18*$px;
+    }
+    .grid {
+        max-width: inherit;
+        padding-top: 20*$px;
+        background-color: white;
+    }
+    .item {
+        margin: 0 50*$px 20*$px;
+        // padding: 10*$px;
+        // background-color: #26bbff;
+    }
+    h2 {
+        padding: 0 10*$px;
+        font-size: 14*$px;
+        line-height: 3;
+        color: white;
+        background-color: #26bbff;
+    }
+    .ft {
+        position: relative;
+        display: block;
+        background-color: #e4007f;
+        // margin-left: -10*$px;
+        // margin-right: -10*$px;
+        // margin-bottom: -10*$px;
+        padding: 10*$px;
+        color: white;
+        font-size: 14*$px;
+    }
+    .price {
+        color: $yellow;
+    }
+    .text {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: inline-block;
+        padding: 10*$px;
+        // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ccfff100,endColorstr=#ccfff100, GradientType=1);
+        background-color: $yellow;
+        // background: linear-gradient(135deg, transparent 50%, $yellow 0);
+        color: #e4007f;
+        &:before {
+            position: absolute;
+            top: 0;
+            right: 100%;
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border: 31*$px solid transparent;
+            border-right-color: $yellow;
+            border-bottom-color: $yellow;
+        }
+    }
+}
+
+@media screen and (max-width: 1100*$px) {
+    .p4-three .text {
+        display: none;
+    }
+}
+
+.p4-four {
+    h1 {
+        background-image: url($path + 'four-title.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .wraper {
+        padding: 40*$px 20*$px;
+        background-color: #26bbff;
+        p {
+            color: white;
+            line-height: 2;
+        }
+    }
+}
+
+.p4.sidebar {
+    width: 60*$px;
+}

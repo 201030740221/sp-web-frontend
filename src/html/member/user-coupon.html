@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>我的优惠券</title>
+    @@include('../_common/header/head.html')
+    @@include('./_include/meta.html')
+</head>
+<body>
+<div class="page page-user-points layout-fixed" data-module="">
+    <!--header-->
+    @@include('../_common/header/header.html')
+    <!--/header end-->
+
+    <div class="container container-border-bottom">
+        <div class="container__wrap">
+            <div class="layout-fixed-inner">
+                <div class="container__main">
+                    <div class="container__main-inner u-clearfix">
+                        <!--nav-->
+                        @@include('../_common/nav/nav.html', { "navName":"卧室" } )
+                        <!--/nav end-->
+                        <div class="main-layout u-wrap u-clearfix">
+                            <div class="main-layout-sidebar">
+                                <div class="center-menu">
+                                    <a class="center-menu__item" href="#">我的订单</a>
+                                    <a class="center-menu__item" href="#">我的购物车</a>
+                                    <a class="center-menu__item" href="#">收藏夹</a>
+                                    <a class="center-menu__item " href="#">我的积分</a>
+                                    <a class="center-menu__item _active" href="#">我的优惠券</a>
+                                    <a class="center-menu__item" href="#">用户信息</a>
+                                </div>
+                            </div>
+                            <div class="main-layout-container coupon-container">
+                                <div class="user-points-hd u-pb_20 u-clearfix">
+                                        <a class="order-list-tab__item _active" href="#">未使用( <span class="u-color_red">2</span> )</a>
+                                        <a class="order-list-tab__item" href="#">已使用 ( <span class="u-color_red">2</span> )</a>
+                                        <a class="order-list-tab__item" href="#">已过期 ( <span class="u-color_red">2</span> )</a>
+                                        <div class="coupon-exchange u-fr">有优惠劵兑换码?&nbsp;&nbsp;<a href="javascript:;" class="handle_coupon btn">现在兑换</a></div>
+                                </div>
+                                <!--table-->
+                                <table class="table-line">
+                                    <thead>
+                                        <tr>
+                                            <th>优惠券信息</th>
+                                            <th>金额</th>
+                                            <th>使用条件</th>
+                                            <th>有效日期</th>
+                                            <th>来源</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2<br>24</td>
+                                            <td>￥100.00</td>
+                                            <td>无</td>
+                                            <td>
+                                                2011-11-30 - 2016-06-01
+                                            </td>
+                                            <td>用户领取</td>
+                                        </tr>
+                                        <!--/item end-->
+                                    </tbody>
+                                </table>
+                                <!--/table end-->
+                                <!--pager-->
+                                <div class="u-clearfix u-mlr_20 u-mb_20">
+                                    <div class="pages u-fr">
+                                        <a href="#" class="pages__prev pages__btn btn btn-primary _disable">&#xf0115;</a>
+                                        <a href="#" class="pages__next pages__btn btn btn-primary">&#xf0116;</a>
+                                    </div>
+                                </div>
+                                <!--/pager end-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../_common/footer/footer.html')
+</div>
+@@include('../_common/footer/foot.html')
+<script src="/js/member-coupon.js"></script>
+</body>
+</html>

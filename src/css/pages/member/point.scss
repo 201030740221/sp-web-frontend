@@ -1,0 +1,69 @@
+@import "~css/modules/settings/_setting_pages";
+.point-container {
+    h4 {
+        margin: 0 0 8*$px;;
+        font-size: 16*$px;
+    }
+
+    .point-reference {
+        padding: 0 0 20*$px;
+        border-bottom: 1px solid $color_gray_border;
+    }
+
+    .table-point {
+        margin-top: -20*$px;
+    }
+
+    .point-pager {
+        padding: 20*$px;
+        text-align: right;
+    }
+
+    .sku-list {
+        li {
+            margin: 5*$px 0;
+        }
+    }
+
+    .gift-list {
+        margin-top: -20*$px;
+    }
+}
+
+.gift-list {
+    > li {
+        padding: 20*$px 20*$px 0;
+        border: 0 solid $color_gray_border;
+        border-width: 0 1px 1px 0;
+
+        &:nth-child(2n) {
+            border-right: 0;
+        }
+    }
+
+    .info {
+        border-bottom: 1px dashed $color_gray_border;
+    }
+
+    .value {
+        margin: 15*$px 0;
+        font-size: 14*$px;
+    }
+
+    em {
+        color: $color_error;
+        font-size: 16*$px;
+    }
+
+    .sku-list {
+        height: 160*$px;
+        overflow: hidden;
+    }
+
+    .exchange {
+        float: right;
+        padding: 0 15*$px;
+        height: 40*$px;
+        line-height: 40*$px;
+    }
+}

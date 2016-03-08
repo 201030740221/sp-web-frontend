@@ -1,0 +1,133 @@
+@import "../../modules/settings/_setting_pages";
+$color_red: #b32b39;
+$color_yellow: #fffc00;
+.u-mt_25{
+    margin-top: 25*$px;
+}
+.u-color_red{
+    color: $color_red;
+}
+.btn-color-red{
+    background: $color_red;
+    color: $color_yellow;
+}
+.btn-color-black{
+    color: $color_yellow;
+}
+.btn-color-red,
+.btn-color-black{
+    &.disabled{
+        &,&:hover,&:active{
+            background: #c8c8c8;
+            color: #7d7d7d;
+        }
+    }
+}
+.page-presales-home{
+    >.footer{
+        margin-top: 0;
+    }
+}
+.u-opacity-init{
+    opacity: .2;
+}
+.u-opacity-1{
+    opacity: 1;
+}
+.u-transition-fade-in{
+    transition: opacity .6s ease-in 0s;
+}
+
+//modal
+.ui-modal__close-box{
+    background: $color_gray2;
+}
+//img-loader
+.img-loader{
+    background: #fff;
+    text-align: center;
+}
+.u-img-w-100{
+    display: block;
+    width: 100%;
+}
+.u-img-max-w{
+    max-width: 100%;
+}
+.u-img-h-100{
+    display: block;
+    height: 100%;
+}
+.u-img-max-h{
+    max-height: 100%;
+}
+
+.presales-link{
+    display: inline-block;
+    line-height: 1.5;
+    border-bottom: 1px solid $color_gold;
+    &:hover{
+        border-bottom-color: $color_gold_hover;
+    }
+}
+
+@import "./slider.scss";
+@import "./presales-goods-info-modal.scss";
+@import "./presales-set-message-modal.scss";
+@import "./presales-coupon-modal.scss";
+@import "./home.scss";
+@import "./detail.scss";
+
+
+
+
+.rt-goods-info {
+    .title {
+        h2 {
+            font-size: 36px;
+            float: left;
+            margin-right: 20px;
+        }
+    }
+
+    overflow: hidden;
+    .good-detail-summary .dt{
+        color: $color_black;
+    }
+    .good-detail-summary__type-item{
+        &:after{
+            display: none;
+        }
+        &._active,
+        &:hover,
+        &:active{
+            color: $color_red;
+            border-color: $color_red;
+        }
+    }
+    .amount-box__btns{
+        a{
+            &:hover,
+            &:active{
+                color: $color_red;
+                border-color: $color_red;
+            }
+        }
+    }
+
+    .amount-box__input input:focus{
+        border-color: $color_red;
+    }
+    .stock-btn{
+        .btn{
+            background: none;
+            &,&:hover{
+                border-color: $color_black;
+                color: $color_black;
+                .iconfont{
+                    color: $color_black;
+                }
+            }
+        }
+    }
+}

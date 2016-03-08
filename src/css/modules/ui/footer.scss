@@ -1,0 +1,50 @@
+/* 底部菜单 */
+.footer {
+    border-top: 1px solid $color_gray_border;
+    margin-top: 30*$px;
+    padding-top: 20*$px;
+    padding-bottom: 50*$px;
+    &-help {
+        @include clearfix;
+        padding-bottom: 20*$px;
+        margin-bottom: 30*$px;
+        border-bottom: 1px solid #f0f0f0;
+        dl {
+            float: left;
+            width: 14.28%;
+        }
+        dt {
+            color: $color_black;
+            font-size: 16*$px;
+            margin-bottom: 5*$px;
+        }
+        dd {
+            margin-top: 10*$px;
+
+        }
+        a:not(.footer-normal-link) {
+            color: $color_gray;
+            font-size: 12*$px;
+            &:hover {
+                color: $color_gold_hover;
+            }
+        }
+    }
+    &-copyright {
+        margin-bottom: 30px;
+        text-align: center;
+        a {
+            color: inherit;
+        }
+    }
+    dd.tel {
+        font-size: 18*$px;
+    }
+    .authentication {
+        text-align: center;
+        > * {
+            display: inline-block;
+            margin: 0 30px;
+        }
+    }
+}

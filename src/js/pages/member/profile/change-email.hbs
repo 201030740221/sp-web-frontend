@@ -1,0 +1,32 @@
+<form class="common-form common-form-nolabel change-email-form">
+    <div class="row">
+        {{#if isFirstBind}}
+        <p class="text">用户名：{{username}}</p>
+        {{else}}
+        {{#if mobile}}
+        <p class="text">已验证手机：{{mobile}}</p>
+        <input type="hidden" name="mobile" value="{{mobile}}">
+        {{else}}
+        <input class="mobilephone full-width" type="text" name="mobile" placeholder="请输入手机号码" required>
+        {{/if}}
+
+        {{/if}}
+    </div>
+    
+    {{#if isFirstBind}}
+    {{else}}
+    <div class="row">
+        <input placeholder="短信验证码" type="text" name="code" required size="6" aria-describedby="sms_code-error">
+        <a class="btn get-sms-code" style="float:right">获取短信验证码</a>
+        <p id="sms_code-error" class="error"></p>
+    </div> 
+    {{/if}}
+
+    <div class="row">
+        <input placeholder="{{#if isFirstBind}}{{else}}新{{/if}}邮箱" class="full-width" type="email" name="email" required>
+    </div>
+
+    <div class="row">
+        <a class="btn btn-confirm">验证邮箱</a>
+    </div>
+</form>

@@ -1,0 +1,368 @@
+@import "../../modules/settings/_setting_pages";
+.activity-banner{
+    position: relative;
+    img{
+        width: 100%;
+    }
+    .banner-click{
+        position: absolute;
+        bottom: 0*$px;
+        left: 50%;
+        margin-left: -50*$px;
+        width: 100*$px;
+        height: 60*$px;
+    }
+}
+.gift-section{
+    margin-left: -3%;
+    margin-top: 36*$px;
+    margin-bottom: 18*$px;
+}
+.activity-gift{
+    max-width: 1600*$px;
+    margin: 0 auto;
+    li{
+        width: 30.3%;
+        float: left;
+        margin-left: 3%;
+        img{
+            width: 100%;
+        }
+    }
+    &:after{
+        content:" ";
+        display: block;
+        clear: both;
+    }
+}
+.gift-award{
+    &.hidden{
+        display: none;
+    }
+    &:after{
+        content:" ";
+        display: block;
+        clear: both;
+    }
+    .title{
+        color: #242424;
+        font-size: 14*$px;
+        .now-date-award{
+            color: #e5361e;
+            font-size: 16*$px;
+            font-weight: bold;
+        }
+    }
+    .content{
+        margin-top: 10*$px;
+        .award{
+            display: block;
+            float: left;
+            width: 111*$px;
+            height: 140*$px;
+            background-image: url("~images/activity/gift-award.png");
+            background-repeat: no-repeat;
+            margin-right: 20*$px;
+        }
+        .dec{
+            .information{
+                color: #A1A1A1;
+                font-size: 12*$px;
+            }
+            .information-next{
+                text-decoration: line-through;
+                margin-top:8px;
+            }
+            .price{
+                font-size: 12*$px;
+                color: #a74453;
+            }
+        }
+    }
+    .gift-content-ul{
+        margin-left: 11%;
+        li{
+            width: 16%;
+            height: 24*$px;
+            line-height: 24*$px;
+            float: left;
+            background-image: url("~images/activity/gift-date.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            text-align: center;
+            margin-bottom: 10*$px;
+            margin-right: 15*$px;
+        }
+        &:after{
+            content:" ";
+            display: block;
+            clear: both;
+        }
+    }
+    p{
+        color: #B8B8B8;
+        font-size: 12*$px;
+        line-height: 18*$px;
+    }
+    .name-section{
+            .list{
+                &:after{
+                    content:" ";
+                    display: block;
+                    clear: both;
+                }
+            }
+            div{
+                font-size: 12*$px;
+                margin-bottom: 3*$px;
+            }
+            .left-item{
+                float: left;
+                clear: right;
+            }
+            .right-item{
+                float: right;
+            }
+            &:after{
+                content:" ";
+                display: block;
+                clear: both;
+            }
+
+    }
+}
+.content-nav{
+    margin-top: 20*$px;
+    &:after{
+        content:" ";
+        display: block;
+        clear: both;
+    }
+    .prev-nav{
+        float: left;
+        cursor: pointer;
+        &.disabled{
+            color: #D5D5D5;
+            cursor: default;
+        }
+    }
+    .next-nav{
+        float: right;
+        cursor: pointer;
+        &.disabled{
+            color: #D5D5D5;
+            cursor: default;
+        }
+    }
+}
+.shape-section{
+    max-width: 1600*$px;
+    height: 3*$px;
+    margin: 0 auto;
+    background-image: url("~images/activity/shape-dashed.png");
+    background-repeat: repeat-x;
+}
+.draw-btn{
+    width: 285*$px;
+    height: 49*$px;
+    margin: 30*$px auto 40*$px;
+    background-image: url("~images/activity/draw-btn.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-size: 22*$px;
+    color: #fff;
+    text-align: center;
+    line-height: 49*$px;
+    &.disabled{
+        background-image: url("~images/activity/button_active.png");
+    }
+}
+#j-activity-banner{
+    img{
+        width: 100%;
+    }
+    .prev-look{
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #fff;
+        width: 8%;
+        height: 100%;
+        cursor: pointer;
+        text-align: center;
+    }
+    .prev-icon{
+        position: absolute;
+        top: 48.5%;
+        left: 37%;
+    }
+    .next-look{
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: #fff;
+        width: 8%;
+        height: 100%;
+        cursor: pointer;
+        text-align: center;
+    }
+    .next-icon{
+        position: absolute;
+        top: 48.5%;
+    }
+    .nav-icon-dec{
+        display: inline-block;
+        position: absolute;
+        width: 32*$px;
+        top: 50%;
+        margin-top: -18*$px;
+        &.next-dec{
+            right: 52%;
+        }
+    }
+    .disabled{
+        color: #B2B2B2;
+        cursor: default;
+    }
+}
+.now-get-btn{
+    display: block;
+    width: 164*$px;
+    height: 44*$px;
+    background-image: url("~images/activity/now-get.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: 9.8%;
+    margin-top: 5%;
+    color: #fff;
+    font-size: 14*$px;
+    text-align: center;
+    line-height: 44*$px;
+}
+.advert-process{
+    margin: 50*$px auto;
+    width: 650*$px;
+    &:after{
+        content:" ";
+        display: block;
+        clear: both;
+    }
+    li{
+       float: left;
+        width: 32.8%;
+        height: 2*$px;
+        background: #A8A8A8;
+        position: relative;
+        &.on_process{
+            background: #d9505e;
+        }
+    }
+    .process-icon{
+        position: absolute;
+        left: 0;
+        top: -8*$px;
+        width: 18*$px;
+        height: 18*$px;
+        background-image: url("~images/activity/point_black.png");
+        background-repeat: no-repeat;
+        cursor: pointer;
+        &.last-icon{
+            left: 100%;
+        }
+        &.active_icon{
+            background-image: url("~images/activity/point_red.png");
+        }
+    }
+    .title-icon{
+        position: absolute;
+        left: -11*$px;
+        top: -34*$px;
+        width: 38*$px;
+        height: 20*$px;
+        text-align: center;
+        line-height: 16*$px;
+        font-size: 11*$px;
+        color: #7d7d7d;
+        cursor: pointer;
+        &.on_title{
+            background-image: url("~images/activity/tag.png");
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+        &.last-title-icon{
+            left: 94.5%;
+        }
+    }
+}
+
+.activity-recommend{
+    max-width: 1600*$px;
+    margin:0 auto;
+    .activity-recommend-title{
+        width: 142*$px;
+        height: 74*$px;
+        background-image: url("~images/activity/activity-recommend.png");
+        background-repeat: no-repeat;
+        margin: 30*$px auto 20*$px;
+    }
+}
+.activity-goods-recommend{
+    margin: 30*$px 0;
+    .recommend-section{
+        li{
+            box-sizing: border-box;
+            width: 25%;
+            float: left;
+            border-left: 1px solid #fff;
+            border-top: 1px solid #fff;
+            position: relative;
+            text-align: center;
+            background: #f2f2f2;
+            &.other-active{
+                background: #eaeaea;
+            }
+            &.large-good-recommend{
+                width: 50%;
+                color: #fbf4ee;
+            }
+            img{
+                width: 90%;
+            }
+            .text-section{
+                position: absolute;
+                bottom: 10*$px;
+                left: 10*$px;
+                text-align: left;
+                line-height: 18*$px;
+                .title{
+                    font-size: 14*$px;
+                    color: black;
+                    &:hover{
+                        color: $color_gold_hover;
+                    }
+                }
+                .content{
+                    font-size: 12*$px;
+                    color: #7d7d7d;
+                    span{
+                        color: #e5361e;
+                        margin-left: 5*$px;
+                        font-weight: bold;
+                    }
+                    .old-price{
+                        text-decoration: line-through;
+                        color: #7d7d7d;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+        &:after{
+            content:" ";
+            display: block;
+            clear: both;
+        }
+    }
+}

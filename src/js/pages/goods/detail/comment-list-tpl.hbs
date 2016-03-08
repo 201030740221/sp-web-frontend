@@ -1,0 +1,83 @@
+<div class="comment-hd u-clearfix">
+    <div class="comment-hd__left u-fl u-pr_30">
+        <div>
+            <span class="u-mr_20">共有商品评价 (<span class="ui-emphasis">{{total}}</span>)</span>
+            <span class="j-filter ui-checkbox u-mr_20">只看晒单</span>
+        </div>
+        <div class="comment__ratio u-fl">
+            <div class="comment__total">{{rate.positive}}%</div>
+            <div class="u-text-center">好评率</div>
+        </div>
+        <div class="comment__ratio-details u-fr">
+            <div class="_item">好评 (<span class="ui-emphasis">{{rate.positive}}%</span>) <span class="ratio-bar"><span
+                    style="width: {{rate.positive}}%;"></span></span></div>
+            <div class="_item">中评 (<span class="ui-emphasis">{{rate.neutral}}%</span>) <span class="ratio-bar"><span
+                    style="width: {{rate.neutral}}%;"></span></span></div>
+            <div class="_item">差评 (<span class="ui-emphasis">{{rate.negative}}%</span>) <span class="ratio-bar"><span
+                    style="width: {{rate.negative}}%;"></span></span></div>
+        </div>
+    </div>
+    <div class="comment-hd__right u-fr u-pl_20">
+        <p>
+            买家印象
+            <a class="u-fr" href="http://www.sipin.com/article/17">评价晒单赢积分换好礼》</a>
+        </p>
+
+        <div class="comment__tags">
+        </div>
+    </div>
+</div>
+<div class="comment-list">
+    <div class="comment-list__hd u-clearfix">
+        <span class="col-1">评价详情</span>
+        <span class="col-2">评价</span>
+        <span class="col-3">订单信息</span>
+        <span class="col-4">评价者</span>
+    </div>
+
+    {{#each data}}
+        <div class="comment-list__item u-clearfix">
+            <div class="col-1">
+                <p class="comment-list__text">{{content}}</p>
+                <p class="u-color_gray u-pb_10">{{created_at}}</p>
+                {{#if pics.length}}
+                    <div class="comment-list__img u-clearfix">
+                        {{#each pics}}
+                            <div class="img-wrap"><img src="{{this}}?imageView2/2/h/80" data-original-src="{{this}}" alt=""/></div>
+                        {{/each}}
+                    </div>
+                {{/if}}
+                {{#if tags.length}}
+                    <div>
+                        {{#each tags}}
+                            <span class="u-label">{{tag_name}}</span>
+                        {{/each}}
+                    </div>
+                {{/if}}
+                {{#each replys}}
+                    <div class="comment-list__reply u-pt_20">
+                        <span class="u-color_cyan">客服回复：</span>
+                        {{content}}
+                    </div>
+                {{/each}}
+
+            </div>
+            <div class="col-2">
+                <div class="u-color_cyan">
+                    {{rate}}
+                </div>
+            </div>
+            <div class="col-3">
+                {{order_info.sku_attribute_name}}
+            </div>
+            <div class="col-4">
+                <p>{{member_name}}</p>
+                <p class="u-color_gray">{{location}}</p>
+            </div>
+        </div>
+    {{/each}}
+</div>
+<div class="comment-ft u-fr u-pt_20 u-pr_20 u-pb_20">
+    <a href="javascript:" class="pages__prev pages__btn btn btn-primary _disable">&#xf0115;</a>
+    <a href="javascript:" class="pages__next pages__btn btn btn-primary">&#xf0116;</a>
+</div>

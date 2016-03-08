@@ -1,0 +1,44 @@
+.lottery-header {
+  padding: 20px;
+}
+
+.lottery-content {
+  position: relative;
+}
+
+.lottery-rule {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20%;
+}
+
+.lottery-dial {
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  &__prize {
+    display: inline-block;
+    width: 180px;
+    height: 100px;
+    overflow: hidden;
+    margin: 10px;
+  }
+}
+
+.j-prize-active {
+  border: solid 2px #000000;
+}
+
+.lottery-scroll {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20%;
+}
+
+.scroll-wrap {
+  height: 180px;
+  overflow: hidden;
+}

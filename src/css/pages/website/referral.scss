@@ -1,0 +1,30 @@
+@import "../../modules/settings/_setting_pages";
+
+.guide-referral {
+    padding: 50*$px 0;
+    font-size: 14*$px;
+
+    > p {
+        margin: 0 0 8*$px;
+    }
+
+    > h3 {
+        padding: 8*$px 0;
+        margin: 10*$px 0;
+        border-bottom: 1px solid $color_gray_border;
+        font-size: 18*$px;
+    }
+    
+    .goto-referral {
+        margin-left: 30*$px;
+        font-size: 14*$px;
+    }
+    .gift-container {
+        width: 430*$px;
+
+        h4 {
+            margin: 0 0 8*$px;
+            font-size: 14*$px;
+        }
+    }
+}

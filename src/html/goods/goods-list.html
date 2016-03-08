@@ -1,0 +1,572 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>商品列表 2.0</title>
+    @@include('../_common/header/head.html')
+    @@include('./_include/meta.html')
+</head>
+<body>
+<div class="page page-main page-list">
+    @@include('../_common/header/header.html')
+    <main class="wrap">
+        <!--nav-->
+        @@include('../_common/nav/nav.html', { "navName":"卧室"} )
+        <!--/nav end-->
+
+        <div class="goods-grid-hd">
+            <div class="u-fr">
+                <span class="u-mr_20">共<span class="u-color_red">3000</span>个商品</span>
+                <span class="u-mr_20"><span class="u-color_red">1</span>/30</span>
+                <a href="#" class="arrow disable iconfont u-mr_10">&#xf0115;</a>
+                <a href="#" class="arrow iconfont">&#xf0116;</a>
+            </div>
+
+            <!--filter-->
+            <div class="list-filter u-clearfix">
+                <a href="#" class="list-filter__item">
+                    综合
+                    <i class="iconfont">&#xf0122;</i>
+                </a>
+                <a href="#" class="list-filter__item _with-2-type _current-up">
+                    综合
+                    <i class="iconfont">&#xf0122;</i>
+                </a>
+                <a href="#" class="list-filter__item _with-2-type _current-down">
+                    综合
+                    <i class="iconfont">&#xf0122;</i>
+                </a>
+                <div id="shipping-area-btn" class="list-filter__item list-filter__placeselect">
+                    <span class="desc">收货地区：</span>
+                    <span class="stock-btn" id="stock-btn">
+                        <b>
+                            <b class="_place_province" data-index="-1"></b>
+                            <b class="_place_city" data-index="-1"></b>
+                            <b class="_place_area" data-index="-1"></b>
+                            <b class="_place_town" data-index=""></b>
+                            <b class="iconfont">&#xf0122;</b>
+                        </b>
+                    </span>
+
+                </div>
+            </div>
+            <!--/filter end-->
+
+            <!-- <ul class="list-filter">
+                <li><a href="">上架时间</a></li>
+                <li><a class="active" href="">价格</a></li>
+            </ul> -->
+        </div>
+
+        <div class="goods-grid">
+            <div class="goods-grid-item goods-babel-promo">
+                <div class="goods-grid-img">
+                    <a href="#"><img src="/images/img/img760_760.jpg" alt=""/>
+                        <img class="scene-cover" src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/06/26/8553ba33_pic_show01.jpg?imageView2/2/w/360/h/360" alt="">
+                    </a>
+                </div>
+                <h3 class="goods-grid-title"><a href="#">MANDA L曼德尔床架</a></h3>
+                <div class="goods-grid-text">
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                </div>
+                <div class="goods-grid-price">
+                    ¥ 3,999
+                </div>
+                <div class="goods-grid-btn">
+                    <a href="#" class="btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                    <a href="#" class="btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                </div>
+            </div>
+            <div class="goods-grid-item goods-babel-new">
+                <div class="goods-grid-img">
+                    <a href="#"><img src="/images/img/img760_760.jpg" alt=""/>
+                        <img class="scene-cover" src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/06/26/8553ba33_pic_show01.jpg?imageView2/2/w/360/h/360" alt="">
+                    </a>
+                </div>
+                <h3 class="goods-grid-title"><a href="#">MANDA L曼德尔床架</a></h3>
+                <div class="goods-grid-text">
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                </div>
+                <div class="goods-grid-price">
+                    ¥ 3,999
+                </div>
+                <div class="goods-grid-btn">
+                    <a href="#" class="btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                    <a href="#" class="btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                </div>
+            </div>
+            <div class="goods-grid-item">
+                <div class="goods-grid-img">
+                    <a href="#"><img src="/images/img/img760_760.jpg" alt=""/>
+                        <img class="scene-cover" src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/06/26/8553ba33_pic_show01.jpg?imageView2/2/w/360/h/360" alt="">
+                    </a>
+                </div>
+                <h3 class="goods-grid-title"><a href="#">MANDA L曼德尔床架</a></h3>
+                <div class="goods-grid-text">
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                </div>
+                <div class="goods-grid-price">
+                    ¥ 3,999
+                </div>
+                <div class="goods-grid-btn">
+                    <a href="#" class="btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                    <a href="#" class="btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                </div>
+            </div>
+            <div class="goods-grid-item">
+                <div class="goods-grid-img">
+                    <a href="#"><img src="/images/img/img760_760.jpg" alt=""/>
+                        <img class="scene-cover" src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/06/26/8553ba33_pic_show01.jpg?imageView2/2/w/360/h/360" alt="">
+                    </a>
+                </div>
+                <h3 class="goods-grid-title"><a href="#">MANDA L曼德尔床架</a></h3>
+                <div class="goods-grid-text">
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                </div>
+                <div class="goods-grid-price">
+                    ¥ 3,999
+                </div>
+                <div class="goods-grid-btn">
+                    <a href="#" class="btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                    <a href="#" class="btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                </div>
+            </div>
+            <div class="goods-grid-item">
+                <div class="goods-grid-img">
+                    <a href="#"><img src="/images/img/img760_760.jpg" alt=""/>
+                        <img class="scene-cover" src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/06/26/8553ba33_pic_show01.jpg?imageView2/2/w/360/h/360" alt="">
+                    </a>
+                </div>
+                <h3 class="goods-grid-title"><a href="#">MANDA L曼德尔床架</a></h3>
+                <div class="goods-grid-text">
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                </div>
+                <div class="goods-grid-price">
+                    ¥ 3,999
+                </div>
+                <div class="goods-grid-btn">
+                    <a href="#" class="btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                    <a href="#" class="btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                </div>
+            </div>
+            <div class="goods-grid-item">
+                <div class="goods-grid-img">
+                    <a href="#"><img src="/images/img/img760_760.jpg" alt=""/>
+                        <img class="scene-cover" src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/06/26/8553ba33_pic_show01.jpg?imageView2/2/w/360/h/360" alt="">
+                    </a>
+                </div>
+                <h3 class="goods-grid-title"><a href="#">MANDA L曼德尔床架</a></h3>
+                <div class="goods-grid-text">
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                </div>
+                <div class="goods-grid-price">
+                    ¥ 3,999
+                </div>
+                <div class="goods-grid-btn">
+                    <a href="#" class="btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                    <a href="#" class="btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                </div>
+            </div>
+            <div class="goods-grid-item">
+                <div class="goods-grid-img">
+                    <a href="#"><img src="/images/img/img760_760.jpg" alt=""/>
+                        <img class="scene-cover" src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/06/26/8553ba33_pic_show01.jpg?imageView2/2/w/360/h/360" alt="">
+                    </a>
+                </div>
+                <h3 class="goods-grid-title"><a href="#">MANDA L曼德尔床架</a></h3>
+                <div class="goods-grid-text">
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                </div>
+                <div class="goods-grid-price">
+                    ¥ 3,999
+                </div>
+                <div class="goods-grid-btn">
+                    <a href="#" class="btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                    <a href="#" class="btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                </div>
+            </div>
+            <div class="goods-grid-item">
+                <div class="goods-grid-img">
+                    <a href="#"><img src="/images/img/img760_760.jpg" alt=""/>
+                        <img class="scene-cover" src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/06/26/8553ba33_pic_show01.jpg?imageView2/2/w/360/h/360" alt="">
+                    </a>
+                </div>
+                <h3 class="goods-grid-title"><a href="#">MANDA L曼德尔床架</a></h3>
+                <div class="goods-grid-text">
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                </div>
+                <div class="goods-grid-price">
+                    ¥ 3,999
+                </div>
+                <div class="goods-grid-btn">
+                    <a href="#" class="btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                    <a href="#" class="btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                </div>
+            </div>
+            <div class="goods-grid-item">
+                <div class="goods-grid-img">
+                    <a href="#"><img src="/images/img/img760_760.jpg" alt=""/>
+                        <img class="scene-cover" src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/06/26/8553ba33_pic_show01.jpg?imageView2/2/w/360/h/360" alt="">
+                    </a>
+                </div>
+                <h3 class="goods-grid-title"><a href="#">MANDA L曼德尔床架</a></h3>
+                <div class="goods-grid-text">
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                </div>
+                <div class="goods-grid-price">
+                    ¥ 3,999
+                </div>
+                <div class="goods-grid-btn">
+                    <a href="#" class="btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                    <a href="#" class="btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                </div>
+            </div>
+            <div class="goods-grid-item">
+                <div class="goods-grid-img">
+                    <a href="#"><img src="/images/img/img760_760.jpg" alt=""/>
+                        <img class="scene-cover" src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/06/26/8553ba33_pic_show01.jpg?imageView2/2/w/360/h/360" alt="">
+                    </a>
+                </div>
+                <h3 class="goods-grid-title"><a href="#">MANDA L曼德尔床架</a></h3>
+                <div class="goods-grid-text">
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                </div>
+                <div class="goods-grid-price">
+                    ¥ 3,999
+                </div>
+                <div class="goods-grid-btn">
+                    <a href="#" class="btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                    <a href="#" class="btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                </div>
+            </div>
+            <div class="goods-grid-item">
+                <div class="goods-grid-img">
+                    <a href="#"><img src="/images/img/img760_760.jpg" alt=""/>
+                        <img class="scene-cover" src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/06/26/8553ba33_pic_show01.jpg?imageView2/2/w/360/h/360" alt="">
+                    </a>
+                </div>
+                <h3 class="goods-grid-title"><a href="#">MANDA L曼德尔床架</a></h3>
+                <div class="goods-grid-text">
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                </div>
+                <div class="goods-grid-price">
+                    ¥ 3,999
+                </div>
+                <div class="goods-grid-btn">
+                    <a href="#" class="btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                    <a href="#" class="btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                </div>
+            </div>
+            <div class="goods-grid-item">
+                <div class="goods-grid-img">
+                    <a href="#"><img src="/images/img/img760_760.jpg" alt=""/>
+                        <img class="scene-cover" src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/06/26/8553ba33_pic_show01.jpg?imageView2/2/w/360/h/360" alt="">
+                    </a>
+                </div>
+                <h3 class="goods-grid-title"><a href="#">MANDA L曼德尔床架</a></h3>
+                <div class="goods-grid-text">
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                    胡桃木饰面+茶镜 1200*500*1800
+                </div>
+                <div class="goods-grid-price">
+                    ¥ 3,999
+                </div>
+                <div class="goods-grid-btn">
+                    <a href="#" class="btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                    <a href="#" class="btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                </div>
+            </div>
+        </div>
+
+        <!--list-->
+        <!-- <div class="new-goods-list-box__outer u-mb_20" id="j-good-list-box">
+            <div class="new-goods-list-box">
+                <div class="new-goods-list-box__wrap">
+                    <div class="new-goods-list-box__inner u-clearfix">
+                        <div class="good-list-item _item_span3 good-label__new-arrival">
+                            <div class="good-list-item__img">
+                                <a href="#"><img src="/images/img/img760_760.jpg" alt=""/>
+                                    <img class="scene-cover" src="http://7viii7.com2.z0.glb.qiniucdn.com/2015/06/26/8553ba33_pic_show01.jpg?imageView2/2/w/360/h/360" alt="">
+                                </a>
+                            </div>
+                            <h3 class="good-list-item__title"><span>销量：<em>350</em></span><a href="#">MANDA L曼德尔床架</a></h3>
+                            <div class="good-list-item__description">
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                            </div>
+                            <div class="good-list-item__price">
+                                ¥ 3,999
+                            </div>
+                            <div class="good-list-item__btn-box">
+                                <a href="#" class="btn btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                                <a href="#" class="btn btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                            </div>
+                        </div>
+                        <div class="good-list-item _item_span3 good-label__promotion">
+                            <div class="good-list-item__img">
+                                <a href="#"><img src="/images/img/img760_760.jpg" alt=""/></a>
+                            </div>
+                            <h3 class="good-list-item__title"><span>销量：<em>350</em></span><a href="#">MANDA L曼德尔床架</a></h3>
+                            <div class="good-list-item__description">
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                            </div>
+                            <div class="good-list-item__price">
+                                ¥ 3,999
+                            </div>
+                            <div class="good-list-item__btn-box">
+                                <a href="#" class="btn btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                                <a href="#" class="btn btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                            </div>
+                        </div>
+                        <div class="good-list-item _item_span3">
+                            <div class="good-list-item__img">
+                                <a href="#"><img src="/images/img/img760_760.jpg" alt=""/></a>
+                            </div>
+                            <h3 class="good-list-item__title"><span>销量：<em>350</em></span><a href="#">MANDA L曼德尔床架</a></h3>
+                            <div class="good-list-item__description">
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                            </div>
+                            <div class="good-list-item__price">
+                                ¥ 3,999
+                            </div>
+                            <div class="good-list-item__btn-box">
+                                <a href="#" class="btn btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                                <a href="#" class="btn btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                            </div>
+                        </div>
+                        <div class="good-list-item _item_span3">
+                            <div class="good-list-item__img">
+                                <a href="#"><img src="/images/img/img760_760.jpg" alt=""/></a>
+                            </div>
+                            <h3 class="good-list-item__title"><span>销量：<em>350</em></span><a href="#">MANDA L曼德尔床架</a></h3>
+                            <div class="good-list-item__description">
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                            </div>
+                            <div class="good-list-item__price">
+                                ¥ 3,999
+                            </div>
+                            <div class="good-list-item__btn-box">
+                                <a href="#" class="btn btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                                <a href="#" class="btn btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                            </div>
+                        </div>
+                        <div class="good-list-item _item_span3">
+                            <div class="good-list-item__img">
+                                <a href="#"><img src="/images/img/img760_760.jpg" alt=""/></a>
+                            </div>
+                            <h3 class="good-list-item__title"><span>销量：<em>350</em></span><a href="#">MANDA L曼德尔床架</a></h3>
+                            <div class="good-list-item__description">
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                            </div>
+                            <div class="good-list-item__price">
+                                ¥ 3,999
+                            </div>
+                            <div class="good-list-item__btn-box">
+                                <a href="#" class="btn btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                                <a href="#" class="btn btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                            </div>
+                        </div>
+                        <div class="good-list-item _item_span3">
+                            <div class="good-list-item__img">
+                                <a href="#"><img src="/images/img/img760_760.jpg" alt=""/></a>
+                            </div>
+                            <h3 class="good-list-item__title"><span>销量：<em>350</em></span><a href="#">MANDA L曼德尔床架</a></h3>
+                            <div class="good-list-item__description">
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                            </div>
+                            <div class="good-list-item__price">
+                                ¥ 3,999
+                            </div>
+                            <div class="good-list-item__btn-box">
+                                <a href="#" class="btn btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                                <a href="#" class="btn btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                            </div>
+                        </div>
+                        <div class="good-list-item _item_span3">
+                            <div class="good-list-item__img">
+                                <a href="#"><img src="/images/img/img760_760.jpg" alt=""/></a>
+                            </div>
+                            <h3 class="good-list-item__title"><span>销量：<em>350</em></span><a href="#">MANDA L曼德尔床架</a></h3>
+                            <div class="good-list-item__description">
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                            </div>
+                            <div class="good-list-item__price">
+                                ¥ 3,999
+                            </div>
+                            <div class="good-list-item__btn-box">
+                                <a href="#" class="btn btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                                <a href="#" class="btn btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                            </div>
+                        </div>
+                        <div class="good-list-item _item_span3">
+                            <div class="good-list-item__img">
+                                <a href="#"><img src="/images/img/img760_760.jpg" alt=""/></a>
+                            </div>
+                            <h3 class="good-list-item__title"><span>销量：<em>350</em></span><a href="#">MANDA L曼德尔床架</a></h3>
+                            <div class="good-list-item__description">
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                                胡桃木饰面+茶镜 1200*500*1800
+                            </div>
+                            <div class="good-list-item__price">
+                                ¥ 3,999
+                            </div>
+                            <div class="good-list-item__btn-box">
+                                <a href="#" class="btn btn-shopping-cart"><span class="iconfont">&#xe662;</span></a>
+                                <a href="#" class="btn btn-favorite"><span class="iconfont">&#xf0054;</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!--/list end-->
+
+        <!--pager-->
+        <div class="u-clearfix u-mt_10">
+            <form id="jump-page-form" action="get">
+                <div class="paging u-fr">
+                    <a href="#" class="paging-btn disable iconfont">&#xf0115;</a>
+                    <a href="#" class="paging-btn active">1</a>
+                    <a href="#" class="paging-btn">2</a>
+                    <span class="paging-ellipsis">&#x000B7;&#x000B7;&#x000B7;&#x000B7;&#x000B7;&#x000B7;</span>
+                    <a href="#" class="paging-btn">333</a>
+                    <a href="#" class="paging-btn iconfont">&#xf0116;</a>
+                    <span class="u-mr_30">共<span class="u-color_red">30</span>页</span>
+                    <span class="u-mr_10">到</span>
+                    <input type="text" class="paging-ipt" data-max="100"/>
+                    <span class="u-mr_10">页</span>
+                    <a href="#" class="paging-go">确定</a>
+                </div>
+            </form>
+        </div>
+        <!--/pager end-->
+
+        <header class="life-hd">
+            <img src="http://www.sipin.latest.dev.e.sipin.one/static/images/topic/life-theme.jpg" alt="">
+            <a href="/theme" class="u-fr">
+                寻找我的空间
+                <span>→</span>
+            </a>
+        </header>
+        <ul class="life-list u-mb_65 has-4 u-clearfix">
+            <li>
+                <a href="" class="u-block u-black-link u-clearfix u-mb_15">
+                    <img src="http://7sbwdf.com2.z0.glb.qiniucdn.com/2016/01/07/568e16b2c60d6_498272bejw1eysjh2eaxqj20gj0gjwfm.jpg?imageView2/2/w/380/h/285/q/100" alt="主题搭配_001">
+                </a>
+                <a href="" class="u-block u-black-link u-clearfix u-mb_10">
+                    <h4>主题搭配_001</h4>
+                </a>
+            </li>
+            <li>
+                <a href="" class="u-block u-black-link u-clearfix u-mb_15">
+                    <img src="http://7sbwdf.com2.z0.glb.qiniucdn.com/2016/01/07/568e16cb0088a_498272bejw1eysjh6c90zj20gj0gjjsg.jpg?imageView2/2/w/380/h/285/q/100" alt="主题搭配_002">
+                </a>
+                <a href="" class="u-block u-black-link u-clearfix u-mb_10">
+                    <h4>主题搭配_002</h4>
+                </a>
+            </li>
+            <li>
+                <a href="" class="u-block u-black-link u-clearfix u-mb_15">
+                    <img src="http://7sbwdf.com2.z0.glb.qiniucdn.com/2016/01/07/568e16db684db_498272bejw1eysjh49n1uj20gj0gjdgs.jpg?imageView2/2/w/380/h/285/q/100" alt="主题搭配_003">
+                </a>
+                <a href="" class="u-block u-black-link u-clearfix u-mb_10">
+                    <h4>主题搭配_003</h4>
+                </a>
+            </li>
+            <li>
+                <a href="" class="u-block u-black-link u-clearfix u-mb_15">
+                    <img src="http://7sbwdf.com2.z0.glb.qiniucdn.com/2016/01/07/568e16f8ed283_498272bejw1eysjh18kkzj20gj0gjmya.jpg?imageView2/2/w/380/h/285/q/100" alt="主题搭配_004">
+                </a>
+                <a href="" class="u-block u-black-link u-clearfix u-mb_10">
+                    <h4>主题搭配_004</h4>
+                </a>
+            </li>
+        </ul>
+    </main>
+    @@include('../_common/footer/footer.html')
+</div>
+@@include('../_common/footer/foot.html')
+<script src="/js/goods-list.js"></script>
+</body>
+</html>

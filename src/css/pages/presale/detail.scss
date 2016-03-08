@@ -1,0 +1,393 @@
+//detail
+#presales-detail{
+    overflow: hidden;
+}
+.page-presales-detail{
+
+}
+.presales-detail-header{
+    overflow: hidden;
+    height: 74*$px;
+    background: #fff;
+    position: relative;
+    z-index:1;
+    &-text{
+        margin-top: 26*$px;
+    }
+}
+.presales-detail-block-inner{
+    position: relative;
+}
+.presales-detail-block-1{
+
+    position: relative;
+    z-index: 1;
+    img{
+        max-width: 100%;
+    }
+
+    background: #d0d0d1;
+}
+
+
+.presales-goods-info-main{
+
+}
+
+.presales-detail-block-1{
+    height:1080*$px;
+    padding:10*$px 0 0;
+    overflow: hidden;
+    background: #d5d5dd;
+    .img-box{
+        width: 60%;
+        img{
+            width:100%;
+        }
+    }
+
+}
+
+.presales-detail-goods-info {
+    position: absolute;
+    top: 100px;
+    width:30%;
+    right:0;
+    .title {
+        h2 {
+            font-size: 36px;
+            float: left;
+            margin-right: 20px;
+        }
+    }
+
+    .presales-block-1-price {
+        margin-bottom: 0;
+    }
+}
+
+.presales-detail-block-2{
+    position: relative;
+    overflow: hidden;
+    background: #e7e5e3;
+    z-index: 0;
+    ul{
+        li{
+            position: relative;
+            text-align: center;
+            width: 33.33%;
+        }
+    }
+    ul{
+        position: absolute;
+        top: 50%;
+        margin-top: -70*$px;
+        left: 0;
+        right: 0;
+        li{
+            >img{
+                width: 72.5%;
+            }
+        }
+        .scale-box-li{
+            z-index: 1;
+        }
+        .scale-box{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            width: 72.5%;
+            margin: auto;
+            img{
+                transform-origin: 50% 100%;
+                //transform: scale(2);
+                width: 100%;
+                opacity: 1;
+            }
+        }
+        .scale-box-desc{
+            width: 240*$px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+            margin: 68*$px auto 0;
+            h5{
+                font-size: 18*$px;
+                font-weight: normal;
+                width: 1em;
+                line-height: 1;
+                margin: 0;
+            }
+            img{
+                width: 44*$px;
+                height: 44*$px;
+                position: absolute;
+                left: 0;
+                top: 18*$px;
+            }
+            section{
+                margin:10*$px 0 0 28*$px;
+                font-size: 14*$px;
+                line-height: 20*$px;
+            }
+        }
+        .scaled .scale-box-desc{
+
+        }
+    }
+    .presales-detail-block-text{
+        position: absolute;
+        bottom: 50%;
+        left: 0;
+        right: 0;
+        margin: 0 auto 240*$px;
+        width: 420*$px;
+    }
+}
+
+
+.presales-detail-block-text{
+    h4{
+        font-size: 36*$px;
+        width: 420*$px;
+        font-weight: normal;
+        line-height: 1.2;
+        margin-bottom: 20*$px;
+    }
+    section,
+    li{
+        width: 420*$px;
+        font-size: 18*$px;
+        line-height: 24*$px;
+        position: relative;
+    }
+}
+
+.presales-detail-block-4{
+    position: relative;
+    overflow: hidden;
+    &-1{
+        background: #cac9cc;
+        position: relative;
+        height: 100%;
+        li{
+            margin-bottom:10*$px;
+            &:before{
+                content: '·';
+                position: absolute;
+                left: -1em;
+                top: 0;
+            }
+        }
+        .img-box{
+            position: absolute;
+            width: 56.25%;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            max-width:1080*$px;
+            max-height: 100%;
+            overflow: hidden;
+            transition: left .4s ease-in .1s, right .4s ease-in .1s;
+            img{
+                width:100%;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+        .presales-detail-block-text{
+            transition: left .5s ease-in .5s, right .5s ease-in .5s;
+        }
+        &.position-left{
+            .presales-detail-block-text{
+                left: -20%;
+            }
+            .img-box{
+                right:-100%;
+            }
+        }
+        &.position-right{
+            .presales-detail-block-text{
+                right: -20%;
+            }
+            .img-box{
+                left: -100%;
+            }
+        }
+    }
+    .bg-1{
+        background: #cac9cc;
+    }
+    .bg-2{
+        background: linear-gradient(#c2c2c4 0%, #ccccce 36%, #bbbbba 100%);
+    }
+    .bg-3{
+        background: #cac9cc;
+    }
+
+    .active{
+        .presales-detail-block-text{
+            transition: left .5s ease-in .2s, right .5s ease-in .2s;
+        }
+        .position-right{
+            .presales-detail-block-text{
+                right: 300/1920*100%;
+            }
+            .img-box{
+                left: 0;
+            }
+        }
+        .position-left{
+            .presales-detail-block-text{
+                left: 200/1920*100%;
+            }
+            .img-box{
+                right: 0;
+            }
+        }
+    }
+    .presales-detail-block-text{
+        position: absolute;
+        top: 190/760*100%;
+    }
+
+}
+.presales-detail-block-4-nav{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 0;
+    ul{
+        position: absolute;
+        right: 50px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    li{
+        display: block;
+        width: 14px;
+        height: 14px;
+        border-radius: 14px;
+        background: $color_gray;
+        margin-bottom: 20px;
+        &.active{
+            background: #9d6050;
+        }
+    }
+}
+.presales-detail-block-5{
+    position: relative;
+}
+
+.presales-detail-block-6{
+    position: relative;
+    z-index: 1;
+    &-item{
+        cursor: default;
+        position: relative;
+        float: left;
+        width:50%;
+        img{
+            width: 100%;
+            display: block;
+        }
+        .table-bg{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: #000;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            transition: opacity .5s ease-in .0s;
+        }
+        section{
+            filter: alpha(opacity=0);
+            opacity: 0;
+            transition: opacity .5s ease-in .0s;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            //background: rgba(0,0,0,.5);
+            color: #fff;
+            font-size:14*$px;
+        }
+        table{
+            height:100%;
+            width:100%;
+            text-align: center;
+        }
+        &:hover{
+            section{
+                filter: alpha(opacity=100);
+                opacity: 1;
+            }
+            .table-bg{
+                filter: alpha(opacity=50);
+                opacity: 0.5;
+            }
+        }
+    }
+}
+.presales-detail-block-7{
+    position: relative;
+    z-index: 1;
+    cursor: default;
+    display: block;
+    &-item{
+        img{
+            display: block;
+            width: 100%;
+        }
+        .table-bg{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: #000;
+            //-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            filter: alpha(opacity=0);
+            opacity: 0;
+            transition: opacity .5s ease-in .0s;
+        }
+        section{
+            transition: opacity .5s ease-in .0s;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            //background: rgba(0,0,0,.5);
+            color: #fff;
+            font-size:14*$px;
+        }
+        table{
+            height:100%;
+            width:100%;
+            text-align: center;
+        }
+        &:hover{
+            section{
+                filter: alpha(opacity=100);
+                opacity: 1;
+            }
+            .table-bg{
+                filter: alpha(opacity=50);
+                opacity: 0.5;
+            }
+        }
+    }
+}

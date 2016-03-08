@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>购物车</title>
+    @@include('../_common/header/head.html')
+    @@include('./_include/meta.html')
+</head>
+<body>
+<div class="page page-cart layout-fixed" data-module="cart">
+    @@include('./_include/cart-header.html')
+    <main class="wrap">
+        <div class="main-title">
+            <!--未登录-->
+            <div class="u-fr">
+                <span class="u-mr_10">登录即可永久保存购物车商品</span>
+                <a class="btn btn-primary j-login" href="javascript:;">现在登录</a>
+            </div>
+            <!--/未登录 end-->
+            <h2 class="u-f18">我的购物车</h2>
+        </div>
+        <div class="cart-table"></div>
+    </main>
+    @@include('../_common/footer/footer.html')
+</div>
+@@include('../_common/footer/foot.html')
+<script src="/js/cart-cart.js"></script>
+</body>
+</html>

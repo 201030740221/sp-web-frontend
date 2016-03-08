@@ -1,0 +1,82 @@
+<div class="lottery-inform">
+    <p class="lottery-inform__title">中奖通知</p>
+
+    <div class="lottery-inform__info">
+        <p>恭喜您获得了斯品商城提供的<span class="_prize-name">{{prizeName}}</span>，请填写你的收货信息</p>
+
+        <form action="" method="post" id="lottery-form" class="form form-horizontal">
+
+            <div class="form-item">
+                <label class="form-label" for="_username">
+                    <span class="form-required">* </span>联系人：
+                </label>
+
+                <div class="form-field">
+                    <input id="_username" type="text" class="form-text" name="name" minlength="2" maxlength="20"
+                           required>
+
+                </div>
+            </div>
+
+            <div class="form-item">
+                <label class="form-label" for="">
+                    <span class="form-required">* </span>取货地址：
+                </label>
+
+                <div class="form-field">
+                    <div id="j-place-selector" class="u-inline-block stock-btn_wrap u-clearfix">
+                        <div class="_place_box stock-btn u-inline-block u-mr_10">
+                            <a class="btn _place_click" href="javascript:;">
+                                <i class="_place_province" data-type="province" data-id="-1">广东</i>
+                                <span class="iconfont">&#xf0122;</span>
+                            </a>
+                        </div>
+                        <div class="_place_box stock-btn u-inline-block u-mr_10" style="">
+                            <a class="btn _place_click" href="javascript:;">
+                                <i class="_place_city" data-type="city" data-id="-1">广州</i>
+                                <span class="iconfont">&#xf0122;</span>
+                            </a>
+                        </div>
+                        <div class="_place_box stock-btn u-inline-block u-mr_10" style="">
+                            <a class="btn _place_click" href="javascript:;">
+                                <i class="_place_district" data-type="district" data-id="-1">越秀区</i>
+                                <span class="iconfont">&#xf0122;</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!--<input type="hidden" class="form-text _required" name="region" value="{{province_id}}">-->
+                    <span class="form-success-tips u-ml_5 iconfont u-color_green">&#xe615;</span>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <label class="form-label" for="_address">
+                    <span class="form-required">* </span>详细地址：
+                </label>
+
+                <div class="form-field">
+                    <input id="_address" type="text" placeholder="" class="form-text _required"
+                           name="address" required>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <label class="form-label" for="_phone">
+                    <span class="form-required">* </span>联系电话：
+                </label>
+
+                <div class="form-field">
+                    <input id="_phone" type="text" placeholder="" class="form-text valid-mobile" name="phone"
+                           required="">
+
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div class="form-field">
+                    <input type="submit" class="btn btn-big" value="确定提交">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

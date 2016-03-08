@@ -1,0 +1,51 @@
+
+// 等分的内容布局, 只需要父级加上.gird .grid-{等分值} 即可实现子级等分
+// div.grid-2 > div * 2
+.grid {
+   @include clearfix;
+   @extend %clearfix;
+}
+.grid > * {
+  float: left;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+  box-sizing: border-box;
+}
+.grid-1 > * {
+  width: 100%;
+}
+.grid-2 > * {
+  width: 50%;
+}
+.grid-3 > * {
+  width: 33.333333333333336%;
+}
+.grid-4 > * {
+  width: 25%;
+}
+.grid-5 > * {
+  width: 20%;
+}
+.grid-6 > * {
+  width: 16.666666666666668%;
+}
+.grid-7 > * {
+  width: 14.285714285714286%;
+}
+.grid-8 > * {
+  width: 12.5%;
+}
+.grid-9 > * {
+  width: 11.11111111111111%;
+}
+.grid-10 > * {
+  width: 10%;
+}
+.grid-11 > * {
+  width: 9.090909090909092%;
+}
+.grid-12 > * {
+  width: 8.333333333333334%;
+}

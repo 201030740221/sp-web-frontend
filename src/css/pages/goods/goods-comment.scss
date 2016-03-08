@@ -1,0 +1,149 @@
+// @import "../../modules/settings/_setting_pages";
+
+.comment {
+    &-hd {
+        padding: 20*$px;
+        margin-right: 20*$px;
+        border-bottom: 1px solid $color_line;
+        &__left {
+            width: 45%;
+            border-right: 1px dashed $color_line;
+        }
+        &__right {
+            width: 55%;
+        }
+    }
+    &__ratio {
+        width: 40%;
+        padding-top: 10*$px;
+    }
+    &__total {
+        font-size: 40*$px;
+        color: $color_emphasis;
+        text-align: center;
+    }
+    &__ratio-details {
+        width: 60%;
+        padding-top: 20*$px;
+        ._item {
+            padding-bottom: 10*$px;
+        }
+        .ratio-bar {
+            float: right;
+            display: inline-block;
+            width: 60%;
+            margin-top: 4*$px;
+            height: 10*$px;
+            background: #dcdcdc;
+            span {
+                float: left;
+                display: inline-block;
+                height: 100%;
+                background: $color_emphasis;
+            }
+        }
+    }
+    &__tags {
+        padding-top: 25*$px;
+    }
+}
+
+.comment-list {
+    .col-1 {
+        float: left;
+        width: 60%;
+        padding-right: 10*$px;
+    }
+    .col-2 {
+        float: left;
+        width: 10%;
+        padding-right: 10*$px;
+    }
+    .col-3 {
+        float: left;
+        width: 20%;
+        padding-right: 20*$px;
+        padding-right: 10*$px;
+    }
+    .col-4 {
+        float: left;
+        width: 10%;
+    }
+    &__hd {
+        padding: 10*$px 0 10*$px 20*$px;
+        margin-right: 20*$px;
+        border-bottom: 1px solid $color_line;
+    }
+    &__item {
+        padding: 20*$px 0 20*$px 20*$px;
+        margin-right: 20*$px;
+        border-bottom: 1px solid $color_line;
+    }
+    &__text {
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+    &__img {
+        padding-bottom: 20*$px;
+        .img-wrap {
+            float: left;
+            margin-right: 4*$px;
+            margin-bottom: 4*$px;
+            width: 82*$px;
+            height: 82*$px;
+            line-height: 80*$px;
+            overflow: hidden;
+            // margin-right: 10*$px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            text-align: center;
+            vertical-align: middle;
+            border-color: $color_gray2;
+            &._active {
+                border-color: $color_gold;
+            }
+        }
+        img {
+            // width: 100%;
+            max-width: 80*$px;
+            max-height: 80*$px;
+            vertical-align: middle;
+        }
+    }
+
+    .swipe-view {
+        height: 500*$px;
+        overflow: hidden;
+        padding: 20*$px;
+        border: 1px solid $color_line;
+        margin-bottom: 20*$px;
+    }
+
+    .swipe {
+        .trigger {
+            position: absolute;
+            bottom: 0;
+            width: 50%;
+            height: 100%;
+            &._prev {
+                left: 0;
+                cursor: url("~images/slice/cursor-prev.png"), pointer;
+            }
+            &._next {
+                right: 0;
+                cursor: url("~images/slice/cursor-next.png"), pointer;
+            }
+        }
+    }
+
+    .swipe-wrap {
+        div {
+            float:left;
+            width:100%;
+            position: relative;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}

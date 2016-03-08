@@ -1,0 +1,423 @@
+
+//ani
+.presales-ani{
+    position: relative;
+    transform: translateY(100%);
+}
+
+
+//presales-header
+.presales-header{
+    position: relative;
+    overflow: hidden;
+    padding: 0 10*$px;
+    h2{
+        color: #a74453;
+        font-size: 24*$px;
+        line-height: 1;
+        margin: 18*$px 0 14*$px;
+    }
+    &-links{
+        margin-bottom: 20*$px;
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        span,
+        a{
+            margin-right: .5em;
+            color: $color_black;
+        }
+        a{
+            &:hover{
+                color: $color_gold_hover;
+            }
+            &:active{
+                color: $color_active;
+            }
+        }
+    }
+    &-icons{
+        color: $color_gray;
+        margin-bottom: 24*$px;
+        li{
+            display: inline-block;
+            width: 30*$px;
+            margin-right: 80*$px;
+            &:first-child{
+                margin-left: 10*$px;
+            }
+
+            > img{
+                display: block;
+                width: 30*$px;
+                height: 30*$px;
+                margin-bottom: 8*$px;
+            }
+            > span{
+                display: block;
+                width: 8em;
+                margin-left: -4em;
+                position: relative;
+                left: 50%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.presales-list{
+    position: absolute;
+    right: 10*$px;
+    left: 10*$px;
+    top: 0;
+    text-align: right;
+
+    li{
+        cursor: pointer;
+        text-align: center;
+        display: inline-block;
+        margin-left: 10%;
+        width: 6.625%;
+        &:first-child{
+            margin-left: 0;
+        }
+        .img-box{
+            height: 106*$px;
+            width: 100%;
+            vertical-align: middle;
+        }
+        img{
+            display: inline-block;
+            //width: 106*$px;
+            width: 100%;
+        }
+    }
+    .presales-status,
+    h4{
+        font-size: 12*$px;
+        font-weight: normal;
+        width: 10em;
+        position: relative;
+        left: 50%;
+        margin-left: -5em;
+        white-space: nowrap;
+    }
+    .presales-status{
+        margin-top: 10*$px;
+        line-height: 24*$px;
+        color: $color_gray;
+        &:before,
+        &:after{
+            content: '';
+            height: 2*$px;
+            background: #bdaea8;
+            width: 5em;
+            left: 0;
+            right: 0;
+            position: absolute;
+            margin: auto;
+        }
+        &:before{
+            top: 0;
+        }
+        &:after{
+            bottom: 0;
+        }
+        &.active{
+            color: #9d6050;
+            &:before,
+            &:after{
+                background: #9d6050;
+            }
+        }
+    }
+}
+
+.no-select{
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+//block 1
+.presales-block-1{
+    position: relative;
+    line-height: 2;
+    overflow: hidden;
+    height: 1080*$px;
+    background: #dcdcdd;
+    &-img-box{
+        position: absolute;
+        left:32.8%;
+        right:0;
+        top: 0;
+        height:100%;
+        overflow: hidden;
+        > img{
+            margin-top: 13.75%;
+            transform: scale(1);
+            max-width:100%;
+            position: relative;
+        }
+    }
+    .wrap{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+    aside{
+        position: absolute;
+        left: 10*$px;
+        top: 13.75%;
+        width: 26.25%;
+        //width: 426*$px;
+        font-size: 14*$px;
+    }
+    h2{
+        font-size: 36*$px;
+        font-weight: normal;
+    }
+    .detail-link{
+        display: inline-block;
+        position: relative;
+        margin-top: 4*$px;
+
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 1px;
+            background: #d3af94;
+        }
+        &:hover:before{
+            background: $color_gold_hover;
+        }
+    }
+    &-price{
+        line-height: 24*$px;
+        .u-del{
+            line-height: 20*$px;
+        }
+    }
+}
+//block 2
+.presales-block-2{
+    position: relative;
+    z-index: 1;
+}
+
+//block 3 购买攻略
+.presales-block-3{
+    position: relative;
+    z-index: 2;
+    background: #343030;
+    header{
+        text-align: center;
+        color: $color_gray;
+        font-size: 14*$px;
+        margin: 3.75% auto 7.5%;
+        h4{
+            color: #fff;
+            font-size: 24*$px;
+            line-height: 40*$px;
+            font-weight: normal;
+            position: relative;
+            width: 4em;
+            margin: 0 auto 4*$px;
+            &:before,
+            &:after{
+                content: '';
+                height: 2px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                background: $color_gray;
+            }
+            &:before{
+                top: 0;
+            }
+            &:after{
+                bottom: 0;
+            }
+        }
+    }
+    section{
+        display: inline-block;
+        width: 33.33%;
+        text-align: center;
+        margin-bottom: 7.5%;
+        line-height: 2;
+        h5{
+            font-size: 18*$px;
+            line-height: 48*$px;
+            font-weight: normal;
+            color: #e9c998;
+            margin-bottom: 12*$px;
+            img{
+                height: 48*$px;
+            }
+            span{
+                vertical-align: -3*$px;
+            }
+        }
+        &.step-1{
+
+        }
+        > div,
+        footer{
+            width: 21em;
+            padding:0 1em;
+            font-size: 14*$px;
+            color: #f7f7f7;
+            margin: auto;
+        }
+        > div{}
+        footer{
+            margin-top: 12*$px;
+            border-top: 1px solid $color_black;
+            padding: 0;
+            img{
+                width: 37.4%;
+            }
+        }
+    }
+}
+
+
+.presales-block-2-special-item{
+    position: relative;
+    min-height: 1px;
+    color: #fff;
+    background: #4d2a2a;
+    header{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 70%;
+        margin-top: -200*$px;
+        h5{
+            font-size: 24*$px;
+            font-weight: normal;
+            line-height: 1.2;
+            margin-bottom: 10*$px;
+        }
+        a{
+            border-top: 1px solid #fff;
+            color: #fff;
+            line-height: 1.5;
+            display: inline-block;
+            margin-top: 4*$px;
+            &:hover{
+                color: $color_gold_hover;
+                border-top-color: $color_gold_hover;
+            }
+        }
+    }
+
+    ul{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        li{
+            position: relative;
+            text-align: center;
+            width: 33.33%;
+        }
+    }
+    ul{
+        position: absolute;
+        top: 50%;
+        margin-top: -60*$px;
+        left: 0;
+        right: 0;
+        li{
+            >img{
+                width: 72.5%;
+                display: inline-block;
+            }
+        }
+        footer{
+            width: 110*$px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+            margin: 28*$px auto 0;
+            h5{
+                font-size: 14*$px;
+                font-weight: normal;
+                width: 1em;
+                line-height: 1;
+                margin: 0;
+            }
+            img{
+                width: 44*$px;
+                height: 44*$px;
+                position: absolute;
+                left: 0;
+                top: 14*$px;
+            }
+            section{
+                margin:10*$px 0 0 28*$px;
+                font-size: 12*$px;
+                line-height: 20*$px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+.presales-coupon{
+    header{
+        >span{
+            display: inline-block;
+            line-height: 32*$px;
+            border-top: 2px solid $color_gray;
+            border-bottom: 2px solid $color_gray;
+            color: $color_black;
+            font-size: 18*$px;
+        }
+    }
+    table{
+        color: #fff;
+        line-height: 1;
+        margin-top: 20*$px;
+        a{
+            color: #fff;
+            border-bottom: 1px solid #fff;
+            &:hover{
+                color: $color_gold_hover;
+                border-bottom-color: $color_gold_hover;
+            }
+        }
+        tr{
+            &:first-child{
+                td{
+                    padding: 12*$px 10*$px 10*$px 18*$px;
+                }
+            }
+            td{
+                padding: 5*$px 10*$px 16*$px 18*$px;
+                background: $color_red;
+                &[rowspan="2"]{
+                    background: $color_yellow;
+                    font-size: 24*$px;
+                    color: $color_black;
+                    cursor: pointer;
+                }
+                &.disabled{
+                    background: $color_gray_border;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

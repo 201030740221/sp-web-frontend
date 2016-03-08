@@ -1,0 +1,35 @@
+</head>
+<body>
+<div class="page page-main page-goods-detail">
+    @@include('../../_common/header/header.html')
+    <main class="wrap">
+        <!--nav-->
+        <div class="breadcrumb">
+            <ol>
+                <li class="breadcrumb-title">商品详情</li>
+                <li>
+                    <a href="/">首页</a><span>/</span>
+                </li>
+                <li>
+                    <a href="/">客厅</a><span>/</span>
+                </li>
+                <li class="breadcrumb-active">沙发</li>
+            </ol>
+        </div>
+        <!--/nav end-->
+
+        <!-- good-detail-box -->
+        @@include('./detail-box.html')
+        <!-- /good-detail-box -->
+
+        <!-- good-detail-extend -->
+        @@include('./detail-extend.html')
+        <!-- /good-detail-extend -->
+    </main>
+    @@include('../../_common/footer/footer.html')
+</div>
+@@include('../../_common/footer/foot.html')
+<script src="/js/goods-detail.js"></script>
+<script>(function(){var kfjs=document.createElement("script");kfjs.setAttribute('charset','UTF-8');kfjs.setAttribute('async','async');kfjs.src="//meiqia.com/js/mechat.js?unitid=55a773f34eae352940000005";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(kfjs,s);})();</script>
+</body>
+</html>

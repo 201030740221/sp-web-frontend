@@ -1,0 +1,22 @@
+@import "../../modules/settings/_setting_pages";
+#lottery {
+    // max-width: 700*$px;
+    // margin: auto;
+}
+
+.lottery-marquee-main {
+    float: left;
+    width: 50%;
+}
+
+.lottery-aside {
+    padding-left: 20*$px;
+    li {
+        line-height: 24*$px;
+    }
+}
+
+.rc-tabs-content {
+    height: 200*$px;
+    overflow-y: auto;
+}

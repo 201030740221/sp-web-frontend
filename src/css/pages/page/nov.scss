@@ -1,0 +1,290 @@
+@import "../../modules/settings/_setting_pages";
+
+$red: #cf1f1c;
+
+img {
+    max-width: 100%;
+}
+
+.grid {
+    max-width: 1240*$px;
+    margin: auto;
+}
+
+#global-sidebar {
+    display: none;
+}
+
+.banner {
+    position: relative;
+    margin-bottom: -160*$px;
+    a {
+        position: absolute;
+        top: 32%;
+        left: 50%;
+        display: block;
+        width: 400*$px;
+        height: 135*$px;
+        margin-left: -200*$px;
+        background-color: transparent;
+    }
+}
+
+.zero {
+    padding-bottom: 40*$px;
+    background-color: $color_page_bg;
+    .grid {
+        position: relative;
+    }
+    .action {
+        max-width: 1100*$px;
+        margin: auto;
+        &-item {
+            & > div {
+                padding: 10*$px;
+                margin-right: 10*$px;
+                border: 2px solid $color_black;
+            }
+            p {
+                line-height: 3;
+            }
+            a {
+                color: $red;
+                &:before {
+                    content: '\025B8'
+                }
+            }
+            span {
+                font-weight: bolder;
+            }
+        }
+    }
+    h1 {
+        position: relative;
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 70*$px;
+            content: '';
+            width: 1*$px;
+            height: 80*$px;
+            background-color: $color_black;
+            transform: rotate(45deg);
+        }
+    }
+    h2 {
+        line-height: 1;
+    }
+    em {
+        font-size: 24*$px;
+        font-weight: bolder;
+        color: $red;
+    }
+    .item {
+        padding: 20*$px 20*$px 40*$px;
+        img {
+            cursor: pointer;
+        }
+    }
+    .notice {
+        width: 420*$px;
+        padding: 20*$px;
+        margin: auto;
+        background-color: $color_gray_light;
+        font-size: 14*$px;
+        font-weight: bolder;
+        text-align: center;
+        a {
+            color: $color_emphasis;
+        }
+    }
+}
+
+.one {
+    padding-top: 14%;
+    background: url('~images/activity/nov/two.png') no-repeat;
+    background-size: contain;
+    background-color: #8c44e0;
+    .intro {
+        width: 800*$px;
+        margin: 0 auto 60*$px;
+        color: white;
+        p {
+            margin-left: 100*$px;
+        }
+    }
+    h1 {
+        position: relative;
+        float: left;
+        line-height: 1.4;
+        &:after {
+            content: '';
+            position: absolute;
+            top: -5*$px;
+            right: 10*$px;
+            width: 1*$px;
+            height: 72*$px;
+            background-color: white;
+            transform: rotate(45deg);
+        }
+    }
+    .item {
+        padding: 0 20*$px 40*$px;
+    }
+    h2 {
+        text-align: center;
+        background-color: white;
+        line-height: 2.5;
+        color: $color_gray;
+    }
+    .caption {
+        position: relative;
+        padding: 20*$px;
+        background-color: white;
+        box-shadow: 0 2px 3px 0.4px rgba(0, 0, 0, 0.5);
+    }
+    .status {
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        width: 100px;
+        margin-left: -50*$px;
+        height: 100px;
+        line-height: 58px;
+        border-radius: 50%;
+        // background-color: rgba(0, 0, 0, 0.8);
+        
+        text-align: center;
+        color: white;
+        font-size: 18*$px;
+    }
+    .status-ready {
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc8c44e0,endColorstr=#cc8c44e0);
+        background-image: linear-gradient(rgba(140, 68, 224, .8) 50%, transparent 0);
+    }
+    .status-going {
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ccaac736,endColorstr=#ccaac736);
+        background-image: linear-gradient(rgba(170, 199, 54, .8) 50%, transparent 0);
+    }
+    .status-end {
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc000000,endColorstr=#cc000000);
+        background-image: linear-gradient(rgba(0, 0, 0, .8) 50%, transparent 0);
+    }
+}
+
+.two {
+    padding: 14% 0 50*$px;
+    background: url('~images/activity/nov/three.png') no-repeat;
+    background-size: contain;
+    background-color: #cc2a1e;
+    .grid {
+        padding: 0 20*$px;
+    }
+}
+
+.three {
+    padding: 14% 0 50*$px;
+    background: url('~images/activity/nov/four.png') no-repeat;
+    background-size: contain;
+    background-color: #44a3e0;
+    color: white;
+    p {
+        padding-bottom: 20*$px;
+    }
+    .item {
+        padding: 0 20*$px;
+    }
+}
+
+.notice-box {
+    padding: 0 20*$px 20*$px;
+    background-color: white;
+    .btn {
+        line-height: 42*$px;
+        background-color: $color_gray;
+        color: white;
+        border: none;
+        &.active {
+            background-color: $red;
+            color: #fffc00;
+        }
+    }
+    &-hd {
+        padding: 20*$px 0;
+        em {
+            font-size: 18*$px;
+            color: $red;
+        }
+        .phone {
+            width: 320*$px;
+        }
+        input {
+        }
+    }
+}
+
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    width: 100*$px;
+    margin-top: -180*$px;
+    text-align: center;
+    background: #a0a0a0;
+    span {
+        display: inline-block;
+        width: 100%;
+    }
+    .qrcode {
+        padding: 3*$px;
+        background-color: black;
+        color: $red;
+    }
+    li {
+        padding: 10*$px 0;
+        color: white;
+        border-bottom: 1px solid white;
+        cursor: pointer;
+        &:last-of-type {
+            border: none;
+        }
+        &.active {
+            background-color: $red;
+        }
+    }
+}
+
+#cs {
+    padding-top: 30*$px;
+    background: url('~images/activity/nov/icon.png') 50% 3px no-repeat;
+}
+
+.goto-top {
+    position: relative;
+    display: none;
+    padding-top: 5*$px;
+    cursor: pointer;
+    border-top: 1px solid white;
+    background: $color_gray_light;
+    &:hover {
+        background: $color_gray_light;
+        em {
+            display: none;
+        }
+    }
+    em {
+        position: absolute;
+        z-index: 1;
+        top: 5*$px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        font-size: 10px;
+        line-height: 1;
+        background: $color_gray_light;
+        color: white;
+    }
+    i {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,40 @@
+.order-info-address {
+    &__box {
+        margin-left: 20px;
+    }
+}
+
+.checkout-action-filed {
+    margin-top: 20px;
+    border-top: 1px solid $color_gray_border;
+}
+
+.presale-notice {
+    margin: 20*$px;
+    &-time {
+        color: $color_emphasis;
+        line-height: 36*$px;
+    }
+    input {
+        width: 360*$px;
+        margin: 0 10*$px;
+    }
+    button {
+        margin-right: 20*$px;
+        line-height: 40*$px;
+    }
+}
+
+.presale-tips {
+    float: left;
+    line-height: 4;
+}
+
+//for IE8 bug
+.﻿order-cart-table{
+    &__options {
+        .placeholder-wrap {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+<div class="header-cart__list">
+
+    {{#each items}}
+        {{#if is_multiple}}
+            <div class="collocation-item" data-item-id="{{id}}">
+                <h1 class="">
+                    {{name}}（共 <span class="ui-emphasis">{{total_quantity}}</span> 件商品）
+                    <a class="item-del u-color_black" href="javascript:;" data-item-id="{{id}}">删除</a>
+                </h1>
+
+                <div class="collocation-item__bd">
+                    {{#each items}}
+                        <div class="header-cart__item">
+                            <a class="header-cart__img-box" href="/item/{{sku}}.html" target="_blank">
+                                <img src="{{image}}?imageView2/2/w/100" alt="{{title}}"/>
+                            </a>
+
+                            <div class="header-cart__item-content">
+                                <a class="header-cart__item-title" href="/item/{{sku}}.html"
+                                   target="_blank">{{title}}</a>
+
+                                <div class="header-cart__item-price">
+                                    ¥ {{price}} X {{quantity}}
+                                    {{#if total_point}}
+                                        <p class="desc u-f14">消耗{{total_point}}积分</p>
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        {{else}}
+            <div class="header-cart__item" data-item-id="{{id}}">
+                <a class="header-cart__img-box" href="/item/{{items.sku}}.html" target="_blank">
+                    <img src="{{items.image}}?imageView2/2/w/100" alt="{{items.title}}"/>
+                </a>
+
+                <div class="header-cart__item-content">
+                    <a class="header-cart__item-title" href="/item/{{items.sku}}.html" target="_blank">{{items.title}}</a>
+
+                    <div class="header-cart__item-price">
+                        ¥ {{items.price}} X {{items.quantity}}
+                        {{#if total_point}}
+                            <p class="desc u-f14">消耗{{total_point}}积分</p>
+                        {{/if}}
+                        <a class="header-cart__item-del" href="javascript:;" data-item-id="{{id}}">删除</a>
+                    </div>
+                </div>
+            </div>
+        {{/if}}
+    {{/each}}
+</div>
+<div class="header-cart__ft">
+    <div class="">共<span class="u-color_red">{{total_quantity}}</span>件商品</div>
+    <div class="">总计(不含送装）：<span class="u-color_price">¥ {{total_price}}</span></div>
+    <a href="/cart" class="btn btn-big">查看购物车</a>
+</div>

@@ -1,0 +1,49 @@
+@import "../../modules/settings/_setting_pages";
+.page-topic-index{
+    > .footer{
+        margin-top: 0;
+    }
+}
+
+.topic{
+    //list
+    &-list{
+        margin: 0 420/1600*100% -9979px 400/1600*100%;
+        border: 1px solid $color_gray_border;
+        border-width:0 1px 0 1px;
+        padding:70*$px 40*$px 9999px;
+        ul{
+            overflow: hidden;
+            img{
+                display: block;
+            }
+        }
+        h3{
+            font-size:30*$px;
+            font-weight: bold;
+            color: $color_black;
+        }
+    }
+
+    &-load-more{
+        &-btn{
+            display: block;
+            margin: auto 100px;
+            line-height:40*$px;
+            text-align: center;
+            background: $color_gray_border;
+            color: $color_gray3;
+        }
+        a{
+            &:hover{
+                background: $color_gold_hover;
+                color: $color_gray3;
+            }
+            &:after{
+                content: '>>';
+                color: transparent;
+                background: url("~images/topic/icon-load-more.png") no-repeat center;
+            }
+        }
+    }
+}

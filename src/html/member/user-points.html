@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>我的积分</title>
+    @@include('../_common/header/head.html')
+    @@include('./_include/meta.html')
+</head>
+<body>
+<div class="page page-user-points layout-fixed" data-module="">
+    <!--header-->
+    @@include('../_common/header/header.html')
+    <!--/header end-->
+
+    <div class="container container-border-bottom">
+        <div class="layout-fixed-inner">
+            <!--nav-->
+            @@include('../_common/nav/nav.html', { "navName":"卧室" } )
+            <!--/nav end-->
+            <div class="main-layout u-wrap u-clearfix">
+                <div class="main-layout-sidebar">
+                    <div class="center-menu">
+                        <a class="center-menu__item" href="#">我的订单</a>
+                        <a class="center-menu__item" href="#">我的购物车</a>
+                        <a class="center-menu__item" href="#">收藏夹</a>
+                        <a class="center-menu__item _active" href="#">我的积分</a>
+                        <a class="center-menu__item" href="#">用户信息</a>
+                    </div>
+                </div>
+                <div class="main-layout-container point-container">
+
+                    <div class="tabs-simple point-reference">
+                        <a href="user-points.html" class="active">积分明细</a>
+                        <a href="user-points-mart.html">积分兑换</a>
+
+                        <p class="ref">
+                            您目前的可用积分: <em class="num">3560</em>
+                            <span class="u-ml_20">
+                                即将到期的积分：<em class="num">560</em>
+                            </span>
+                            <a href="" class="normal u-ml_20">如何获取积分？</a>
+                        </p>
+                    </div>
+
+                    <!--table-->
+                    <table class="table-line table-point">
+                        <thead>
+                            <tr>
+                                <th class="left">来源/用途</th>
+                                <th>时间</th>
+                                <th>积分变化</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="left">
+                                    <h3>交易获得</h3>
+                                    <p><span class="desc">订单编号：</span>123112312312</p>
+                                </td>
+                                <td>
+                                    <time>2015年07月03日 17:00:44</time>
+                                </td>
+                                <td class="u-color_green">+500</td>
+                            </tr>
+                            <tr>
+                                <td class="left">
+                                    <h3>消费抵扣</h3>
+                                    <p><span class="desc">订单编号：</span>123112312312</p>
+                                </td>
+                                <td>
+                                    <time>2015年07月03日 17:00:44</time>
+                                </td>
+                                <td class="u-color_red">-500</td>
+                            </tr>
+                            <!--/item end-->
+                        </tbody>
+                    </table>
+                    <!--/table end-->
+                    <!--pager-->
+                    <div class="pages point-pager">
+                        <a href="#" class="pages__prev pages__btn btn btn-primary _disable">&#xf0115;</a>
+                        <a href="#" class="pages__next pages__btn btn btn-primary">&#xf0116;</a>
+                    </div>
+                    <!--/pager end-->
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../_common/footer/footer.html')
+</div>
+@@include('../_common/footer/foot.html')
+</body>
+</html>

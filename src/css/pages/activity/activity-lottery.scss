@@ -1,0 +1,324 @@
+@import "~css/modules/settings/_setting_pages";
+$lottery_red: #be3247;
+$lottery_yellow: #ffff00;
+
+.lottery-section {
+  padding: 40px 0;
+  background-color: $lottery_red;
+  h2 {
+    display: inline-block;
+    border-bottom: solid 2px #ffff00;
+    color: #ffff00;
+  }
+}
+
+.lottery-header {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  &__title {
+    display: block;
+    text-indent: -10000px;
+    padding: 40px 0;
+    background-image: url("~images/activity/activity-july-s4-1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__rule {
+    padding: 10px 0;
+    border-top: solid 2px white;
+    border-bottom: solid 2px white;
+  }
+}
+
+.lottery-content {
+  max-width: 1600px;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.lottery-main {
+  width: 70%;
+}
+
+.lottery-share {
+  padding-top: 20px;
+  text-align: center;
+  color: white;
+  h2 {
+    margin-bottom: 30px;
+  }
+  ._sign-btn {
+    display: inline-block;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #000;
+    background-color: #ffff00;
+    border-radius: 50px;
+  }
+  ._signed {
+    background-color: #a0a0a0;
+    color: white;
+  }
+}
+
+.lottery-dial {
+  padding: 30px 40px;
+  &__wrap {
+    position: relative;
+    min-height: 180*$px;
+  }
+}
+
+.prize-list {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 30%;
+  overflow: hidden;
+  &__item {
+    position: absolute;
+    display: inline-block;
+    img {
+      width: 100%;
+    }
+  }
+  ._item_0 {
+    left: 0;
+    top: 0;
+    width: 20%;
+  }
+  ._item_1 {
+    left: 20%;
+    top: 0;
+    box-sizing: border-box;
+    width: 30%;
+    height: 32%;
+    border-left: solid 1px $lottery_red;
+    overflow: hidden;
+  }
+  ._item_2 {
+    @extend ._item_1;
+    left: 50%;
+    border-right: solid 1px $lottery_red;
+  }
+  ._item_3 {
+    right: 0;
+    top: 0;
+    width: 20%;
+  }
+  ._item_4 {
+    right: 20%;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 30%;
+    height: 32%;
+    overflow: hidden;
+    border-right: solid 1px $lottery_red;
+  }
+  ._item_5 {
+    @extend ._item_4;
+    right: 50%;
+    border-left: solid 1px $lottery_red;
+  }
+}
+
+.lottery-dial__center {
+  position: absolute;
+  left: 20%;
+  top: 32%;
+  bottom: 32%;
+  box-sizing: border-box;
+  width: 60%;
+  border: solid 1px $lottery_red;
+  background: rgba(253, 253, 252, 1);
+  background: -moz-linear-gradient(-45deg, rgba(253, 253, 252, 1) 0%, rgba(239, 237, 235, 1) 47%, rgba(223, 220, 216, 1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(253, 253, 252, 1)), color-stop(47%, rgba(239, 237, 235, 1)), color-stop(100%, rgba(223, 220, 216, 1)));
+  background: -webkit-linear-gradient(-45deg, rgba(253, 253, 252, 1) 0%, rgba(239, 237, 235, 1) 47%, rgba(223, 220, 216, 1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(253, 253, 252, 1) 0%, rgba(239, 237, 235, 1) 47%, rgba(223, 220, 216, 1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(253, 253, 252, 1) 0%, rgba(239, 237, 235, 1) 47%, rgba(223, 220, 216, 1) 100%);
+  background: linear-gradient(135deg, rgba(253, 253, 252, 1) 0%, rgba(239, 237, 235, 1) 47%, rgba(223, 220, 216, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdfdfc', endColorstr='#dfdcd8', GradientType=1);
+  ._lottery-count {
+    height: 50px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    span {
+      color: $lottery_red;
+    }
+  }
+  .lottery-go {
+    height: 40px;
+    margin: auto;
+    line-height: 40px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    bottom: 0;
+  }
+}
+
+.lottery-dot {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  li span {
+    content: ' ';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  &._list-1 {
+    top: -20px;
+    left: 0;
+    height: 18px;
+    overflow: hidden;
+    li {
+      float: left;
+      display: inline-block;
+      width: 5%;
+    }
+  }
+  &._list-2 {
+    top: 5px;
+    right: -15px;
+    width: 10px;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    li {
+      height: 15%;
+      vertical-align: middle;
+    }
+  }
+  &._list-3 {
+    @extend ._list-1;
+    top: auto;
+    bottom: -20px;
+    li {
+      float: right;
+    }
+  }
+  &._list-4 {
+    @extend ._list-2;
+    right: auto;
+    left: -15px;
+  }
+}
+
+.lottery-aside {
+  box-sizing: border-box;
+  width: 30%;
+  padding-left: 30px;
+  color: white;
+  border-left: solid 2px #b42f43;
+  &__rule {
+    padding-bottom: 20px;
+    p {
+      padding-top: 10px;
+      line-height: 2;
+    }
+  }
+  .ui-tab {
+    margin: 0;
+    padding-bottom: 15px;
+    &__item {
+      float: left;
+      display: inline-block;
+      width: 50%;
+      margin: 0;
+      cursor: pointer;
+      color: white;
+      &:hover {
+        border: none;
+        color: $lottery_yellow;
+      }
+      ._active {
+        color: $lottery_yellow;
+        border-bottom: solid 2px $lottery_yellow;
+      }
+    }
+  }
+}
+
+.aside-content {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 45%;
+  .ui-tab-container__item {
+    height: 200px;
+    overflow: hidden;
+  }
+  li {
+    line-height: 2;
+  }
+  ._name {
+    display: inline-block;
+    width: 45%;
+    margin-right: 16px;
+  }
+  ._prize {
+    color: $lottery_yellow;
+  }
+  #j-prize-list {
+    overflow-y: auto;
+  }
+}
+
+.lottery-inform {
+  text-align: center;
+  color: white;
+  &__info {
+    padding: 30px 0;
+    background-color: #be3247;
+  }
+  ._prize-name {
+    color: #e6be99;
+    font-size: 20px;
+  }
+  .prize_img {
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    background-size: contain;
+    &.prize-point {
+      background-image: url("~images/activity/prize-point.png");
+    }
+    &.prize-coupon {
+      background-image: url("~images/activity/prize-coupon.png");
+    }
+    &.prize-watch {
+      background-image: url("~images/activity/prize-watch.png");
+    }
+    &.prize-three {
+      background-image: url("~images/activity/prize-three.png");
+    }
+  }
+  &__btn {
+    background-color: #f9d301;
+    color: #be3247;
+    border: none;
+    line-height: 32px;
+  }
+}
+
+.lottery-address-form {
+  padding-left: 20px;
+  text-align: left;
+  .order-info__form {
+    padding-top: 10px;
+  }
+}

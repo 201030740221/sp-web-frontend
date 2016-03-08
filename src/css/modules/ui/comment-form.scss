@@ -1,0 +1,105 @@
+.comment-form {
+    position: relative;
+    padding-top: 20*$px;
+    border-top: 1px solid $color_line;
+    &:before {
+        content: ' ';
+        position: absolute;
+        top: -21*$px;
+        right: 65*$px;
+        border: 10*$px solid transparent;
+        border-bottom-color: $color_line;
+    }
+    &:after {
+        content: ' ';
+        position: absolute;
+        top: -20*$px;
+        right: 65*$px;
+        border: 10*$px solid transparent;
+        border-bottom-color: #fff;
+    }
+
+    .ui-radio {
+        line-height: 38*$px;
+        margin-right: 10*$px;
+    }
+
+    .form-textarea {
+        width: 90%;
+    }
+
+    .ui-tag {
+        margin-top: 6*$px;
+    }
+
+    .form-file {
+        width: 90*$px;
+        height: 40*$px;
+        overflow: hidden;
+        color: transparent;
+        &::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+        &::before {
+            content: '上传';
+            display: inline-block;
+            padding: 0 30*$px;
+            background: #fff;
+            border: 1px solid $color_gold;
+            color: $color_gold;
+            line-height: 38*$px;
+            outline: none;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            cursor: pointer;
+            font-size: 10pt;
+        }
+    }
+
+    .tip-2 {
+        padding-left: 80*$px;
+        line-height: 38*$px;
+    }
+
+    .img-preview {
+        margin: 20px 0;
+        &__wrap {
+            position: relative;
+            width: 80*$px;
+            margin-right: 10*$px;
+            ._del {
+                display: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 20*$px;
+                height: 20*$px;
+                background-color: $color_gold;
+                color: #fff;
+                text-align: center;
+                line-height: 20*$px;
+                cursor: pointer;
+            }
+            &:hover ._del {
+                display: inline-block;
+            }
+        }
+        img {
+            width: 100%;
+        }
+    }
+
+    .submit {
+        margin-right: 20*$px;
+        color: #fff;
+        background-color: $color_gold;
+        border-color: $color_gold;
+    }
+}
+
+.comment-empty {
+    width: 280*$px;
+    padding-left: 50*$px;
+    margin: 100*$px auto;
+    background: url("~images/comment-icon.png") 0 50% no-repeat;
+}

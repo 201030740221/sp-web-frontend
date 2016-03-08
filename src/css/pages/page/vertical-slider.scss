@@ -1,0 +1,175 @@
+@import "../../modules/settings/_setting_pages";
+
+$em: #cf1f1c;
+$yellow: #fff100;
+$brown: #9d6050;
+
+.s-slider {
+    // width: 83%;
+    max-width: 1600*$px;
+    margin: 430*$px auto 0;
+    padding: 40*$px 20*$px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#aaffffff,endColorstr=#aaffffff);
+    background-color: rgba(255, 255, 255, 0.66);
+    .trigger {
+        width: 200*$px;
+        padding: 50*$px 0;
+        li {
+            float: left;
+            width: 50%;
+            padding-bottom: 20*$px;
+            text-align: center;
+        }
+        a {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #dc9a81;
+            color: white;
+            line-height: 60px;
+            &.active {
+                background-color: #f07848;
+            }
+            &.up::after {
+                content: '\025B4';
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: #dc9a81;
+                color: white;
+                line-height: 0.8;
+                font-size: 60*$px;
+            }
+            &.down {
+                @extend .up;
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.slider-wiew {
+    margin-left: 230*$px;
+    .slider-row {
+        display: none;
+    }
+    .item {
+        float: left;
+        width: 49%;
+        max-width: 614*$px;
+        margin-right: 1%;
+        &-going {
+            .status {
+                background-color: $em;
+                &:after {
+                    border-left-color: $em;
+                }
+            }
+            .ft {
+                background-image: url('~images/activity/nov-2015/2th/one-3.jpg');
+            }
+            .countdown {
+                color: $yellow;
+            }
+            .price {
+                background-color: $em;
+            }
+        }
+        &-ready {
+
+        }
+        &-end {
+            .status {
+                background-color: #7D7D7D;
+                &:after {
+                    border-left-color: #7D7D7D;
+                }
+            }
+            .ft {
+                background-image: url('~images/activity/nov-2015/2th/one-4.jpg');
+            }
+            .countdown {
+                color: white;
+            }
+            .price {
+                background-color: #7D7D7D;
+            }
+        }
+    }
+    .title {
+        position: relative;
+        background-color: #fde9e2;
+    }
+    h1 {
+        color: $brown;
+        line-height: 50*$px;
+    }
+    .status {
+        display: inline-block;
+        position: relative;
+        color: white;
+        padding: 0 20*$px;
+        margin-right: 10%;
+        background-color: $brown;
+        font-size: 18*$px;
+        line-height: 50*$px;
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            right: -50*$px;
+            top: 0;
+            border: 25*$px solid transparent;
+            border-left-color: $brown;
+        }
+    }
+    .ft {
+        position: relative;
+        padding: 10*$px 0;
+        background-image: url('~images/activity/nov-2015/2th/one-5.jpg');
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        text-align: center;
+    }
+    .countdown {
+        font-size: 20*$px;
+        line-height: 30*$px;
+        color: white;
+    }
+    .price {
+        position: absolute;
+        bottom: 10*$px;
+        left: 30*$px;
+        width: 100*$px;
+        height: 100*$px;
+        padding-top: 20*$px;
+        background-color: $brown;
+        text-align: center;
+        border-radius: 50%;
+        & > * {
+            display: block;
+            line-height: 1.2;
+        }
+        &-1 {
+            color: white;
+            font-size: 16*$px;
+        }
+        &-2 {
+            color: $yellow;
+            font-size: 22*$px;
+        }
+        &-3 {
+            color: $color_gold;
+        }
+    }
+}

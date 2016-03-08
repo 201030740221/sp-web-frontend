@@ -1,0 +1,38 @@
+.activity-topbar-july {
+    display: block;
+    background-image: url('~images/activity/july-2015/bg.png');
+    background-repeat: repeat-x;
+
+    > .title {
+        display: block;
+        height: 64px;
+        background-image: url('~images/activity/july-2015/title.png');
+        background-repeat: no-repeat;
+        background-position: 50% -7px;
+    }
+}
+
+.activity-topbar-aug-tianjin {
+    display: block;
+    background: #000;
+
+    > .title {
+        display: block;
+        height: 64px;
+        background-image: url('~images/activity/aug-2015/title-tianjin.png');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+    }
+}
+.activity-topbar-2015-11 {
+    display: block;
+    background: #bc2c29;
+
+    > .title {
+        display: block;
+        height: 100px;
+        background-image: url('~images/activity/nov-2015/title-main.png');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+    }
+}

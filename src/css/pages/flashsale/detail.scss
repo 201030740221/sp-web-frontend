@@ -1,0 +1,90 @@
+@import "../../modules/settings/_setting_pages";
+@import "../goods/goods";
+.good-detail-summary__flash-price {
+    line-height: 24px;
+}
+.flash-prize {
+    font-size: 24px;
+}
+.flash-buy {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    font-size: 16px;
+    &__time {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        min-height: 45px;
+        span {
+            color: #a74453;
+            vertical-align: baseline;
+        }
+        .ui-emphasis {
+            font-size: 30px;
+        }
+    }
+    &__button .btn {
+        width: 210px;
+        height: 56px;
+        border: none;
+        font-size: 18px;
+        color: #fff;
+        background-color: #994b53;
+        &.disabled {
+            background-color: #7d7d7d;
+        }
+    }
+}
+.flash-notice {
+    padding-top: 10px;
+    border-top: dashed 1px #eaeaea;
+}
+.flash-notice__form {
+    display: none;
+    padding-top: 5px;
+    .form-text {
+        padding: 6px 10px;
+    }
+    .form-submit-button {
+        margin-left: 10px;
+        border-color: #eaeaea;
+        color: $grayDarker;
+    }
+    .flash-notice__cancel {
+        line-height: 30px;
+        margin-left: 10px;
+        color: $grayDark;
+    }
+    .notice-error {
+        display: none;
+        color: $red;
+    }
+}
+.flash-sale-Intro {
+    padding: 30px;
+}
+
+// 验证码
+.flash-sale-captcha {
+    padding: 10*$px;
+    width: 220*$px;
+    background: $color_gray_border;
+    > p {
+        margin: 0 0 10*$px;
+    }
+    .flash-sale-captcha-img img {
+        height: 40*$px;
+    }
+    input {
+        width: 137*$px;
+        padding: 0 5*$px;
+        height: 32*$px;
+        line-height: 32*$px;
+        vertical-align: middle;
+    }
+    .btn {
+        width: auto;
+        height: 35*$px;
+        line-height: 34*$px;
+        font-size: 14*$px;
+    }
+}

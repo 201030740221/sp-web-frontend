@@ -1,0 +1,50 @@
+@import "~css/modules/settings/_setting_pages";
+$lottery_red: #be3247;
+$lottery_yellow: #ffff00;
+
+.recommend-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  .recommend-header {
+    text-align: center;
+    border-bottom: solid 2px #3a3a3a;
+    font-weight: 600;
+  }
+}
+
+.recommend-content {
+  padding-top: 20px;
+  &__item {
+    float: left;
+    box-sizing: border-box;
+    width: 25%;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+  }
+  ._item-img {
+    height: 0;
+    padding-bottom: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
+  }
+  .item-caption {
+    height: 100px;
+    &__name {
+      border-top: solid 2px #dcdcdc;
+      font-weight: 600;
+    }
+    &__price {
+      color: $lottery_red;
+      font-weight: 600;
+    }
+  }
+}

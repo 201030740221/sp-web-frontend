@@ -1,0 +1,168 @@
+
+/***
+* presales-slider
+* Author: Remiel.
+***/
+.presales-slider{
+
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+    overflow: hidden;
+    position: relative;
+    &-inner{
+        overflow: hidden;
+        position: relative;
+        font-size: 0;
+        line-height: 0;
+    }
+    &-item{
+        overflow: hidden;
+        width: 100%;
+        float: left;
+        display: inline-block;
+        line-height: 1.5;
+        font-size: 12*$px;
+    }
+    img{
+        width: 100%;
+        display: block;
+    }
+
+    &.full-screen{
+        height: 100%;
+
+        .presales-slider{
+            &-inner{
+                height: 100%;
+            }
+            &-item{
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        .presales-slider-nav{
+            &-item{
+                background: #898989;
+                border: 1px solid #898989;
+                &:hover{
+                    background: #f2f4f9;
+                    border-color: #f2f4f9;
+                }
+            }
+
+            &-item.active{
+                background: #f2f4f9;
+                border-color: #f2f4f9;
+                &:hover{
+                    background: #f2f4f9;
+                }
+            }
+        }
+    }
+    .prev,
+    .next{
+        display: block;
+        width: 60*$px;
+        height: 60*$px;
+        line-height: 60*$px;
+        color: #fff;
+        font-size: 30*$px;
+        font-weight: bold;
+        //background: #c4c4c5;
+        background: none;
+        &:hover{
+            //background: $color_gold_hover;
+            background: none;
+        }
+    }
+    .prev{
+        left: 0;
+    }
+    .next{
+        right: 0;
+    }
+}
+
+.presales-slider-nav{
+    position: absolute;
+    left: 24 *$px;
+    right: 24 *$px;
+    bottom: 0;
+}
+
+.presales-slider-nav.nav-at-center{
+    text-align: center;
+}
+
+.presales-slider-nav.nav-at-right{
+    text-align: right;
+}
+
+.presales-slider-nav{
+    &-item{
+        display: inline-block;
+        width: 10 *$px;
+        height: 10 *$px;
+        border-radius: 10 *$px;
+        margin: 3 *$px;
+        background: #f2f4f9;
+        border: 1px solid #f2f4f9;
+        &:hover{
+            background: #898989;
+            border-color: #898989;
+        }
+    }
+
+    &-item.active{
+        background: #898989;
+        border-color: #898989;
+        &:hover{
+            background: #898989;
+        }
+    }
+}
+.nav-gold{
+    .presales-slider-nav{
+        &-item{
+            width: 8 *$px;
+            height: 8 *$px;
+            border-radius: 8 *$px;
+            margin: 6 *$px;
+            background: #f2f4f9;
+            border: 1px solid #fff;
+            &:hover{
+                background: $color_gold_hover;
+                border-color: #c9a78e;
+            }
+        }
+        &-item.active{
+            background: #d6c3b6;
+            border-color: #c9a78e;
+            &:hover{
+                background: $color_gold_hover;
+            }
+        }
+    }
+}
+.nav-gray{
+    .presales-slider-nav{
+        &-item{
+            width: 6 *$px;
+            height: 6 *$px;
+            border-radius: 6 *$px;
+            margin: 6 *$px;
+            background: transparent;
+            border: 1px solid $color_gray;
+            &:hover{
+                background: $color_gray;
+            }
+        }
+
+        &-item.active{
+            background: $color_gray;
+        }
+    }
+}

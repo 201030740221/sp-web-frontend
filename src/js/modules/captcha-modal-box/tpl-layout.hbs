@@ -1,0 +1,15 @@
+<div class="ui-modal__box confirm-modal-box">
+    <div class="confirm-modal-box__hd ui-modal__title">
+        请输入图形验证码
+    </div>
+    <div class="confirm-modal-box__bd">
+        <input class="form-text" type="text" size="6"/>
+        <a>
+            <img class="captcha-image captcha-modal-updater" data-src="/api/captcha" src="/api/captcha?{{time}}" alt="点击刷新">
+        </a>
+    </div>
+    <p class="u-color_red captcha-error-show"></p>
+    <div class="confirm-modal-box__ft u-text-center">
+        <a href="javascript:;" class="btn btn-primary-big confirm-modal-box__ok">确定</a>
+    </div>
+</div>

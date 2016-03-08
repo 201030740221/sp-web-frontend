@@ -1,0 +1,169 @@
+<div class="cart-table__hd">
+    <div class="cart-table__inner u-clearfix">
+        <div class="cart-table__col-01 u-fl">
+            <span class="ui-checkbox j-checkbox-check-all" _checked=true>全选</span>
+        </div>
+        <div class="cart-table__col-02 u-fl">
+            <div class="cart-table__title">
+                商品描述
+            </div>
+            </div>
+        <div class="cart-table__col-03 u-fl">
+            <div class="stock-btn u-none" id="stock-btn">
+                <a class="btn" href="javascript:;">
+                    <i class="_place_province" data-index="1">广东</i>
+                    <i class="_place_city" data-index="0">广州</i>
+                    <i class="_place_area" data-index="6">番禺区</i>
+                    <i class="_place_town" data-index=""></i>
+                    <span class="iconfont">&#xf0122;</span>
+                </a>
+            </div>
+        </div>
+        <div class="cart-table__col-04 u-fl">单价</div>
+        <div class="cart-table__col-05 u-fl">数量</div>
+        <div class="cart-table__col-06 u-fl">金额</div>
+        <div class="cart-table__col-07 u-fl">操作</div>
+    </div>
+</div>
+<div class="cart-table__bd">
+    <div class="cart-table__inner">
+
+        {{#each items}}
+            {{#if is_multiple}}
+                <div class="collocation-item" data-on-sale="{{on_sale}}" data-item-id="{{id}}" data-total-price="{{price}}" data-quantity="{{total_quantity}}" >
+                    <div class="collocation-item__hd u-clearfix">
+                        <div class="cart-table__col-01 u-fl">
+                            <span class="ui-checkbox" _checked=true></span>
+                        </div>
+                        <div class="cart-table__col-02 u-fl">
+                            {{name}}（共 <span class="ui-emphasis">{{total_quantity}}</span> 件商品）
+                        </div>
+                        <div class="cart-table__col-03 u-fl">
+                        </div>
+                        <div class="cart-table__col-04 u-fl">
+                            <div class="cart-table__item-price">¥ {{unit_price}}</div>
+                        </div>
+                        <div class="cart-table__col-05 u-fl">
+                            <div class="amount-box u-clearfix">
+                                <div class="amount-box__input">
+                                    <input data-max="99" type="text" name="" value="{{quantity}}"/>
+                                </div>
+                                <div class="amount-box__btns">
+                                    <a href="javascript:;" class="amount-box__btn amount-box__btns-up">&#xe628;</a>
+                                    <a href="javascript:;" class="amount-box__btn amount-box__btns-down">&#xe629;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-table__col-06 u-fl">
+                            <div class="cart-table__item-price">¥ {{price}}</div>
+                        </div>
+                        <div class="cart-table__col-07 u-fl">
+                            <a class="j-sku-delete u-f14" href="javascript:;">删除</a>
+                        </div>
+                    </div>
+                    <div class="collocation-item__bd">
+                        {{#each items}}
+                            <div class="cart-table__item u-clearfix" data-quantity="{{quantity}}">
+                                <div class="cart-table__col-01 u-fl">
+                                </div>
+                                <div class="cart-table__col-02 u-fl">
+                                    <a href="/item/{{sku}}.html" class="cart-table__item-img-box" target="_blank">
+                                        <img src="{{image}}?imageView2/2/w/120"
+                                             alt="{{sub_title}}"/>
+                                    </a>
+                                    <div class="cart-table__item-title">
+                                        <a href="/item/{{sku}}.html" class="u-color_black" target="_blank">{{title}}</a>
+                                        {{#unless on_sale}}
+                                            <span class="cart-table__item-state">已下架</span>
+                                        {{/unless}}
+                                    </div>
+
+                                    <div class="cart-table__item-desc">{{sub_title}}</div>
+                                </div>
+                                <div class="cart-table__col-03 u-f14 u-fl">
+                                    有货
+                                </div>
+                                <div class="cart-table__col-04 u-fl">
+                                    <div class="cart-table__item-price">¥ {{price}}</div>
+                                </div>
+                                <div class="cart-table__col-05 u-fl">
+                                    <div class="amount-box u-clearfix" data-sku-id="{{id}}">
+                                        <div class="amount-box__input">
+                                            <input data-max="99" type="text" name="" value="{{quantity}}" disabled/>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cart-table__col-06 u-fl">
+                                    <div class="cart-table__item-price">¥ {{sub_total_price}}</div>
+                                </div>
+                                <div class="cart-table__col-07 u-fl">
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            {{else}}
+                <div class="cart-table__item u-clearfix" data-item-id="{{id}}" data-goods-id="{{items.id}}"
+                     data-quantity="{{items.quantity}}" data-on-sale="{{items.on_sale}}" data-price="{{items.price}}" data-total-price="{{items.sub_total_price}}">
+                    <div class="cart-table__col-01 u-fl">
+                        <span class="ui-checkbox" _checked=true></span>
+                    </div>
+                    <div class="cart-table__col-02 u-fl">
+                        <a href="/item/{{items.sku}}.html" class="cart-table__item-img-box" target="_blank">
+                            <img src="{{items.image}}?imageView2/2/w/120" alt="{{items.title}}"/>
+                        </a>
+                        <div class="cart-table__item-title">
+                            <a href="/item/{{items.sku}}.html" class="u-color_black" target="_blank">{{items.title}}</a>
+                            {{#unless items.on_sale}}
+                                <span class="cart-table__item-state">已下架</span>
+                            {{/unless}}
+                        </div>
+
+                        <div class="cart-table__item-desc">{{items.sub_title}}</div>
+                    </div>
+                    <div class="cart-table__col-03 u-f14 u-fl">
+                        有货
+                    </div>
+                    <div class="cart-table__col-04 u-fl">
+                        <div class="cart-table__item-price">¥ {{items.price}}</div>
+                    </div>
+                    <div class="cart-table__col-05 u-fl">
+                        <div class="amount-box u-clearfix">
+                            <div class="amount-box__input">
+                                <input data-max="99" type="text" name="" value="{{items.quantity}}"/>
+                            </div>
+                            <div class="amount-box__btns">
+                                <a href="javascript:;" class="amount-box__btn amount-box__btns-up">&#xe628;</a>
+                                <a href="javascript:;" class="amount-box__btn amount-box__btns-down">&#xe629;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-table__col-06 u-fl">
+                        <div class="cart-table__item-price">¥ {{items.sub_total_price}}</div>
+                    </div>
+                    <div class="cart-table__col-07 u-fl">
+                        <a class="j-sku-delete u-f14" href="javascript:;">删除</a>
+                    </div>
+                </div>
+            {{/if}}
+        {{/each}}
+    </div>
+</div>
+<div class="cart-table__ft">
+    <div class="cart-table__inner u-clearfix">
+        <div class="u-fl">
+            <span class="ui-checkbox j-checkbox-check-all" _checked=true>全选</span>
+            <a href="javascript:;" class="btn btn-primary-big u-ml_10 j-delete-checked-sku">删除选中</a>
+            <a href="/" class="btn btn-primary-big u-ml_20">继续购物</a>
+        </div>
+        <div class="u-fr">
+        <span class="u-mr_40">
+            共<span class="u-color_red u-f18" id="j-total-sku">0</span>件商品
+        </span>
+            <span class="">总计（不含送装费）：</span>
+            <span class="u-color_price u-mr_20 u-f18" id="j-total-price">¥ 0</span>
+            <a href="javascript:;" class="btn btn-larger-big btn-color-orange _disable j-cart-submit">&nbsp;&nbsp;&nbsp;去结算&nbsp;&nbsp;&nbsp;</a>
+        </div>
+    </div>
+</div>
